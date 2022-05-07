@@ -20,16 +20,19 @@ from cybrid_api_bank.model.customer import Customer
 from cybrid_api_bank.model.customer_list import CustomerList
 from cybrid_api_bank.model.exchange import Exchange
 from cybrid_api_bank.model.exchange_account import ExchangeAccount
+from cybrid_api_bank.model.fee import Fee
 from cybrid_api_bank.model.identity_record import IdentityRecord
 from cybrid_api_bank.model.list_request_page import ListRequestPage
 from cybrid_api_bank.model.list_request_per_page import ListRequestPerPage
 from cybrid_api_bank.model.post_account import PostAccount
 from cybrid_api_bank.model.post_bank import PostBank
 from cybrid_api_bank.model.post_customer import PostCustomer
+from cybrid_api_bank.model.post_fee import PostFee
 from cybrid_api_bank.model.post_identity_record import PostIdentityRecord
 from cybrid_api_bank.model.post_identity_record_attestation_details import PostIdentityRecordAttestationDetails
 from cybrid_api_bank.model.post_quote import PostQuote
 from cybrid_api_bank.model.post_trade import PostTrade
+from cybrid_api_bank.model.post_trading_configuration import PostTradingConfiguration
 from cybrid_api_bank.model.post_verification_key import PostVerificationKey
 from cybrid_api_bank.model.quote import Quote
 from cybrid_api_bank.model.quote_list import QuoteList
@@ -39,5 +42,7 @@ from cybrid_api_bank.model.symbols import Symbols
 from cybrid_api_bank.model.system_account import SystemAccount
 from cybrid_api_bank.model.trade import Trade
 from cybrid_api_bank.model.trade_list import TradeList
+from cybrid_api_bank.model.trading_configuration import TradingConfiguration
+from cybrid_api_bank.model.trading_configuration_list import TradingConfigurationList
 from cybrid_api_bank.model.verification_key import VerificationKey
 from cybrid_api_bank.model.verification_key_list import VerificationKeyList

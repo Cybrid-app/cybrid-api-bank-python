@@ -23,4 +23,5 @@ from cybrid_api_bank.api.prices_bank_api import PricesBankApi
 from cybrid_api_bank.api.quotes_bank_api import QuotesBankApi
 from cybrid_api_bank.api.symbols_bank_api import SymbolsBankApi
 from cybrid_api_bank.api.trades_bank_api import TradesBankApi
+from cybrid_api_bank.api.trading_configurations_bank_api import TradingConfigurationsBankApi
 from cybrid_api_bank.api.verification_keys_bank_api import VerificationKeysBankApi
