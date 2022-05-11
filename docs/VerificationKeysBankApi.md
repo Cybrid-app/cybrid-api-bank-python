@@ -4,13 +4,13 @@ All URIs are relative to *https://bank.demo.cybrid.app*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**create_verification_key**](VerificationKeysBankApi.md#create_verification_key) | **POST** /api/banks/{bank_guid}/verification_keys | Create VerificationKey
-[**get_verification_key**](VerificationKeysBankApi.md#get_verification_key) | **GET** /api/banks/{bank_guid}/verification_keys/{verification_key_guid} | Get VerificationKey
-[**list_verification_keys**](VerificationKeysBankApi.md#list_verification_keys) | **GET** /api/banks/{bank_guid}/verification_keys | Get Verification Keys list
+[**create_verification_key**](VerificationKeysBankApi.md#create_verification_key) | **POST** /api/bank_verification_keys | Create VerificationKey
+[**get_verification_key**](VerificationKeysBankApi.md#get_verification_key) | **GET** /api/bank_verification_keys/{verification_key_guid} | Get VerificationKey
+[**list_verification_keys**](VerificationKeysBankApi.md#list_verification_keys) | **GET** /api/bank_verification_keys | Get Verification Keys list
 
 
 # **create_verification_key**
-> VerificationKey create_verification_key(bank_guid, post_verification_key)
+> VerificationKey create_verification_key(post_verification_key)
 
 Create VerificationKey
 
@@ -54,7 +54,6 @@ configuration.access_token = 'YOUR_ACCESS_TOKEN'
 with cybrid_api_bank.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = verification_keys_bank_api.VerificationKeysBankApi(api_client)
-    bank_guid = "bank_guid_example" # str | Identifier for the bank.
     post_verification_key = PostVerificationKey(
         type="attestation",
         algorithm="RS512",
@@ -66,7 +65,7 @@ with cybrid_api_bank.ApiClient(configuration) as api_client:
     # example passing only required values which don't have defaults set
     try:
         # Create VerificationKey
-        api_response = api_instance.create_verification_key(bank_guid, post_verification_key)
+        api_response = api_instance.create_verification_key(post_verification_key)
         pprint(api_response)
     except cybrid_api_bank.ApiException as e:
         print("Exception when calling VerificationKeysBankApi->create_verification_key: %s\n" % e)
@@ -77,7 +76,6 @@ with cybrid_api_bank.ApiClient(configuration) as api_client:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **bank_guid** | **str**| Identifier for the bank. |
  **post_verification_key** | [**PostVerificationKey**](PostVerificationKey.md)|  |
 
 ### Return type
@@ -103,7 +101,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_verification_key**
-> VerificationKey get_verification_key(bank_guid, verification_key_guid)
+> VerificationKey get_verification_key(verification_key_guid)
 
 Get VerificationKey
 
@@ -146,13 +144,12 @@ configuration.access_token = 'YOUR_ACCESS_TOKEN'
 with cybrid_api_bank.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = verification_keys_bank_api.VerificationKeysBankApi(api_client)
-    bank_guid = "bank_guid_example" # str | Identifier for the bank.
     verification_key_guid = "verification_key_guid_example" # str | Identifier for the verification key.
 
     # example passing only required values which don't have defaults set
     try:
         # Get VerificationKey
-        api_response = api_instance.get_verification_key(bank_guid, verification_key_guid)
+        api_response = api_instance.get_verification_key(verification_key_guid)
         pprint(api_response)
     except cybrid_api_bank.ApiException as e:
         print("Exception when calling VerificationKeysBankApi->get_verification_key: %s\n" % e)
@@ -163,7 +160,6 @@ with cybrid_api_bank.ApiClient(configuration) as api_client:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **bank_guid** | **str**| Identifier for the bank. |
  **verification_key_guid** | **str**| Identifier for the verification key. |
 
 ### Return type
@@ -189,7 +185,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **list_verification_keys**
-> VerificationKeyList list_verification_keys(bank_guid)
+> VerificationKeyList list_verification_keys()
 
 Get Verification Keys list
 
@@ -234,23 +230,14 @@ configuration.access_token = 'YOUR_ACCESS_TOKEN'
 with cybrid_api_bank.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = verification_keys_bank_api.VerificationKeysBankApi(api_client)
-    bank_guid = "bank_guid_example" # str | Identifier for the bank.
     page = ListRequestPage(0) # ListRequestPage |  (optional)
     per_page = ListRequestPerPage(10) # ListRequestPerPage |  (optional)
-
-    # example passing only required values which don't have defaults set
-    try:
-        # Get Verification Keys list
-        api_response = api_instance.list_verification_keys(bank_guid)
-        pprint(api_response)
-    except cybrid_api_bank.ApiException as e:
-        print("Exception when calling VerificationKeysBankApi->list_verification_keys: %s\n" % e)
 
     # example passing only required values which don't have defaults set
     # and optional values
     try:
         # Get Verification Keys list
-        api_response = api_instance.list_verification_keys(bank_guid, page=page, per_page=per_page)
+        api_response = api_instance.list_verification_keys(page=page, per_page=per_page)
         pprint(api_response)
     except cybrid_api_bank.ApiException as e:
         print("Exception when calling VerificationKeysBankApi->list_verification_keys: %s\n" % e)
@@ -261,7 +248,6 @@ with cybrid_api_bank.ApiClient(configuration) as api_client:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **bank_guid** | **str**| Identifier for the bank. |
  **page** | **ListRequestPage**|  | [optional]
  **per_page** | **ListRequestPerPage**|  | [optional]
 
