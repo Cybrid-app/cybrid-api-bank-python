@@ -141,11 +141,21 @@ with cybrid_api_bank.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = customers_bank_api.CustomersBankApi(api_client)
     customer_guid = "customer_guid_example" # str | Identifier for the customer.
+    bank_guid = "bank_guid_example" # str | Identifier for the bank. (optional)
 
     # example passing only required values which don't have defaults set
     try:
         # Get Customer
         api_response = api_instance.get_customer(customer_guid)
+        pprint(api_response)
+    except cybrid_api_bank.ApiException as e:
+        print("Exception when calling CustomersBankApi->get_customer: %s\n" % e)
+
+    # example passing only required values which don't have defaults set
+    # and optional values
+    try:
+        # Get Customer
+        api_response = api_instance.get_customer(customer_guid, bank_guid=bank_guid)
         pprint(api_response)
     except cybrid_api_bank.ApiException as e:
         print("Exception when calling CustomersBankApi->get_customer: %s\n" % e)
@@ -157,6 +167,7 @@ with cybrid_api_bank.ApiClient(configuration) as api_client:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **customer_guid** | **str**| Identifier for the customer. |
+ **bank_guid** | **str**| Identifier for the bank. | [optional]
 
 ### Return type
 
@@ -228,12 +239,14 @@ with cybrid_api_bank.ApiClient(configuration) as api_client:
     api_instance = customers_bank_api.CustomersBankApi(api_client)
     page = ListRequestPage(0) # ListRequestPage |  (optional)
     per_page = ListRequestPerPage(10) # ListRequestPerPage |  (optional)
+    bank_guid = "bank_guid_example" # str | Identifier for the bank. (optional)
+    guid = "guid_example" # str | Comma separated customer_guid to list customers for. (optional)
 
     # example passing only required values which don't have defaults set
     # and optional values
     try:
         # Get customers list
-        api_response = api_instance.list_customers(page=page, per_page=per_page)
+        api_response = api_instance.list_customers(page=page, per_page=per_page, bank_guid=bank_guid, guid=guid)
         pprint(api_response)
     except cybrid_api_bank.ApiException as e:
         print("Exception when calling CustomersBankApi->list_customers: %s\n" % e)
@@ -246,6 +259,8 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **page** | **ListRequestPage**|  | [optional]
  **per_page** | **ListRequestPerPage**|  | [optional]
+ **bank_guid** | **str**| Identifier for the bank. | [optional]
+ **guid** | **str**| Comma separated customer_guid to list customers for. | [optional]
 
 ### Return type
 
