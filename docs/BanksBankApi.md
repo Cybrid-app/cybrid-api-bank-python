@@ -57,6 +57,9 @@ with cybrid_api_bank.ApiClient(configuration) as api_client:
     post_bank = PostBank(
         name="name_example",
         type="sandbox",
+        supported_fiat_assets=[
+            "supported_fiat_assets_example",
+        ],
         features=[
             "attestation_identity_records",
         ],
