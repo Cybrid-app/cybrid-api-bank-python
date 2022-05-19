@@ -23,6 +23,7 @@ from cybrid_api_bank.model.exchange import Exchange
 from cybrid_api_bank.model.exchange_account import ExchangeAccount
 from cybrid_api_bank.model.fee import Fee
 from cybrid_api_bank.model.identity_record import IdentityRecord
+from cybrid_api_bank.model.identity_record_list import IdentityRecordList
 from cybrid_api_bank.model.list_request_page import ListRequestPage
 from cybrid_api_bank.model.list_request_per_page import ListRequestPerPage
 from cybrid_api_bank.model.post_account import PostAccount

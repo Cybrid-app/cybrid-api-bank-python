@@ -13,11 +13,13 @@ import sys
 import unittest
 
 import cybrid_api_bank
-from cybrid_api_bank.model.post_bank import PostBank
+from cybrid_api_bank.model.identity_record import IdentityRecord
+globals()['IdentityRecord'] = IdentityRecord
+from cybrid_api_bank.model.identity_record_list import IdentityRecordList
 
 
-class TestPostBank(unittest.TestCase):
-    """PostBank unit test stubs"""
+class TestIdentityRecordList(unittest.TestCase):
+    """IdentityRecordList unit test stubs"""
 
     def setUp(self):
         pass
@@ -25,10 +27,10 @@ class TestPostBank(unittest.TestCase):
     def tearDown(self):
         pass
 
-    def testPostBank(self):
-        """Test PostBank"""
+    def testIdentityRecordList(self):
+        """Test IdentityRecordList"""
         # FIXME: construct object with mandatory attributes with example values
-        # model = PostBank()  # noqa: E501
+        # model = IdentityRecordList()  # noqa: E501
         pass
 
 
