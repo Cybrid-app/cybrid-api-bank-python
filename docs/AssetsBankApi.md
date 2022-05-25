@@ -24,6 +24,7 @@ import time
 import cybrid_api_bank
 from cybrid_api_bank.api import assets_bank_api
 from cybrid_api_bank.model.asset_list import AssetList
+from cybrid_api_bank.model.error_response import ErrorResponse
 from cybrid_api_bank.model.list_request_page import ListRequestPage
 from cybrid_api_bank.model.list_request_per_page import ListRequestPerPage
 from pprint import pprint
@@ -93,6 +94,9 @@ Name | Type | Description  | Notes
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
 **200** | get list of assets |  -  |
+**400** | Malformed Authentication Header |  -  |
+**401** | Invalid responses - Authentication failed, invalid subject |  -  |
+**403** | Invalid scope |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 

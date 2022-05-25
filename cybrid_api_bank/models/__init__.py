@@ -19,6 +19,7 @@ from cybrid_api_bank.model.bank_list import BankList
 from cybrid_api_bank.model.customer import Customer
 from cybrid_api_bank.model.customer_list import CustomerList
 from cybrid_api_bank.model.cybrid_account import CybridAccount
+from cybrid_api_bank.model.error_response import ErrorResponse
 from cybrid_api_bank.model.exchange import Exchange
 from cybrid_api_bank.model.exchange_account import ExchangeAccount
 from cybrid_api_bank.model.fee import Fee
