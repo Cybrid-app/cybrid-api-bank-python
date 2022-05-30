@@ -94,8 +94,8 @@ Name | Type | Description  | Notes
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
 **200** | get list of assets |  -  |
-**400** | Malformed Authentication Header |  -  |
-**401** | Invalid responses - Authentication failed, invalid subject |  -  |
+**400** | Invalid requests - Malformed Authentication Header |  -  |
+**401** | Unauthorized - Authentication failed, invalid subject |  -  |
 **403** | Invalid scope |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)

@@ -25,6 +25,7 @@ Creates a bank.  ## Bank Type  Bank's can be created in either `sandbox` or `pro
 import time
 import cybrid_api_bank
 from cybrid_api_bank.api import banks_bank_api
+from cybrid_api_bank.model.error_response import ErrorResponse
 from cybrid_api_bank.model.bank import Bank
 from cybrid_api_bank.model.post_bank import PostBank
 from pprint import pprint
@@ -100,6 +101,10 @@ Name | Type | Description  | Notes
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
 **201** | Bank created |  -  |
+**400** | Invalid requests - malformed authentication header |  -  |
+**401** | Unauthorized - Authentication failed, invalid subject |  -  |
+**403** | Invalid scope |  -  |
+**415** | Unsupported values |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
@@ -119,6 +124,7 @@ Retrieves a bank.  Required scope: **banks:read**
 import time
 import cybrid_api_bank
 from cybrid_api_bank.api import banks_bank_api
+from cybrid_api_bank.model.error_response import ErrorResponse
 from cybrid_api_bank.model.bank import Bank
 from pprint import pprint
 # Defining the host is optional and defaults to https://bank.demo.cybrid.app
@@ -184,6 +190,10 @@ Name | Type | Description  | Notes
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
 **200** | bank found |  -  |
+**400** | Invalid requests - malformed authentication header |  -  |
+**401** | Unauthorized - invalid subject, Authentication failed |  -  |
+**403** | Invalid scope |  -  |
+**404** | bank not found |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
@@ -204,6 +214,7 @@ import time
 import cybrid_api_bank
 from cybrid_api_bank.api import banks_bank_api
 from cybrid_api_bank.model.bank_list import BankList
+from cybrid_api_bank.model.error_response import ErrorResponse
 from cybrid_api_bank.model.list_request_page import ListRequestPage
 from cybrid_api_bank.model.list_request_per_page import ListRequestPerPage
 from pprint import pprint
@@ -273,6 +284,9 @@ Name | Type | Description  | Notes
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
 **200** | get list of banks |  -  |
+**400** | Invalid requests - malformed authentication header |  -  |
+**401** | Unauthorized - invalid subject, Authentication failed |  -  |
+**403** | Invalid scope |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
