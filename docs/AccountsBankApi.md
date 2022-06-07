@@ -27,6 +27,7 @@ import cybrid_api_bank
 from cybrid_api_bank.api import accounts_bank_api
 from cybrid_api_bank.model.post_account import PostAccount
 from cybrid_api_bank.model.account import Account
+from cybrid_api_bank.model.error_response import ErrorResponse
 from pprint import pprint
 # Defining the host is optional and defaults to https://bank.demo.cybrid.app
 # See configuration.py for a list of all supported configuration parameters.
@@ -96,6 +97,9 @@ Name | Type | Description  | Notes
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
 **201** | account created |  -  |
+**400** | Invalid requests - malformed authentication header |  -  |
+**401** | Unauthorized - Authentication failed,  |  -  |
+**403** | Invalid scope |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
@@ -116,6 +120,7 @@ import time
 import cybrid_api_bank
 from cybrid_api_bank.api import accounts_bank_api
 from cybrid_api_bank.model.account import Account
+from cybrid_api_bank.model.error_response import ErrorResponse
 from pprint import pprint
 # Defining the host is optional and defaults to https://bank.demo.cybrid.app
 # See configuration.py for a list of all supported configuration parameters.
@@ -180,6 +185,10 @@ Name | Type | Description  | Notes
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
 **200** | account found |  -  |
+**400** | Invalid requests - malformed authentication header |  -  |
+**401** | Unauthorized - Authentication failed,  |  -  |
+**403** | Invalid scope |  -  |
+**404** | account not found |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
@@ -199,6 +208,7 @@ Retrieves a list of accounts.  Required scope: **accounts:read**
 import time
 import cybrid_api_bank
 from cybrid_api_bank.api import accounts_bank_api
+from cybrid_api_bank.model.error_response import ErrorResponse
 from cybrid_api_bank.model.list_request_page import ListRequestPage
 from cybrid_api_bank.model.account_list import AccountList
 from cybrid_api_bank.model.list_request_per_page import ListRequestPerPage
@@ -275,6 +285,9 @@ Name | Type | Description  | Notes
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
 **200** | get list of accounts |  -  |
+**400** | Invalid requests - malformed authentication header |  -  |
+**401** | Unauthorized - Authentication failed,  |  -  |
+**403** | Invalid scope |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
