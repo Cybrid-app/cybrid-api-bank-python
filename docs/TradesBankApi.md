@@ -182,7 +182,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **list_trades**
-> TradeList list_trades(customer_guid, account_guid)
+> TradeList list_trades()
 
 Get trades list
 
@@ -227,25 +227,18 @@ configuration.access_token = 'YOUR_ACCESS_TOKEN'
 with cybrid_api_bank.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = trades_bank_api.TradesBankApi(api_client)
-    customer_guid = "customer_guid_example" # str | The customer's identifier.
-    account_guid = "account_guid_example" # str | The account's identifier.
     page = ListRequestPage(0) # ListRequestPage | The page index to retrieve. (optional)
     per_page = ListRequestPerPage(10) # ListRequestPerPage | The number of entities per page to return. (optional)
     guid = "guid_example" # str | Comma separated trade_guids to list trades for. (optional)
-
-    # example passing only required values which don't have defaults set
-    try:
-        # Get trades list
-        api_response = api_instance.list_trades(customer_guid, account_guid)
-        pprint(api_response)
-    except cybrid_api_bank.ApiException as e:
-        print("Exception when calling TradesBankApi->list_trades: %s\n" % e)
+    bank_guid = "bank_guid_example" # str | Comma separated bank_guids to list trades for. (optional)
+    customer_guid = "customer_guid_example" # str | Comma separated customer_guids to list trades for. (optional)
+    account_guid = "account_guid_example" # str | Comma separated account_guids to list trades for. (optional)
 
     # example passing only required values which don't have defaults set
     # and optional values
     try:
         # Get trades list
-        api_response = api_instance.list_trades(customer_guid, account_guid, page=page, per_page=per_page, guid=guid)
+        api_response = api_instance.list_trades(page=page, per_page=per_page, guid=guid, bank_guid=bank_guid, customer_guid=customer_guid, account_guid=account_guid)
         pprint(api_response)
     except cybrid_api_bank.ApiException as e:
         print("Exception when calling TradesBankApi->list_trades: %s\n" % e)
@@ -256,11 +249,12 @@ with cybrid_api_bank.ApiClient(configuration) as api_client:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **customer_guid** | **str**| The customer&#39;s identifier. |
- **account_guid** | **str**| The account&#39;s identifier. |
  **page** | **ListRequestPage**| The page index to retrieve. | [optional]
  **per_page** | **ListRequestPerPage**| The number of entities per page to return. | [optional]
  **guid** | **str**| Comma separated trade_guids to list trades for. | [optional]
+ **bank_guid** | **str**| Comma separated bank_guids to list trades for. | [optional]
+ **customer_guid** | **str**| Comma separated customer_guids to list trades for. | [optional]
+ **account_guid** | **str**| Comma separated account_guids to list trades for. | [optional]
 
 ### Return type
 
