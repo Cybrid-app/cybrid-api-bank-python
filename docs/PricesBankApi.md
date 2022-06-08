@@ -24,6 +24,7 @@ import time
 import cybrid_api_bank
 from cybrid_api_bank.api import prices_bank_api
 from cybrid_api_bank.model.symbol_price_response import SymbolPriceResponse
+from cybrid_api_bank.model.error_response import ErrorResponse
 from pprint import pprint
 # Defining the host is optional and defaults to https://bank.demo.cybrid.app
 # See configuration.py for a list of all supported configuration parameters.
@@ -89,6 +90,9 @@ Name | Type | Description  | Notes
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
 **200** | get list of price |  -  |
+**400** | Invalid requests - malformed authentication header |  -  |
+**401** | Unauthorized - Authentication failed,  |  -  |
+**403** | Invalid scope |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
