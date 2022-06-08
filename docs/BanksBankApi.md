@@ -190,9 +190,10 @@ Name | Type | Description  | Notes
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
 **200** | bank found |  -  |
-**400** | Invalid requests - invalid value in request |  -  |
+**400** | Invalid requests - malformed authentication header |  -  |
 **401** | Unauthorized - Authentication failed, invalid subject |  -  |
 **403** | Invalid scope |  -  |
+**404** | bank not found |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
@@ -245,12 +246,13 @@ with cybrid_api_bank.ApiClient(configuration) as api_client:
     api_instance = banks_bank_api.BanksBankApi(api_client)
     page = ListRequestPage(0) # ListRequestPage | The page index to retrieve. (optional)
     per_page = ListRequestPerPage(10) # ListRequestPerPage | The number of entities per page to return. (optional)
+    guid = "guid_example" # str | Comma separated bank_guids to list banks for. (optional)
 
     # example passing only required values which don't have defaults set
     # and optional values
     try:
         # Get banks list
-        api_response = api_instance.list_banks(page=page, per_page=per_page)
+        api_response = api_instance.list_banks(page=page, per_page=per_page, guid=guid)
         pprint(api_response)
     except cybrid_api_bank.ApiException as e:
         print("Exception when calling BanksBankApi->list_banks: %s\n" % e)
@@ -263,6 +265,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **page** | **ListRequestPage**| The page index to retrieve. | [optional]
  **per_page** | **ListRequestPerPage**| The number of entities per page to return. | [optional]
+ **guid** | **str**| Comma separated bank_guids to list banks for. | [optional]
 
 ### Return type
 

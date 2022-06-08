@@ -232,12 +232,15 @@ with cybrid_api_bank.ApiClient(configuration) as api_client:
     api_instance = quotes_bank_api.QuotesBankApi(api_client)
     page = ListRequestPage(0) # ListRequestPage |  (optional)
     per_page = ListRequestPerPage(10) # ListRequestPerPage |  (optional)
+    guid = "guid_example" # str | Comma separated quote_guids to list quotes for. (optional)
+    bank_guid = "bank_guid_example" # str | Comma separated bank_guids to list quotes for. (optional)
+    customer_guid = "customer_guid_example" # str | Comma separated customer_guids to list quotes for. (optional)
 
     # example passing only required values which don't have defaults set
     # and optional values
     try:
         # Get quotes list
-        api_response = api_instance.list_quotes(page=page, per_page=per_page)
+        api_response = api_instance.list_quotes(page=page, per_page=per_page, guid=guid, bank_guid=bank_guid, customer_guid=customer_guid)
         pprint(api_response)
     except cybrid_api_bank.ApiException as e:
         print("Exception when calling QuotesBankApi->list_quotes: %s\n" % e)
@@ -250,6 +253,9 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **page** | **ListRequestPage**|  | [optional]
  **per_page** | **ListRequestPerPage**|  | [optional]
+ **guid** | **str**| Comma separated quote_guids to list quotes for. | [optional]
+ **bank_guid** | **str**| Comma separated bank_guids to list quotes for. | [optional]
+ **customer_guid** | **str**| Comma separated customer_guids to list quotes for. | [optional]
 
 ### Return type
 
