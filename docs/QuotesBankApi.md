@@ -25,6 +25,7 @@ Creates a quote.  Required scope: **quotes:execute**
 import time
 import cybrid_api_bank
 from cybrid_api_bank.api import quotes_bank_api
+from cybrid_api_bank.model.error_response import ErrorResponse
 from cybrid_api_bank.model.quote import Quote
 from cybrid_api_bank.model.post_quote import PostQuote
 from pprint import pprint
@@ -97,6 +98,11 @@ Name | Type | Description  | Notes
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
 **201** | quote created |  -  |
+**400** | Invalid requests - malformed authentication header |  -  |
+**401** | Unauthorized - Authentication failed,  |  -  |
+**403** | Invalid scope |  -  |
+**422** | Unable to process request |  -  |
+**500** | Internal server error |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
@@ -116,6 +122,7 @@ Retrieves a quote.  Required scope: **quotes:read**
 import time
 import cybrid_api_bank
 from cybrid_api_bank.api import quotes_bank_api
+from cybrid_api_bank.model.error_response import ErrorResponse
 from cybrid_api_bank.model.quote import Quote
 from pprint import pprint
 # Defining the host is optional and defaults to https://bank.demo.cybrid.app
@@ -181,6 +188,10 @@ Name | Type | Description  | Notes
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
 **200** | quote found |  -  |
+**400** | Invalid requests - malformed authentication header |  -  |
+**401** | Unauthorized - Authentication failed,  |  -  |
+**403** | Invalid scope |  -  |
+**404** | quote not found |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
@@ -201,6 +212,7 @@ import time
 import cybrid_api_bank
 from cybrid_api_bank.api import quotes_bank_api
 from cybrid_api_bank.model.quote_list import QuoteList
+from cybrid_api_bank.model.error_response import ErrorResponse
 from cybrid_api_bank.model.list_request_page import ListRequestPage
 from cybrid_api_bank.model.list_request_per_page import ListRequestPerPage
 from pprint import pprint
@@ -276,6 +288,9 @@ Name | Type | Description  | Notes
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
 **200** | get list of quotes |  -  |
+**400** | Invalid requests - malformed authentication header |  -  |
+**401** | Unauthorized - Authentication failed,  |  -  |
+**403** | Invalid scope |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
