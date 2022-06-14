@@ -13,11 +13,13 @@ import sys
 import unittest
 
 import cybrid_api_bank
-from cybrid_api_bank.model.cybrid_account import CybridAccount
+from cybrid_api_bank.model.exchange import Exchange
+globals()['Exchange'] = Exchange
+from cybrid_api_bank.model.exchange_list import ExchangeList
 
 
-class TestCybridAccount(unittest.TestCase):
-    """CybridAccount unit test stubs"""
+class TestExchangeList(unittest.TestCase):
+    """ExchangeList unit test stubs"""
 
     def setUp(self):
         pass
@@ -25,10 +27,10 @@ class TestCybridAccount(unittest.TestCase):
     def tearDown(self):
         pass
 
-    def testCybridAccount(self):
-        """Test CybridAccount"""
+    def testExchangeList(self):
+        """Test ExchangeList"""
         # FIXME: construct object with mandatory attributes with example values
-        # model = CybridAccount()  # noqa: E501
+        # model = ExchangeList()  # noqa: E501
         pass
 
 
