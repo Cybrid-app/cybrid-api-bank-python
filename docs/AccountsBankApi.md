@@ -209,9 +209,7 @@ import time
 import cybrid_api_bank
 from cybrid_api_bank.api import accounts_bank_api
 from cybrid_api_bank.model.error_response import ErrorResponse
-from cybrid_api_bank.model.list_request_page import ListRequestPage
 from cybrid_api_bank.model.account_list import AccountList
-from cybrid_api_bank.model.list_request_per_page import ListRequestPerPage
 from pprint import pprint
 # Defining the host is optional and defaults to https://bank.demo.cybrid.app
 # See configuration.py for a list of all supported configuration parameters.
@@ -239,8 +237,8 @@ configuration.access_token = 'YOUR_ACCESS_TOKEN'
 with cybrid_api_bank.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = accounts_bank_api.AccountsBankApi(api_client)
-    page = ListRequestPage(0) # ListRequestPage | The page index to retrieve. (optional)
-    per_page = ListRequestPerPage(10) # ListRequestPerPage | The number of entities per page to return. (optional)
+    page = ListRequestPage(0) # int | The page index to retrieve. (optional) if omitted the server will use the default value of 0
+    per_page = ListRequestPerPage(10) # int | The number of entities per page to return. (optional) if omitted the server will use the default value of 10
     guid = "guid_example" # str | Comma separated account_guids to list accounts for. (optional)
     bank_guid = "bank_guid_example" # str | Comma separated bank_guids to list accounts for. (optional)
     customer_guid = "customer_guid_example" # str | Comma separated customer_guids to list accounts for. (optional)
@@ -260,8 +258,8 @@ with cybrid_api_bank.ApiClient(configuration) as api_client:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **page** | **ListRequestPage**| The page index to retrieve. | [optional]
- **per_page** | **ListRequestPerPage**| The number of entities per page to return. | [optional]
+ **page** | **int**| The page index to retrieve. | [optional] if omitted the server will use the default value of 0
+ **per_page** | **int**| The number of entities per page to return. | [optional] if omitted the server will use the default value of 10
  **guid** | **str**| Comma separated account_guids to list accounts for. | [optional]
  **bank_guid** | **str**| Comma separated bank_guids to list accounts for. | [optional]
  **customer_guid** | **str**| Comma separated customer_guids to list accounts for. | [optional]

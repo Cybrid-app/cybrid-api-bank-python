@@ -211,8 +211,6 @@ import cybrid_api_bank
 from cybrid_api_bank.api import identity_records_bank_api
 from cybrid_api_bank.model.identity_record_list import IdentityRecordList
 from cybrid_api_bank.model.error_response import ErrorResponse
-from cybrid_api_bank.model.list_request_page import ListRequestPage
-from cybrid_api_bank.model.list_request_per_page import ListRequestPerPage
 from pprint import pprint
 # Defining the host is optional and defaults to https://bank.demo.cybrid.app
 # See configuration.py for a list of all supported configuration parameters.
@@ -241,8 +239,8 @@ with cybrid_api_bank.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = identity_records_bank_api.IdentityRecordsBankApi(api_client)
     customer_guid = "customer_guid_example" # str | Comma separated customer identifier to list identity records for. (optional)
-    page = ListRequestPage(0) # ListRequestPage |  (optional)
-    per_page = ListRequestPerPage(10) # ListRequestPerPage |  (optional)
+    page = ListRequestPage(0) # int |  (optional) if omitted the server will use the default value of 0
+    per_page = ListRequestPerPage(10) # int |  (optional) if omitted the server will use the default value of 10
 
     # example passing only required values which don't have defaults set
     # and optional values
@@ -260,8 +258,8 @@ with cybrid_api_bank.ApiClient(configuration) as api_client:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **customer_guid** | **str**| Comma separated customer identifier to list identity records for. | [optional]
- **page** | **ListRequestPage**|  | [optional]
- **per_page** | **ListRequestPerPage**|  | [optional]
+ **page** | **int**|  | [optional] if omitted the server will use the default value of 0
+ **per_page** | **int**|  | [optional] if omitted the server will use the default value of 10
 
 ### Return type
 

@@ -213,8 +213,6 @@ import cybrid_api_bank
 from cybrid_api_bank.api import quotes_bank_api
 from cybrid_api_bank.model.quote_list import QuoteList
 from cybrid_api_bank.model.error_response import ErrorResponse
-from cybrid_api_bank.model.list_request_page import ListRequestPage
-from cybrid_api_bank.model.list_request_per_page import ListRequestPerPage
 from pprint import pprint
 # Defining the host is optional and defaults to https://bank.demo.cybrid.app
 # See configuration.py for a list of all supported configuration parameters.
@@ -242,8 +240,8 @@ configuration.access_token = 'YOUR_ACCESS_TOKEN'
 with cybrid_api_bank.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = quotes_bank_api.QuotesBankApi(api_client)
-    page = ListRequestPage(0) # ListRequestPage |  (optional)
-    per_page = ListRequestPerPage(10) # ListRequestPerPage |  (optional)
+    page = ListRequestPage(0) # int |  (optional) if omitted the server will use the default value of 0
+    per_page = ListRequestPerPage(10) # int |  (optional) if omitted the server will use the default value of 10
     guid = "guid_example" # str | Comma separated quote_guids to list quotes for. (optional)
     bank_guid = "bank_guid_example" # str | Comma separated bank_guids to list quotes for. (optional)
     customer_guid = "customer_guid_example" # str | Comma separated customer_guids to list quotes for. (optional)
@@ -263,8 +261,8 @@ with cybrid_api_bank.ApiClient(configuration) as api_client:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **page** | **ListRequestPage**|  | [optional]
- **per_page** | **ListRequestPerPage**|  | [optional]
+ **page** | **int**|  | [optional] if omitted the server will use the default value of 0
+ **per_page** | **int**|  | [optional] if omitted the server will use the default value of 10
  **guid** | **str**| Comma separated quote_guids to list quotes for. | [optional]
  **bank_guid** | **str**| Comma separated bank_guids to list quotes for. | [optional]
  **customer_guid** | **str**| Comma separated customer_guids to list quotes for. | [optional]

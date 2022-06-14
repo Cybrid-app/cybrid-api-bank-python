@@ -6,7 +6,7 @@
 # raise a `RecursionError`.
 # In order to avoid this, import only the API that you directly need like:
 #
-#   from .api.accounts_bank_api import AccountsBankApi
+#   from cybrid_api_bank.api.accounts_bank_api import AccountsBankApi
 #
 # or import this package, but before doing it, use:
 #
