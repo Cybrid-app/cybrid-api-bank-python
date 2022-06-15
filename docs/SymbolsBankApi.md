@@ -23,6 +23,7 @@ Retrieves a listing of symbols.  Required scope: **prices:read**
 import time
 import cybrid_api_bank
 from cybrid_api_bank.api import symbols_bank_api
+from cybrid_api_bank.model.error_response import ErrorResponse
 from cybrid_api_bank.model.symbols import Symbols
 from pprint import pprint
 # Defining the host is optional and defaults to https://bank.demo.cybrid.app
@@ -84,6 +85,9 @@ This endpoint does not need any parameter.
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
 **200** | get list of symbols |  -  |
+**400** | Invalid requests - Malformed Authentication Header |  -  |
+**401** | Unauthorized - Authentication failed,  |  -  |
+**403** | Invalid scope |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
