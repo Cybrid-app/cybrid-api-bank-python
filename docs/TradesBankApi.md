@@ -25,6 +25,7 @@ Creates a trade.  ## State  | State | Description | |-------|-------------| | st
 import time
 import cybrid_api_bank
 from cybrid_api_bank.api import trades_bank_api
+from cybrid_api_bank.model.error_response import ErrorResponse
 from cybrid_api_bank.model.trade import Trade
 from cybrid_api_bank.model.post_trade import PostTrade
 from pprint import pprint
@@ -94,6 +95,11 @@ Name | Type | Description  | Notes
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
 **201** | Trade created |  -  |
+**400** | Invalid requests - malformed authentication header |  -  |
+**401** | Unauthorized - Authentication failed,  |  -  |
+**403** | Invalid scope |  -  |
+**409** | Data already exists |  -  |
+**422** | Unable to process request |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
@@ -113,6 +119,7 @@ Retrieves a trade.  Required scope: **trades:read**
 import time
 import cybrid_api_bank
 from cybrid_api_bank.api import trades_bank_api
+from cybrid_api_bank.model.error_response import ErrorResponse
 from cybrid_api_bank.model.trade import Trade
 from pprint import pprint
 # Defining the host is optional and defaults to https://bank.demo.cybrid.app
@@ -178,6 +185,9 @@ Name | Type | Description  | Notes
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
 **200** | trade found |  -  |
+**401** | Unauthorized - Authentication failed,  |  -  |
+**403** | Invalid scope |  -  |
+**404** | trade not found |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
@@ -197,6 +207,7 @@ Retrieves a listing of trades.  Required scope: **trades:read**
 import time
 import cybrid_api_bank
 from cybrid_api_bank.api import trades_bank_api
+from cybrid_api_bank.model.error_response import ErrorResponse
 from cybrid_api_bank.model.trade_list import TradeList
 from pprint import pprint
 # Defining the host is optional and defaults to https://bank.demo.cybrid.app
@@ -273,6 +284,9 @@ Name | Type | Description  | Notes
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
 **200** | get list of trades |  -  |
+**400** | Invalid requests - malformed authentication header |  -  |
+**401** | Unauthorized - Authentication failed,  |  -  |
+**403** | Invalid scope |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
