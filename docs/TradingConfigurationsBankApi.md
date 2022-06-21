@@ -25,6 +25,7 @@ Creates a trading configuration.  Required scope: **banks:write**
 import time
 import cybrid_api_bank
 from cybrid_api_bank.api import trading_configurations_bank_api
+from cybrid_api_bank.model.error_response import ErrorResponse
 from cybrid_api_bank.model.post_trading_configuration import PostTradingConfiguration
 from cybrid_api_bank.model.trading_configuration import TradingConfiguration
 from pprint import pprint
@@ -100,6 +101,9 @@ Name | Type | Description  | Notes
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
 **201** | trading configuration created |  -  |
+**400** | Invalid requests - malformed authentication header |  -  |
+**401** | Unauthorized - Authentication failed,  |  -  |
+**403** | Invalid scope |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
@@ -119,6 +123,7 @@ Retrieves a trading configuration.  Required scope: **banks:read**
 import time
 import cybrid_api_bank
 from cybrid_api_bank.api import trading_configurations_bank_api
+from cybrid_api_bank.model.error_response import ErrorResponse
 from cybrid_api_bank.model.trading_configuration import TradingConfiguration
 from pprint import pprint
 # Defining the host is optional and defaults to https://bank.demo.cybrid.app
@@ -184,6 +189,9 @@ Name | Type | Description  | Notes
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
 **200** | trading configuration found |  -  |
+**401** | Unauthorized - Authentication failed,  |  -  |
+**403** | Invalid scope |  -  |
+**404** | trading_configuration not found |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
@@ -204,6 +212,7 @@ import time
 import cybrid_api_bank
 from cybrid_api_bank.api import trading_configurations_bank_api
 from cybrid_api_bank.model.trading_configuration_list import TradingConfigurationList
+from cybrid_api_bank.model.error_response import ErrorResponse
 from pprint import pprint
 # Defining the host is optional and defaults to https://bank.demo.cybrid.app
 # See configuration.py for a list of all supported configuration parameters.
@@ -271,6 +280,9 @@ Name | Type | Description  | Notes
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
 **200** | get list of trading configurations |  -  |
+**400** | Invalid requests - malformed authentication header |  -  |
+**401** | Unauthorized - Authentication failed,  |  -  |
+**403** | Invalid scope |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
