@@ -234,8 +234,8 @@ configuration.access_token = 'YOUR_ACCESS_TOKEN'
 with cybrid_api_bank.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = customers_bank_api.CustomersBankApi(api_client)
-    page = ListRequestPage(0) # int |  (optional) if omitted the server will use the default value of 0
-    per_page = ListRequestPerPage(10) # int |  (optional) if omitted the server will use the default value of 10
+    page = ListRequestPage(0) # int |  (optional)
+    per_page = ListRequestPerPage(1) # int |  (optional)
     bank_guid = "bank_guid_example" # str | Comma separated bank_guids to list customers for. (optional)
     guid = "guid_example" # str | Comma separated customer_guids to list customers for. (optional)
 
@@ -254,8 +254,8 @@ with cybrid_api_bank.ApiClient(configuration) as api_client:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **page** | **int**|  | [optional] if omitted the server will use the default value of 0
- **per_page** | **int**|  | [optional] if omitted the server will use the default value of 10
+ **page** | **int**|  | [optional]
+ **per_page** | **int**|  | [optional]
  **bank_guid** | **str**| Comma separated bank_guids to list customers for. | [optional]
  **guid** | **str**| Comma separated customer_guids to list customers for. | [optional]
 

@@ -239,8 +239,8 @@ with cybrid_api_bank.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = identity_records_bank_api.IdentityRecordsBankApi(api_client)
     customer_guid = "customer_guid_example" # str | Comma separated customer identifier to list identity records for. (optional)
-    page = ListRequestPage(0) # int |  (optional) if omitted the server will use the default value of 0
-    per_page = ListRequestPerPage(10) # int |  (optional) if omitted the server will use the default value of 10
+    page = ListRequestPage(0) # int |  (optional)
+    per_page = ListRequestPerPage(1) # int |  (optional)
 
     # example passing only required values which don't have defaults set
     # and optional values
@@ -258,8 +258,8 @@ with cybrid_api_bank.ApiClient(configuration) as api_client:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **customer_guid** | **str**| Comma separated customer identifier to list identity records for. | [optional]
- **page** | **int**|  | [optional] if omitted the server will use the default value of 0
- **per_page** | **int**|  | [optional] if omitted the server will use the default value of 10
+ **page** | **int**|  | [optional]
+ **per_page** | **int**|  | [optional]
 
 ### Return type
 
