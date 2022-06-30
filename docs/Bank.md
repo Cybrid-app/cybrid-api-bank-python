@@ -7,9 +7,9 @@ Name | Type | Description | Notes
 **guid** | **str** | Auto-generated unique identifier for the bank. | 
 **organization_guid** | **str** | The organization&#39;s identifier. | 
 **name** | **str** | The bank&#39;s name. | 
+**type** | **str** | The bank&#39;s type. | 
 **features** | **[str]** | The bank&#39;s enabled features. | 
 **created_at** | **datetime** | ISO8601 datetime the bank was created at. | 
-**type** | **str** | The bank&#39;s type. | defaults to "sandbox"
 **supported_fiat_assets** | **[str]** | The bank&#39;s list of supported fiat assets. | [optional] 
 **any string name** | **bool, date, datetime, dict, float, int, list, str, none_type** | any string name can be used but the value must be the correct type | [optional]
 
