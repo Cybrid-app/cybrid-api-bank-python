@@ -13,11 +13,11 @@ import sys
 import unittest
 
 import cybrid_api_bank
-from cybrid_api_bank.model.post_identity_record_attestation_details import PostIdentityRecordAttestationDetails
+from cybrid_api_bank.model.patch_bank import PatchBank
 
 
-class TestPostIdentityRecordAttestationDetails(unittest.TestCase):
-    """PostIdentityRecordAttestationDetails unit test stubs"""
+class TestPatchBank(unittest.TestCase):
+    """PatchBank unit test stubs"""
 
     def setUp(self):
         pass
@@ -25,10 +25,10 @@ class TestPostIdentityRecordAttestationDetails(unittest.TestCase):
     def tearDown(self):
         pass
 
-    def testPostIdentityRecordAttestationDetails(self):
-        """Test PostIdentityRecordAttestationDetails"""
+    def testPatchBank(self):
+        """Test PatchBank"""
         # FIXME: construct object with mandatory attributes with example values
-        # model = PostIdentityRecordAttestationDetails()  # noqa: E501
+        # model = PatchBank()  # noqa: E501
         pass
 
 

@@ -6,7 +6,7 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **name** | **str** | The bank&#39;s name. | 
 **type** | **str** | The bank&#39;s type. At present, only **sandbox** is supported. | 
-**supported_fiat_assets** | **[str]** | The bank&#39;s list of supported fiat assets. | 
+**supported_trading_symbols** | **[str]** | The bank&#39;s list of supported trading symbols. | 
 **features** | **[str]** | The bank&#39;s enabled features. At present, both **attestation_identity_records** and **backstopped_funding_source** must be set. | 
 **any string name** | **bool, date, datetime, dict, float, int, list, str, none_type** | any string name can be used but the value must be the correct type | [optional]
 
