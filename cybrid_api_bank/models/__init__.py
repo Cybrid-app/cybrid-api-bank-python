@@ -18,15 +18,7 @@ from cybrid_api_bank.model.bank import Bank
 from cybrid_api_bank.model.bank_list import BankList
 from cybrid_api_bank.model.customer import Customer
 from cybrid_api_bank.model.customer_list import CustomerList
-from cybrid_api_bank.model.cybrid_account import CybridAccount
 from cybrid_api_bank.model.error_response import ErrorResponse
-from cybrid_api_bank.model.exchange import Exchange
-from cybrid_api_bank.model.exchange_account import ExchangeAccount
-from cybrid_api_bank.model.exchange_list import ExchangeList
-from cybrid_api_bank.model.exchange_settlement import ExchangeSettlement
-from cybrid_api_bank.model.exchange_settlement_expected_payment import ExchangeSettlementExpectedPayment
-from cybrid_api_bank.model.exchange_settlement_obligation import ExchangeSettlementObligation
-from cybrid_api_bank.model.exchange_settlement_payment_order import ExchangeSettlementPaymentOrder
 from cybrid_api_bank.model.fee import Fee
 from cybrid_api_bank.model.identity_record import IdentityRecord
 from cybrid_api_bank.model.identity_record_list import IdentityRecordList
@@ -48,7 +40,6 @@ from cybrid_api_bank.model.quote_list import QuoteList
 from cybrid_api_bank.model.symbol_price import SymbolPrice
 from cybrid_api_bank.model.symbol_price_response import SymbolPriceResponse
 from cybrid_api_bank.model.symbols import Symbols
-from cybrid_api_bank.model.system_account import SystemAccount
 from cybrid_api_bank.model.trade import Trade
 from cybrid_api_bank.model.trade_list import TradeList
 from cybrid_api_bank.model.trading_configuration import TradingConfiguration
