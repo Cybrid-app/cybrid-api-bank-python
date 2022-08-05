@@ -5,6 +5,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **type** | **str** | The account type. | [optional] 
+**provider** | **str, none_type** | The account provider, if applicable. | [optional]  if omitted the server will use the default value of "compound"
 **guid** | **str** | Auto-generated unique identifier for the account. | [optional] 
 **created_at** | **datetime** | ISO8601 datetime the account was created at. | [optional] 
 **asset** | **str** | The asset code. | [optional] 
