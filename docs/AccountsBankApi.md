@@ -56,7 +56,7 @@ with cybrid_api_bank.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = accounts_bank_api.AccountsBankApi(api_client)
     post_account = PostAccount(
-        type="trading",
+        type="staking",
         provider="compound",
         customer_guid="customer_guid_example",
         asset="asset_example",
