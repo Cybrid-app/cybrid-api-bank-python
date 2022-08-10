@@ -9,26 +9,26 @@
 """
 
 
-import sys
 import unittest
 
 import cybrid_api_bank
-from cybrid_api_bank.model.post_quote import PostQuote
+from cybrid_api_bank.api.rewards_bank_api import RewardsBankApi  # noqa: E501
 
 
-class TestPostQuote(unittest.TestCase):
-    """PostQuote unit test stubs"""
+class TestRewardsBankApi(unittest.TestCase):
+    """RewardsBankApi unit test stubs"""
 
     def setUp(self):
-        pass
+        self.api = RewardsBankApi()  # noqa: E501
 
     def tearDown(self):
         pass
 
-    def testPostQuote(self):
-        """Test PostQuote"""
-        # FIXME: construct object with mandatory attributes with example values
-        # model = PostQuote()  # noqa: E501
+    def test_create_rewards(self):
+        """Test case for create_rewards
+
+        Create Reward  # noqa: E501
+        """
         pass
 
 

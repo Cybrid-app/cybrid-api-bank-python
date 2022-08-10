@@ -32,11 +32,13 @@ from cybrid_api_bank.model.post_fee import PostFee
 from cybrid_api_bank.model.post_identity_record import PostIdentityRecord
 from cybrid_api_bank.model.post_identity_record_attestation_details import PostIdentityRecordAttestationDetails
 from cybrid_api_bank.model.post_quote import PostQuote
+from cybrid_api_bank.model.post_reward import PostReward
 from cybrid_api_bank.model.post_trade import PostTrade
 from cybrid_api_bank.model.post_trading_configuration import PostTradingConfiguration
 from cybrid_api_bank.model.post_verification_key import PostVerificationKey
 from cybrid_api_bank.model.quote import Quote
 from cybrid_api_bank.model.quote_list import QuoteList
+from cybrid_api_bank.model.reward import Reward
 from cybrid_api_bank.model.symbol_price import SymbolPrice
 from cybrid_api_bank.model.symbol_price_response import SymbolPriceResponse
 from cybrid_api_bank.model.symbols import Symbols
