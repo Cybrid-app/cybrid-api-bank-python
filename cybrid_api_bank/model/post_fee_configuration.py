@@ -3,7 +3,7 @@
 
     # Welcome  Welcome to the Cybrid platform; enabling turnkey crypto banking services!  In these documents, you will find information on the operations provided by our platform, as well as details on how our REST API operates more generally.  Our complete set of APIs allows you to manage all your resources: your Organization, your banks and your identities. The complete set of APIs can be found on the following pages:  | API                                                            | Description                  | |----------------------------------------------------------------|------------------------------| | [Organization API](https://organization.demo.cybrid.app/api/schema/swagger-ui) | APIs to manage organizations | | [Bank API](https://bank.demo.cybrid.app/api/schema/swagger-ui)                 | APIs to manage banks         | | [Identities API](https://id.demo.cybrid.app/api/schema/swagger-ui)                     | APIs to manage identities    |  When you're ready, [request access](https://www.cybrid.xyz/access) to your Dashboard to view and administer your Organization. Once you've logged in, you can begin creating Banks, either for sandbox or production usage, and start enabling your customers to leverage DeFi and web3 with confidence.  If you have any questions, please contact [Support](mailto:support@cybrid.app) at any time so that we can help.  ## Authentication  The Cybrid Platform uses OAuth 2.0 Bearer Tokens to authenticate requests to the platform. Credentials to create Organization and Bank tokens can be generated via your Dashboard ([request access](https://www.cybrid.xyz/access)).  An Organization Token applies broadly to the whole Organization and all of its Banks, whereas, a Bank Token is specific to an individual Bank.  Both Organization and Bank tokens can be created using the OAuth Client Credential Grant flow. Each Organization and Bank has its own unique Client ID and Secret that allows for machine-to-machine authentication.  **Never share your Client ID or Secret publicly or in your source code repository**  Your Client ID and Secret can be exchanged for a time-limited Bearer Token by interacting with the Cybrid Identity Provider or through interacting with the **Authorize** button in this document:  ``` curl -X POST https://id.demo.cybrid.app/oauth/token -d '{     \"grant_type\": \"client_credentials\",     \"client_id\": \"<Your Client ID>\",     \"client_secret\": \"<Your Secret>\",     \"scope\": \"<Your requested scopes -- space separated>\"   }' -H \"Content-Type: application/json\" ```  ## Scopes  The Cybrid platform supports the use of scopes to control the level of access a token is limited to. Scopes do not grant access to resources; instead, they provide limits, in support of the least privilege principal.  The following scopes are available on the platform and can be requested when generating either an Organization or a Bank token. Generally speaking, the _Read_ scope is required to read and list resources, the _Write_ scope is required to update a resource and the _Execute_ scope is required to create a resource.  | Resource      | Read scope         | Write scope          | Execute scope     | Token Type         | |---------------|--------------------|----------------------|-------------------|--------------------| | Organizations | organizations:read | organizations:write  |                   | Organization/ Bank | | Banks         | banks:read         | banks:write          | banks:execute     | Organization/ Bank | | Customers     | customers:read     | customers:write      | customers:execute | Bank               | | Assets        | prices:read        |                      |                   | Bank               | | Accounts      | accounts:read      |                      | accounts:execute  | Bank               | | Prices        | prices:read        |                      |                   | Bank               | | Symbols       | prices:read        |                      |                   | Bank               | | Quotes        | quotes:read        |                      | quotes:execute    | Bank               | | Trades        | trades:read        |                      | trades:execute    | Bank               | | Rewards       | rewards:read       |                      | rewards:execute   | Bank               |  ## Organizations  An Organization is meant to model the organization partnering with Cybrid to use our platform.  An Organization does not directly interact with customers. Instead, an Organization has one or more banks, which encompass the financial service offerings of the platform.  ## Banks  A Bank is owned by an Organization and can be thought of as an environment or container for Customers and product offerings. An example of a Bank would be your customer facing banking website, or an internal staging environment for testing and integration.  An Organization can have multiple banks, in sandbox or production environments. A sandbox Bank will be backed by stubbed data and process flows. For instance, identity record and funding source processes will be simulated rather than performed.  ## Customers  Customers represent your banking users on the platform. At present, we offer support for Individuals as Customers.  Customers must be verified in our system before they can play any part on the platform. See the Identity Records section for more details on how a customer can be verified.  Customers must also have an account to be able to transact. See the Accounts APIs for more details on setting up accounts for the customer.   # noqa: E501
 
-    The version of the OpenAPI document: v0.35.4
+    The version of the OpenAPI document: v0.35.5
     Contact: support@cybrid.app
     Generated by: https://openapi-generator.tech
 """
@@ -31,11 +31,11 @@ from cybrid_api_bank.exceptions import ApiAttributeError
 
 
 def lazy_import():
-    from cybrid_api_bank.model.fee import Fee
-    globals()['Fee'] = Fee
+    from cybrid_api_bank.model.post_fee import PostFee
+    globals()['PostFee'] = PostFee
 
 
-class TradingConfiguration(ModelNormal):
+class PostFeeConfiguration(ModelNormal):
     """NOTE: This class is auto generated by OpenAPI Generator.
     Ref: https://openapi-generator.tech
 
@@ -60,17 +60,17 @@ class TradingConfiguration(ModelNormal):
     """
 
     allowed_values = {
+        ('product_type',): {
+            'TRADING': "trading",
+            'SAVINGS': "savings",
+        },
+        ('product_provider',): {
+            'None': None,
+            'COMPOUND': "compound",
+        },
     }
 
     validations = {
-        ('guid',): {
-            'max_length': 32,
-            'min_length': 32,
-        },
-        ('bank_guid',): {
-            'max_length': 32,
-            'min_length': 32,
-        },
         ('asset',): {
             'max_length': 8,
             'min_length': 1,
@@ -100,11 +100,10 @@ class TradingConfiguration(ModelNormal):
         """
         lazy_import()
         return {
-            'guid': (str,),  # noqa: E501
-            'bank_guid': (str, none_type,),  # noqa: E501
+            'product_type': (str,),  # noqa: E501
             'asset': (str,),  # noqa: E501
-            'created_at': (datetime,),  # noqa: E501
-            'fees': ([Fee],),  # noqa: E501
+            'fees': ([PostFee],),  # noqa: E501
+            'product_provider': (str, none_type,),  # noqa: E501
         }
 
     @cached_property
@@ -113,11 +112,10 @@ class TradingConfiguration(ModelNormal):
 
 
     attribute_map = {
-        'guid': 'guid',  # noqa: E501
-        'bank_guid': 'bank_guid',  # noqa: E501
+        'product_type': 'product_type',  # noqa: E501
         'asset': 'asset',  # noqa: E501
-        'created_at': 'created_at',  # noqa: E501
         'fees': 'fees',  # noqa: E501
+        'product_provider': 'product_provider',  # noqa: E501
     }
 
     read_only_vars = {
@@ -127,8 +125,13 @@ class TradingConfiguration(ModelNormal):
 
     @classmethod
     @convert_js_args_to_python_args
-    def _from_openapi_data(cls, *args, **kwargs):  # noqa: E501
-        """TradingConfiguration - a model defined in OpenAPI
+    def _from_openapi_data(cls, product_type, asset, fees, *args, **kwargs):  # noqa: E501
+        """PostFeeConfiguration - a model defined in OpenAPI
+
+        Args:
+            product_type (str): The type of product being configured.
+            asset (str): The asset code.
+            fees ([PostFee]): The fees associated with the configuration
 
         Keyword Args:
             _check_type (bool): if True, values for parameters in openapi_types
@@ -161,11 +164,7 @@ class TradingConfiguration(ModelNormal):
                                 Animal class but this time we won't travel
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
-            guid (str): Auto-generated unique identifier for the exchange.. [optional]  # noqa: E501
-            bank_guid (str, none_type): The bank identifier.. [optional]  # noqa: E501
-            asset (str): The asset code.. [optional]  # noqa: E501
-            created_at (datetime): ISO8601 datetime the bank was created at.. [optional]  # noqa: E501
-            fees ([Fee]): The fees associated with the configuration. [optional]  # noqa: E501
+            product_provider (str, none_type): The provider for the product being configured.. [optional] if omitted the server will use the default value of "compound"  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)
@@ -197,6 +196,9 @@ class TradingConfiguration(ModelNormal):
         self._configuration = _configuration
         self._visited_composed_classes = _visited_composed_classes + (self.__class__,)
 
+        self.product_type = product_type
+        self.asset = asset
+        self.fees = fees
         for var_name, var_value in kwargs.items():
             if var_name not in self.attribute_map and \
                         self._configuration is not None and \
@@ -217,8 +219,13 @@ class TradingConfiguration(ModelNormal):
     ])
 
     @convert_js_args_to_python_args
-    def __init__(self, *args, **kwargs):  # noqa: E501
-        """TradingConfiguration - a model defined in OpenAPI
+    def __init__(self, product_type, asset, fees, *args, **kwargs):  # noqa: E501
+        """PostFeeConfiguration - a model defined in OpenAPI
+
+        Args:
+            product_type (str): The type of product being configured.
+            asset (str): The asset code.
+            fees ([PostFee]): The fees associated with the configuration
 
         Keyword Args:
             _check_type (bool): if True, values for parameters in openapi_types
@@ -251,11 +258,7 @@ class TradingConfiguration(ModelNormal):
                                 Animal class but this time we won't travel
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
-            guid (str): Auto-generated unique identifier for the exchange.. [optional]  # noqa: E501
-            bank_guid (str, none_type): The bank identifier.. [optional]  # noqa: E501
-            asset (str): The asset code.. [optional]  # noqa: E501
-            created_at (datetime): ISO8601 datetime the bank was created at.. [optional]  # noqa: E501
-            fees ([Fee]): The fees associated with the configuration. [optional]  # noqa: E501
+            product_provider (str, none_type): The provider for the product being configured.. [optional] if omitted the server will use the default value of "compound"  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)
@@ -285,6 +288,9 @@ class TradingConfiguration(ModelNormal):
         self._configuration = _configuration
         self._visited_composed_classes = _visited_composed_classes + (self.__class__,)
 
+        self.product_type = product_type
+        self.asset = asset
+        self.fees = fees
         for var_name, var_value in kwargs.items():
             if var_name not in self.attribute_map and \
                         self._configuration is not None and \

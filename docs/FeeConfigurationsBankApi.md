@@ -1,20 +1,20 @@
-# cybrid_api_bank.TradingConfigurationsBankApi
+# cybrid_api_bank.FeeConfigurationsBankApi
 
 All URIs are relative to *https://bank.demo.cybrid.app*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**create_trading_configuration**](TradingConfigurationsBankApi.md#create_trading_configuration) | **POST** /api/trading_configurations | Create TradingConfiguration
-[**get_trading_configuration**](TradingConfigurationsBankApi.md#get_trading_configuration) | **GET** /api/trading_configurations/{trading_configuration_guid} | Get TradingConfiguration
-[**list_trading_configurations**](TradingConfigurationsBankApi.md#list_trading_configurations) | **GET** /api/trading_configurations | List trading configurations
+[**create_fee_configuration**](FeeConfigurationsBankApi.md#create_fee_configuration) | **POST** /api/fee_configurations | Create FeeConfiguration
+[**get_fee_configuration**](FeeConfigurationsBankApi.md#get_fee_configuration) | **GET** /api/fee_configurations/{fee_configuration_guid} | Get FeeConfiguration
+[**list_fee_configurations**](FeeConfigurationsBankApi.md#list_fee_configurations) | **GET** /api/fee_configurations | List fee configurations
 
 
-# **create_trading_configuration**
-> TradingConfiguration create_trading_configuration(post_trading_configuration)
+# **create_fee_configuration**
+> FeeConfiguration create_fee_configuration(post_fee_configuration)
 
-Create TradingConfiguration
+Create FeeConfiguration
 
-Creates a trading configuration.  Required scope: **banks:write**
+Creates a fee configuration.  Required scope: **banks:write**
 
 ### Example
 
@@ -24,10 +24,10 @@ Creates a trading configuration.  Required scope: **banks:write**
 ```python
 import time
 import cybrid_api_bank
-from cybrid_api_bank.api import trading_configurations_bank_api
+from cybrid_api_bank.api import fee_configurations_bank_api
 from cybrid_api_bank.model.error_response import ErrorResponse
-from cybrid_api_bank.model.post_trading_configuration import PostTradingConfiguration
-from cybrid_api_bank.model.trading_configuration import TradingConfiguration
+from cybrid_api_bank.model.post_fee_configuration import PostFeeConfiguration
+from cybrid_api_bank.model.fee_configuration import FeeConfiguration
 from pprint import pprint
 # Defining the host is optional and defaults to https://bank.demo.cybrid.app
 # See configuration.py for a list of all supported configuration parameters.
@@ -54,8 +54,9 @@ configuration.access_token = 'YOUR_ACCESS_TOKEN'
 # Enter a context with an instance of the API client
 with cybrid_api_bank.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = trading_configurations_bank_api.TradingConfigurationsBankApi(api_client)
-    post_trading_configuration = PostTradingConfiguration(
+    api_instance = fee_configurations_bank_api.FeeConfigurationsBankApi(api_client)
+    post_fee_configuration = PostFeeConfiguration(
+        product_type="trading",
         asset="asset_example",
         fees=[
             PostFee(
@@ -64,15 +65,16 @@ with cybrid_api_bank.ApiClient(configuration) as api_client:
                 fixed_fee=1,
             ),
         ],
-    ) # PostTradingConfiguration | 
+        product_provider="compound",
+    ) # PostFeeConfiguration | 
 
     # example passing only required values which don't have defaults set
     try:
-        # Create TradingConfiguration
-        api_response = api_instance.create_trading_configuration(post_trading_configuration)
+        # Create FeeConfiguration
+        api_response = api_instance.create_fee_configuration(post_fee_configuration)
         pprint(api_response)
     except cybrid_api_bank.ApiException as e:
-        print("Exception when calling TradingConfigurationsBankApi->create_trading_configuration: %s\n" % e)
+        print("Exception when calling FeeConfigurationsBankApi->create_fee_configuration: %s\n" % e)
 ```
 
 
@@ -80,11 +82,11 @@ with cybrid_api_bank.ApiClient(configuration) as api_client:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **post_trading_configuration** | [**PostTradingConfiguration**](PostTradingConfiguration.md)|  |
+ **post_fee_configuration** | [**PostFeeConfiguration**](PostFeeConfiguration.md)|  |
 
 ### Return type
 
-[**TradingConfiguration**](TradingConfiguration.md)
+[**FeeConfiguration**](FeeConfiguration.md)
 
 ### Authorization
 
@@ -100,19 +102,19 @@ Name | Type | Description  | Notes
 
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-**201** | trading configuration created |  -  |
+**201** | fee configuration created |  -  |
 **400** | Invalid requests - malformed authentication header |  -  |
 **401** | Unauthorized - Authentication failed,  |  -  |
 **403** | Invalid scope |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **get_trading_configuration**
-> TradingConfiguration get_trading_configuration(trading_configuration_guid)
+# **get_fee_configuration**
+> FeeConfiguration get_fee_configuration(fee_configuration_guid)
 
-Get TradingConfiguration
+Get FeeConfiguration
 
-Retrieves a trading configuration.  Required scope: **banks:read**
+Retrieves a fee configuration.  Required scope: **banks:read**
 
 ### Example
 
@@ -122,9 +124,9 @@ Retrieves a trading configuration.  Required scope: **banks:read**
 ```python
 import time
 import cybrid_api_bank
-from cybrid_api_bank.api import trading_configurations_bank_api
+from cybrid_api_bank.api import fee_configurations_bank_api
 from cybrid_api_bank.model.error_response import ErrorResponse
-from cybrid_api_bank.model.trading_configuration import TradingConfiguration
+from cybrid_api_bank.model.fee_configuration import FeeConfiguration
 from pprint import pprint
 # Defining the host is optional and defaults to https://bank.demo.cybrid.app
 # See configuration.py for a list of all supported configuration parameters.
@@ -151,16 +153,16 @@ configuration.access_token = 'YOUR_ACCESS_TOKEN'
 # Enter a context with an instance of the API client
 with cybrid_api_bank.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = trading_configurations_bank_api.TradingConfigurationsBankApi(api_client)
-    trading_configuration_guid = "trading_configuration_guid_example" # str | Identifier for the trading configuration.
+    api_instance = fee_configurations_bank_api.FeeConfigurationsBankApi(api_client)
+    fee_configuration_guid = "fee_configuration_guid_example" # str | Identifier for the fee configuration.
 
     # example passing only required values which don't have defaults set
     try:
-        # Get TradingConfiguration
-        api_response = api_instance.get_trading_configuration(trading_configuration_guid)
+        # Get FeeConfiguration
+        api_response = api_instance.get_fee_configuration(fee_configuration_guid)
         pprint(api_response)
     except cybrid_api_bank.ApiException as e:
-        print("Exception when calling TradingConfigurationsBankApi->get_trading_configuration: %s\n" % e)
+        print("Exception when calling FeeConfigurationsBankApi->get_fee_configuration: %s\n" % e)
 ```
 
 
@@ -168,11 +170,11 @@ with cybrid_api_bank.ApiClient(configuration) as api_client:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **trading_configuration_guid** | **str**| Identifier for the trading configuration. |
+ **fee_configuration_guid** | **str**| Identifier for the fee configuration. |
 
 ### Return type
 
-[**TradingConfiguration**](TradingConfiguration.md)
+[**FeeConfiguration**](FeeConfiguration.md)
 
 ### Authorization
 
@@ -188,19 +190,19 @@ Name | Type | Description  | Notes
 
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-**200** | trading configuration found |  -  |
+**200** | fee configuration found |  -  |
 **401** | Unauthorized - Authentication failed,  |  -  |
 **403** | Invalid scope |  -  |
-**404** | trading_configuration not found |  -  |
+**404** | fee_configuration not found |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **list_trading_configurations**
-> TradingConfigurationList list_trading_configurations()
+# **list_fee_configurations**
+> FeeConfigurationList list_fee_configurations()
 
-List trading configurations
+List fee configurations
 
-Retrieves a listing of trading configurations for a bank.  Required scope: **banks:read**
+Retrieves a listing of fee configurations for a bank.  Required scope: **banks:read**
 
 ### Example
 
@@ -210,9 +212,9 @@ Retrieves a listing of trading configurations for a bank.  Required scope: **ban
 ```python
 import time
 import cybrid_api_bank
-from cybrid_api_bank.api import trading_configurations_bank_api
-from cybrid_api_bank.model.trading_configuration_list import TradingConfigurationList
+from cybrid_api_bank.api import fee_configurations_bank_api
 from cybrid_api_bank.model.error_response import ErrorResponse
+from cybrid_api_bank.model.fee_configuration_list import FeeConfigurationList
 from pprint import pprint
 # Defining the host is optional and defaults to https://bank.demo.cybrid.app
 # See configuration.py for a list of all supported configuration parameters.
@@ -239,18 +241,18 @@ configuration.access_token = 'YOUR_ACCESS_TOKEN'
 # Enter a context with an instance of the API client
 with cybrid_api_bank.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = trading_configurations_bank_api.TradingConfigurationsBankApi(api_client)
+    api_instance = fee_configurations_bank_api.FeeConfigurationsBankApi(api_client)
     page = ListRequestPage(0) # int |  (optional)
     per_page = ListRequestPerPage(1) # int |  (optional)
 
     # example passing only required values which don't have defaults set
     # and optional values
     try:
-        # List trading configurations
-        api_response = api_instance.list_trading_configurations(page=page, per_page=per_page)
+        # List fee configurations
+        api_response = api_instance.list_fee_configurations(page=page, per_page=per_page)
         pprint(api_response)
     except cybrid_api_bank.ApiException as e:
-        print("Exception when calling TradingConfigurationsBankApi->list_trading_configurations: %s\n" % e)
+        print("Exception when calling FeeConfigurationsBankApi->list_fee_configurations: %s\n" % e)
 ```
 
 
@@ -263,7 +265,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**TradingConfigurationList**](TradingConfigurationList.md)
+[**FeeConfigurationList**](FeeConfigurationList.md)
 
 ### Authorization
 
@@ -279,7 +281,7 @@ Name | Type | Description  | Notes
 
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-**200** | get list of trading configurations |  -  |
+**200** | get list of fee configurations |  -  |
 **400** | Invalid requests - malformed authentication header |  -  |
 **401** | Unauthorized - Authentication failed,  |  -  |
 **403** | Invalid scope |  -  |

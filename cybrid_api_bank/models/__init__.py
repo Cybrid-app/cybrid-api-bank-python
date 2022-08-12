@@ -20,6 +20,8 @@ from cybrid_api_bank.model.customer import Customer
 from cybrid_api_bank.model.customer_list import CustomerList
 from cybrid_api_bank.model.error_response import ErrorResponse
 from cybrid_api_bank.model.fee import Fee
+from cybrid_api_bank.model.fee_configuration import FeeConfiguration
+from cybrid_api_bank.model.fee_configuration_list import FeeConfigurationList
 from cybrid_api_bank.model.identity_record import IdentityRecord
 from cybrid_api_bank.model.identity_record_list import IdentityRecordList
 from cybrid_api_bank.model.list_request_page import ListRequestPage
@@ -29,12 +31,12 @@ from cybrid_api_bank.model.post_account import PostAccount
 from cybrid_api_bank.model.post_bank import PostBank
 from cybrid_api_bank.model.post_customer import PostCustomer
 from cybrid_api_bank.model.post_fee import PostFee
+from cybrid_api_bank.model.post_fee_configuration import PostFeeConfiguration
 from cybrid_api_bank.model.post_identity_record import PostIdentityRecord
 from cybrid_api_bank.model.post_identity_record_attestation_details import PostIdentityRecordAttestationDetails
 from cybrid_api_bank.model.post_quote import PostQuote
 from cybrid_api_bank.model.post_reward import PostReward
 from cybrid_api_bank.model.post_trade import PostTrade
-from cybrid_api_bank.model.post_trading_configuration import PostTradingConfiguration
 from cybrid_api_bank.model.post_verification_key import PostVerificationKey
 from cybrid_api_bank.model.quote import Quote
 from cybrid_api_bank.model.quote_list import QuoteList
@@ -44,7 +46,5 @@ from cybrid_api_bank.model.symbol_price_response import SymbolPriceResponse
 from cybrid_api_bank.model.symbols import Symbols
 from cybrid_api_bank.model.trade import Trade
 from cybrid_api_bank.model.trade_list import TradeList
-from cybrid_api_bank.model.trading_configuration import TradingConfiguration
-from cybrid_api_bank.model.trading_configuration_list import TradingConfigurationList
 from cybrid_api_bank.model.verification_key import VerificationKey
 from cybrid_api_bank.model.verification_key_list import VerificationKeyList
