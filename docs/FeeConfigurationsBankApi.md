@@ -4,15 +4,15 @@ All URIs are relative to *https://bank.demo.cybrid.app*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**create_fee_configuration**](FeeConfigurationsBankApi.md#create_fee_configuration) | **POST** /api/fee_configurations | Create FeeConfiguration
-[**get_fee_configuration**](FeeConfigurationsBankApi.md#get_fee_configuration) | **GET** /api/fee_configurations/{fee_configuration_guid} | Get FeeConfiguration
-[**list_fee_configurations**](FeeConfigurationsBankApi.md#list_fee_configurations) | **GET** /api/fee_configurations | List fee configurations
+[**create_fee_configuration**](FeeConfigurationsBankApi.md#create_fee_configuration) | **POST** /api/fee_configurations | Create Fee Configuration
+[**get_fee_configuration**](FeeConfigurationsBankApi.md#get_fee_configuration) | **GET** /api/fee_configurations/{fee_configuration_guid} | Get Fee Configuration
+[**list_fee_configurations**](FeeConfigurationsBankApi.md#list_fee_configurations) | **GET** /api/fee_configurations | List Fee Configurations
 
 
 # **create_fee_configuration**
 > FeeConfiguration create_fee_configuration(post_fee_configuration)
 
-Create FeeConfiguration
+Create Fee Configuration
 
 Creates a fee configuration.  Required scope: **banks:write**
 
@@ -70,7 +70,7 @@ with cybrid_api_bank.ApiClient(configuration) as api_client:
 
     # example passing only required values which don't have defaults set
     try:
-        # Create FeeConfiguration
+        # Create Fee Configuration
         api_response = api_instance.create_fee_configuration(post_fee_configuration)
         pprint(api_response)
     except cybrid_api_bank.ApiException as e:
@@ -112,7 +112,7 @@ Name | Type | Description  | Notes
 # **get_fee_configuration**
 > FeeConfiguration get_fee_configuration(fee_configuration_guid)
 
-Get FeeConfiguration
+Get Fee Configuration
 
 Retrieves a fee configuration.  Required scope: **banks:read**
 
@@ -158,7 +158,7 @@ with cybrid_api_bank.ApiClient(configuration) as api_client:
 
     # example passing only required values which don't have defaults set
     try:
-        # Get FeeConfiguration
+        # Get Fee Configuration
         api_response = api_instance.get_fee_configuration(fee_configuration_guid)
         pprint(api_response)
     except cybrid_api_bank.ApiException as e:
@@ -200,7 +200,7 @@ Name | Type | Description  | Notes
 # **list_fee_configurations**
 > FeeConfigurationList list_fee_configurations()
 
-List fee configurations
+List Fee Configurations
 
 Retrieves a listing of fee configurations for a bank.  Required scope: **banks:read**
 
@@ -248,7 +248,7 @@ with cybrid_api_bank.ApiClient(configuration) as api_client:
     # example passing only required values which don't have defaults set
     # and optional values
     try:
-        # List fee configurations
+        # List Fee Configurations
         api_response = api_instance.list_fee_configurations(page=page, per_page=per_page)
         pprint(api_response)
     except cybrid_api_bank.ApiException as e:
