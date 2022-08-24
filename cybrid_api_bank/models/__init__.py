@@ -41,6 +41,7 @@ from cybrid_api_bank.model.post_verification_key import PostVerificationKey
 from cybrid_api_bank.model.quote import Quote
 from cybrid_api_bank.model.quote_list import QuoteList
 from cybrid_api_bank.model.reward import Reward
+from cybrid_api_bank.model.reward_list import RewardList
 from cybrid_api_bank.model.symbol_price import SymbolPrice
 from cybrid_api_bank.model.symbol_price_response import SymbolPriceResponse
 from cybrid_api_bank.model.symbols import Symbols

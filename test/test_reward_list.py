@@ -13,13 +13,13 @@ import sys
 import unittest
 
 import cybrid_api_bank
-from cybrid_api_bank.model.symbol_price import SymbolPrice
-globals()['SymbolPrice'] = SymbolPrice
-from cybrid_api_bank.model.symbol_price_response import SymbolPriceResponse
+from cybrid_api_bank.model.reward import Reward
+globals()['Reward'] = Reward
+from cybrid_api_bank.model.reward_list import RewardList
 
 
-class TestSymbolPriceResponse(unittest.TestCase):
-    """SymbolPriceResponse unit test stubs"""
+class TestRewardList(unittest.TestCase):
+    """RewardList unit test stubs"""
 
     def setUp(self):
         pass
@@ -27,10 +27,10 @@ class TestSymbolPriceResponse(unittest.TestCase):
     def tearDown(self):
         pass
 
-    def testSymbolPriceResponse(self):
-        """Test SymbolPriceResponse"""
+    def testRewardList(self):
+        """Test RewardList"""
         # FIXME: construct object with mandatory attributes with example values
-        # model = SymbolPriceResponse()  # noqa: E501
+        # model = RewardList()  # noqa: E501
         pass
 
 
