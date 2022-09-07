@@ -59,11 +59,9 @@ with cybrid_api_bank.ApiClient(configuration) as api_client:
         product_type="trading",
         customer_guid="customer_guid_example",
         symbol="symbol_example",
-        asset="asset_example",
         side="buy",
         receive_amount=1,
         deliver_amount=1,
-        product_provider="compound",
     ) # PostQuote | 
 
     # example passing only required values which don't have defaults set

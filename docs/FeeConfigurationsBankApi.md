@@ -65,7 +65,6 @@ with cybrid_api_bank.ApiClient(configuration) as api_client:
                 fixed_fee=1,
             ),
         ],
-        product_provider="compound",
     ) # PostFeeConfiguration | 
 
     # example passing only required values which don't have defaults set

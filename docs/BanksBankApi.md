@@ -62,11 +62,6 @@ with cybrid_api_bank.ApiClient(configuration) as api_client:
         supported_trading_symbols=[
             "supported_trading_symbols_example",
         ],
-        supported_savings_configuration={
-            "key": [
-                "key_example",
-            ],
-        },
         features=[
             "attestation_identity_records",
         ],
@@ -348,11 +343,6 @@ with cybrid_api_bank.ApiClient(configuration) as api_client:
         supported_trading_symbols=[
             "supported_trading_symbols_example",
         ],
-        supported_savings_configuration={
-            "key": [
-                "key_example",
-            ],
-        },
     ) # PatchBank | 
 
     # example passing only required values which don't have defaults set

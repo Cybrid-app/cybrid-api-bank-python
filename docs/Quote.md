@@ -5,17 +5,15 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **guid** | **str** | Auto-generated unique identifier for the quote. | [optional] 
-**product_type** | **str** | The type of product the quote is for. | [optional] 
+**product_type** | **str** | The type of product the quote is for. | [optional]  if omitted the server will use the default value of "trading"
 **customer_guid** | **str** | The unique identifier for the customer. | [optional] 
 **symbol** | **str, none_type** | Symbol the quote was requested for. Format is \&quot;asset-counter_asset\&quot; in uppercase. Populated for trade quotes. | [optional] 
-**asset** | **str, none_type** | The asset code the quote was requested for. Populated for savings quotes. | [optional] 
-**side** | **str** | The direction of the quote: either &#39;buy&#39; or &#39;sell&#39; for trade quotes; &#39;deposit&#39; or &#39;withdrawal&#39; for savings quotes. | [optional] 
-**receive_amount** | **int** | The amount to be received in base units of the currency: currency is \&quot;asset\&quot; for buy and \&quot;counter_asset\&quot; for sell for trade quotes and currency is always \&quot;asset\&quot; for savings quotes. | [optional] 
-**deliver_amount** | **int** | The amount to be delivered in base units of the currency: currency is \&quot;counter_asset\&quot; for buy and \&quot;asset\&quot; for sell for trade quotes and currency is always \&quot;asset\&quot; for savings quotes. | [optional] 
-**fee** | **int** | The fee associated with the trade. Denominated in \&quot;counter_asset\&quot; base units for trade quotes and \&quot;asset\&quot; for savings quotes. | [optional] 
+**side** | **str** | The direction of the quote: either &#39;buy&#39; or &#39;sell&#39; for trade quotes. | [optional] 
+**receive_amount** | **int** | The amount to be received in base units of the currency: currency is \&quot;asset\&quot; for buy and \&quot;counter_asset\&quot; for sell for trade quotes. | [optional] 
+**deliver_amount** | **int** | The amount to be delivered in base units of the currency: currency is \&quot;counter_asset\&quot; for buy and \&quot;asset\&quot; for sell for trade quotes. | [optional] 
+**fee** | **int** | The fee associated with the trade. Denominated in \&quot;counter_asset\&quot; base units for trade quotes. | [optional] 
 **issued_at** | **datetime** | ISO8601 datetime the quote was created at. | [optional] 
 **expires_at** | **datetime, none_type** | ISO8601 datetime the quote is expiring at. Populated for trading quotes. | [optional] 
-**product_provider** | **str, none_type** | The provider for the product being quoted. Populated for savings quotes. | [optional]  if omitted the server will use the default value of "compound"
 **any string name** | **bool, date, datetime, dict, float, int, list, str, none_type** | any string name can be used but the value must be the correct type | [optional]
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
