@@ -12,7 +12,7 @@ Method | HTTP request | Description
 
 Get Symbols list
 
-Retrieves a listing of symbols.  Required scope: **prices:read**
+Retrieves a listing of symbols.
 
 ### Example
 
@@ -87,7 +87,6 @@ This endpoint does not need any parameter.
 **200** | get list of symbols |  -  |
 **400** | Invalid requests - Malformed Authentication Header |  -  |
 **401** | Unauthorized - Authentication failed,  |  -  |
-**403** | Invalid scope |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
