@@ -8,6 +8,7 @@ Name | Type | Description | Notes
 **bank_guid** | **str** | The banks&#39;s identifier. | [optional] 
 **type** | **str** | The verification key&#39;s type. | [optional]  if omitted the server will use the default value of "attestation"
 **state** | **str** | The verification key&#39;s state. | [optional] 
+**failure_code** | **str, none_type** | The verification key&#39;s failure code (if any). | [optional] 
 **algorithm** | **str** | The verification key&#39;s algorithm. | [optional]  if omitted the server will use the default value of "RS512"
 **fingerprint** | **str** | The verification key&#39;s cryptographic fingerprint. | [optional] 
 **created_at** | **datetime** | ISO8601 datetime the verification key was created at. | [optional] 
