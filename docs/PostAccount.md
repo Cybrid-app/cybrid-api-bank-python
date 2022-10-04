@@ -4,9 +4,9 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
+**type** | **str** | The account type. | 
 **asset** | **str** | The asset code. | 
 **name** | **str** | The name of the account. | 
-**type** | **str** | The account type. | defaults to "trading"
 **customer_guid** | **str** | The customer identifier associated with the account. | [optional] 
 **any string name** | **bool, date, datetime, dict, float, int, list, str, none_type** | any string name can be used but the value must be the correct type | [optional]
 

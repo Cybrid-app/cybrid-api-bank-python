@@ -65,6 +65,9 @@ with cybrid_api_bank.ApiClient(configuration) as api_client:
         features=[
             "attestation_identity_records",
         ],
+        supported_fiat_account_assets=[
+            "supported_fiat_account_assets_example",
+        ],
     ) # PostBank | 
 
     # example passing only required values which don't have defaults set
@@ -342,6 +345,9 @@ with cybrid_api_bank.ApiClient(configuration) as api_client:
         name="name_example",
         supported_trading_symbols=[
             "supported_trading_symbols_example",
+        ],
+        supported_fiat_account_assets=[
+            "supported_fiat_account_assets_example",
         ],
     ) # PatchBank | 
 
