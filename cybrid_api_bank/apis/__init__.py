@@ -18,6 +18,7 @@ from cybrid_api_bank.api.accounts_bank_api import AccountsBankApi
 from cybrid_api_bank.api.assets_bank_api import AssetsBankApi
 from cybrid_api_bank.api.banks_bank_api import BanksBankApi
 from cybrid_api_bank.api.customers_bank_api import CustomersBankApi
+from cybrid_api_bank.api.external_bank_accounts_bank_api import ExternalBankAccountsBankApi
 from cybrid_api_bank.api.fee_configurations_bank_api import FeeConfigurationsBankApi
 from cybrid_api_bank.api.identity_records_bank_api import IdentityRecordsBankApi
 from cybrid_api_bank.api.prices_bank_api import PricesBankApi
