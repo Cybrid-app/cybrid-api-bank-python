@@ -26,6 +26,8 @@ from cybrid_api_bank.model.fee_configuration import FeeConfiguration
 from cybrid_api_bank.model.fee_configuration_list import FeeConfigurationList
 from cybrid_api_bank.model.identity_record import IdentityRecord
 from cybrid_api_bank.model.identity_record_list import IdentityRecordList
+from cybrid_api_bank.model.identity_verification import IdentityVerification
+from cybrid_api_bank.model.identity_verification_list import IdentityVerificationList
 from cybrid_api_bank.model.list_request_page import ListRequestPage
 from cybrid_api_bank.model.list_request_per_page import ListRequestPerPage
 from cybrid_api_bank.model.patch_bank import PatchBank
@@ -37,6 +39,7 @@ from cybrid_api_bank.model.post_fee import PostFee
 from cybrid_api_bank.model.post_fee_configuration import PostFeeConfiguration
 from cybrid_api_bank.model.post_identity_record import PostIdentityRecord
 from cybrid_api_bank.model.post_identity_record_attestation_details import PostIdentityRecordAttestationDetails
+from cybrid_api_bank.model.post_identity_verification import PostIdentityVerification
 from cybrid_api_bank.model.post_quote import PostQuote
 from cybrid_api_bank.model.post_reward import PostReward
 from cybrid_api_bank.model.post_trade import PostTrade
