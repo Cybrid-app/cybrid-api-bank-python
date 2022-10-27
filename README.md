@@ -86,30 +86,32 @@ The following scopes are available on the platform and can be requested when gen
 | Trades                 | trades:read (Organization, Bank, Customer)                 |                                    | trades:execute (Bank)                           |
 | Rewards                | rewards:read (Bank, Customer)                              |                                    | rewards:execute (Bank)                          |
 | External bank accounts | external_bank_accounts:read (Organization, Bank, Customer) |                                    | external_bank_accounts:execute (Bank, Customer) |
+| Workflows              | workflows:read (Organization, Bank, Customer)              |                                    | workflows:execute (Bank, Customer)              |
 
 ## Available Endpoints
 
 The available APIs for the [Identity](https://id.demo.cybrid.app/api/schema/swagger-ui), [Organization](https://organization.demo.cybrid.app/api/schema/swagger-ui) and [Bank](https://bank.demo.cybrid.app/api/schema/swagger-ui) API services are listed below:
 
-| API Service  | Model               | API Endpoint Path              | Description                                                                                       |
-|--------------|---------------------|--------------------------------|---------------------------------------------------------------------------------------------------|
-| Identity     | Bank                | /api/bank_applications         | Create and list banks                                                                             |
-| Identity     | Organization        | /api/organization_applications | Create and list organizations                                                                     |
-| Identity     | CustomerToken       | /api/customer_tokens           | Create customer JWT access tokens                                                                 |
-| Organization | Organization        | /api/organizations             | APIs to retrieve and update organization name                                                     |
-| Bank         | Asset               | /api/assets                    | Get a list of assets supported by the platform (ex: BTC, ETH)                                     |
-| Bank         | VerificationKey     | /api/bank_verification_keys    | Create, list and retrive verification keys, used for signing identities                           |
-| Bank         | Banks               | /api/banks                     | Create, update and list banks, the parent to customers, accounts, etc                             |
-| Bank         | FeeConfiguration    | /api/fee_configurations        | Create and list bank fees (spread or fixed)                                                       |
-| Bank         | Customers           | /api/customers                 | Create and list customers                                                                         |
-| Bank         | IdentityRecord      | /api/identity_records          | Create and list identity records, which are attached to customers for KYC                         |
-| Bank         | Accounts            | /api/accounts                  | Create and list accounts, which hold a specific asset for a customers                             |
-| Bank         | Symbols             | /api/symbols                   | Get a list of symbols supported for trade (ex: BTC-USD)                                           |
-| Bank         | Prices              | /api/prices                    | Get the current prices for assets on the platform                                                 |
-| Bank         | Quotes              | /api/quotes                    | Create and list quotes, which are required to execute trades                                      |
-| Bank         | Trades              | /api/trades                    | Create and list trades, which buy or sell cryptocurrency                                          |
-| Bank         | Rewards             | /api/rewards                   | Create a new reward (automates quote/trade for simplicity)                                        |
-| Bank         | ExternalBankAccount | /api/external_bank_account     | Create, get and list external bank accounts, which connect customer bank accounts to the platform |
+| API Service  | Model                | API Endpoint Path              | Description                                                                                       |
+|--------------|----------------------|--------------------------------|---------------------------------------------------------------------------------------------------|
+| Identity     | Bank                 | /api/bank_applications         | Create and list banks                                                                             |
+| Identity     | Organization         | /api/organization_applications | Create and list organizations                                                                     |
+| Identity     | CustomerToken        | /api/customer_tokens           | Create customer JWT access tokens                                                                 |
+| Organization | Organization         | /api/organizations             | APIs to retrieve and update organization name                                                     |
+| Bank         | Asset                | /api/assets                    | Get a list of assets supported by the platform (ex: BTC, ETH)                                     |
+| Bank         | VerificationKey      | /api/bank_verification_keys    | Create, list and retrive verification keys, used for signing identities                           |
+| Bank         | Banks                | /api/banks                     | Create, update and list banks, the parent to customers, accounts, etc                             |
+| Bank         | FeeConfiguration     | /api/fee_configurations        | Create and list bank fees (spread or fixed)                                                       |
+| Bank         | Customers            | /api/customers                 | Create and list customers                                                                         |
+| Bank         | IdentityRecord       | /api/identity_records          | Create and list identity records, which are attached to customers for KYC                         |
+| Bank         | Accounts             | /api/accounts                  | Create and list accounts, which hold a specific asset for a customers                             |
+| Bank         | Symbols              | /api/symbols                   | Get a list of symbols supported for trade (ex: BTC-USD)                                           |
+| Bank         | Prices               | /api/prices                    | Get the current prices for assets on the platform                                                 |
+| Bank         | Quotes               | /api/quotes                    | Create and list quotes, which are required to execute trades                                      |
+| Bank         | Trades               | /api/trades                    | Create and list trades, which buy or sell cryptocurrency                                          |
+| Bank         | Rewards              | /api/rewards                   | Create a new reward (automates quote/trade for simplicity)                                        |
+| Bank         | ExternalBankAccounts | /api/external_bank_accounts    | Create, get and list external bank accounts, which connect customer bank accounts to the platform |
+| Bank         | Workflows            | /api/workflows                 | Create, get and list workflows                                                                    |
 
 ## Understanding Object Models & Endpoints
 
@@ -136,7 +138,7 @@ An `Organization` can have multiple `banks`, in either sandbox or production env
 
 This Python package is automatically generated by the [OpenAPI Generator](https://openapi-generator.tech) project:
 
-- API version: v0.51.5
+- API version: v0.51.6
 - Package version: 1.0.0
 - Build package: org.openapitools.codegen.languages.PythonClientCodegen
 
@@ -272,6 +274,9 @@ Class | Method | HTTP request | Description
 *VerificationKeysBankApi* | [**create_verification_key**](docs/VerificationKeysBankApi.md#create_verification_key) | **POST** /api/bank_verification_keys | Create VerificationKey
 *VerificationKeysBankApi* | [**get_verification_key**](docs/VerificationKeysBankApi.md#get_verification_key) | **GET** /api/bank_verification_keys/{verification_key_guid} | Get VerificationKey
 *VerificationKeysBankApi* | [**list_verification_keys**](docs/VerificationKeysBankApi.md#list_verification_keys) | **GET** /api/bank_verification_keys | Get Verification Keys list
+*WorkflowsBankApi* | [**create_workflow**](docs/WorkflowsBankApi.md#create_workflow) | **POST** /api/workflows | Create Workflow
+*WorkflowsBankApi* | [**get_workflow**](docs/WorkflowsBankApi.md#get_workflow) | **GET** /api/workflows/{workflow_guid} | Get Workflow
+*WorkflowsBankApi* | [**list_workflows**](docs/WorkflowsBankApi.md#list_workflows) | **GET** /api/workflows | Get workflows list
 
 
 ## Documentation For Models
@@ -311,6 +316,7 @@ Class | Method | HTTP request | Description
  - [PostReward](docs/PostReward.md)
  - [PostTrade](docs/PostTrade.md)
  - [PostVerificationKey](docs/PostVerificationKey.md)
+ - [PostWorkflow](docs/PostWorkflow.md)
  - [Quote](docs/Quote.md)
  - [QuoteList](docs/QuoteList.md)
  - [Reward](docs/Reward.md)
@@ -322,6 +328,10 @@ Class | Method | HTTP request | Description
  - [TradeList](docs/TradeList.md)
  - [VerificationKey](docs/VerificationKey.md)
  - [VerificationKeyList](docs/VerificationKeyList.md)
+ - [Workflow](docs/Workflow.md)
+ - [WorkflowWithDetails](docs/WorkflowWithDetails.md)
+ - [WorkflowWithDetailsAllOf](docs/WorkflowWithDetailsAllOf.md)
+ - [WorkflowsList](docs/WorkflowsList.md)
 
 
 ## Documentation For Authorization
@@ -354,6 +364,8 @@ Class | Method | HTTP request | Description
  - **rewards:read**: rewards read
  - **external_bank_accounts:read**: external_bank_accounts read
  - **external_bank_accounts:execute**: external_bank_accounts execute
+ - **workflows:read**: workflows read
+ - **workflows:execute**: workflows execute
 
 
 ## Author
