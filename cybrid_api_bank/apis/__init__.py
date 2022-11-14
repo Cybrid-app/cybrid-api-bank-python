@@ -27,5 +27,6 @@ from cybrid_api_bank.api.quotes_bank_api import QuotesBankApi
 from cybrid_api_bank.api.rewards_bank_api import RewardsBankApi
 from cybrid_api_bank.api.symbols_bank_api import SymbolsBankApi
 from cybrid_api_bank.api.trades_bank_api import TradesBankApi
+from cybrid_api_bank.api.transfers_bank_api import TransfersBankApi
 from cybrid_api_bank.api.verification_keys_bank_api import VerificationKeysBankApi
 from cybrid_api_bank.api.workflows_bank_api import WorkflowsBankApi

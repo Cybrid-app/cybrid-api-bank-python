@@ -1,0 +1,294 @@
+# cybrid_api_bank.TransfersBankApi
+
+All URIs are relative to *https://bank.demo.cybrid.app*
+
+Method | HTTP request | Description
+------------- | ------------- | -------------
+[**create_transfer**](TransfersBankApi.md#create_transfer) | **POST** /api/transfers | Create Transfer
+[**get_transfer**](TransfersBankApi.md#get_transfer) | **GET** /api/transfers/{transfer_guid} | Get Transfer
+[**list_transfers**](TransfersBankApi.md#list_transfers) | **GET** /api/transfers | Get transfers list
+
+
+# **create_transfer**
+> Transfer create_transfer(post_transfer)
+
+Create Transfer
+
+Creates a transfer.  Required scope: **transfers:execute**
+
+### Example
+
+* Bearer (JWT) Authentication (BearerAuth):
+* OAuth Authentication (oauth2):
+
+```python
+import time
+import cybrid_api_bank
+from cybrid_api_bank.api import transfers_bank_api
+from cybrid_api_bank.model.error_response import ErrorResponse
+from cybrid_api_bank.model.post_transfer import PostTransfer
+from cybrid_api_bank.model.transfer import Transfer
+from pprint import pprint
+# Defining the host is optional and defaults to https://bank.demo.cybrid.app
+# See configuration.py for a list of all supported configuration parameters.
+configuration = cybrid_api_bank.Configuration(
+    host = "https://bank.demo.cybrid.app"
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
+# Configure Bearer authorization (JWT): BearerAuth
+configuration = cybrid_api_bank.Configuration(
+    access_token = 'YOUR_BEARER_TOKEN'
+)
+
+# Configure OAuth2 access token for authorization: oauth2
+configuration = cybrid_api_bank.Configuration(
+    host = "https://bank.demo.cybrid.app"
+)
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
+
+# Enter a context with an instance of the API client
+with cybrid_api_bank.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = transfers_bank_api.TransfersBankApi(api_client)
+    post_transfer = PostTransfer(
+        quote_guid="quote_guid_example",
+        transfer_type="funding",
+        external_bank_account_guid="external_bank_account_guid_example",
+        expected_error="pending",
+    ) # PostTransfer | 
+
+    # example passing only required values which don't have defaults set
+    try:
+        # Create Transfer
+        api_response = api_instance.create_transfer(post_transfer)
+        pprint(api_response)
+    except cybrid_api_bank.ApiException as e:
+        print("Exception when calling TransfersBankApi->create_transfer: %s\n" % e)
+```
+
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **post_transfer** | [**PostTransfer**](PostTransfer.md)|  |
+
+### Return type
+
+[**Transfer**](Transfer.md)
+
+### Authorization
+
+[BearerAuth](../README.md#BearerAuth), [oauth2](../README.md#oauth2)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+
+### HTTP response details
+
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**201** | Transfer created |  -  |
+**400** | Invalid requests - malformed authentication header |  -  |
+**401** | Unauthorized - Authentication failed,  |  -  |
+**403** | Invalid scope |  -  |
+**409** | Data already exists |  -  |
+**422** | Unable to process request |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **get_transfer**
+> Transfer get_transfer(transfer_guid)
+
+Get Transfer
+
+Retrieves a transfer.  Required scope: **transfers:read**
+
+### Example
+
+* Bearer (JWT) Authentication (BearerAuth):
+* OAuth Authentication (oauth2):
+
+```python
+import time
+import cybrid_api_bank
+from cybrid_api_bank.api import transfers_bank_api
+from cybrid_api_bank.model.error_response import ErrorResponse
+from cybrid_api_bank.model.transfer import Transfer
+from pprint import pprint
+# Defining the host is optional and defaults to https://bank.demo.cybrid.app
+# See configuration.py for a list of all supported configuration parameters.
+configuration = cybrid_api_bank.Configuration(
+    host = "https://bank.demo.cybrid.app"
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
+# Configure Bearer authorization (JWT): BearerAuth
+configuration = cybrid_api_bank.Configuration(
+    access_token = 'YOUR_BEARER_TOKEN'
+)
+
+# Configure OAuth2 access token for authorization: oauth2
+configuration = cybrid_api_bank.Configuration(
+    host = "https://bank.demo.cybrid.app"
+)
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
+
+# Enter a context with an instance of the API client
+with cybrid_api_bank.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = transfers_bank_api.TransfersBankApi(api_client)
+    transfer_guid = "transfer_guid_example" # str | Identifier for the transfer.
+
+    # example passing only required values which don't have defaults set
+    try:
+        # Get Transfer
+        api_response = api_instance.get_transfer(transfer_guid)
+        pprint(api_response)
+    except cybrid_api_bank.ApiException as e:
+        print("Exception when calling TransfersBankApi->get_transfer: %s\n" % e)
+```
+
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **transfer_guid** | **str**| Identifier for the transfer. |
+
+### Return type
+
+[**Transfer**](Transfer.md)
+
+### Authorization
+
+[BearerAuth](../README.md#BearerAuth), [oauth2](../README.md#oauth2)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+
+### HTTP response details
+
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** | transfer found |  -  |
+**401** | Unauthorized - Authentication failed,  |  -  |
+**403** | Invalid scope |  -  |
+**404** | transfer not found |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **list_transfers**
+> TransferList list_transfers()
+
+Get transfers list
+
+Retrieves a listing of transfers.  Required scope: **transfers:read**
+
+### Example
+
+* Bearer (JWT) Authentication (BearerAuth):
+* OAuth Authentication (oauth2):
+
+```python
+import time
+import cybrid_api_bank
+from cybrid_api_bank.api import transfers_bank_api
+from cybrid_api_bank.model.transfer_list import TransferList
+from cybrid_api_bank.model.error_response import ErrorResponse
+from pprint import pprint
+# Defining the host is optional and defaults to https://bank.demo.cybrid.app
+# See configuration.py for a list of all supported configuration parameters.
+configuration = cybrid_api_bank.Configuration(
+    host = "https://bank.demo.cybrid.app"
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
+# Configure Bearer authorization (JWT): BearerAuth
+configuration = cybrid_api_bank.Configuration(
+    access_token = 'YOUR_BEARER_TOKEN'
+)
+
+# Configure OAuth2 access token for authorization: oauth2
+configuration = cybrid_api_bank.Configuration(
+    host = "https://bank.demo.cybrid.app"
+)
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
+
+# Enter a context with an instance of the API client
+with cybrid_api_bank.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = transfers_bank_api.TransfersBankApi(api_client)
+    page = ListRequestPage(0) # int | The page index to retrieve. (optional)
+    per_page = ListRequestPerPage(1) # int | The number of entities per page to return. (optional)
+    guid = "guid_example" # str | Comma separated trade_guids to list transfers for. (optional)
+    bank_guid = "bank_guid_example" # str | Comma separated bank_guids to list transfers for. (optional)
+    customer_guid = "customer_guid_example" # str | Comma separated customer_guids to list transfers for. (optional)
+    account_guid = "account_guid_example" # str | Comma separated account_guids to list transfers for. (optional)
+
+    # example passing only required values which don't have defaults set
+    # and optional values
+    try:
+        # Get transfers list
+        api_response = api_instance.list_transfers(page=page, per_page=per_page, guid=guid, bank_guid=bank_guid, customer_guid=customer_guid, account_guid=account_guid)
+        pprint(api_response)
+    except cybrid_api_bank.ApiException as e:
+        print("Exception when calling TransfersBankApi->list_transfers: %s\n" % e)
+```
+
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **page** | **int**| The page index to retrieve. | [optional]
+ **per_page** | **int**| The number of entities per page to return. | [optional]
+ **guid** | **str**| Comma separated trade_guids to list transfers for. | [optional]
+ **bank_guid** | **str**| Comma separated bank_guids to list transfers for. | [optional]
+ **customer_guid** | **str**| Comma separated customer_guids to list transfers for. | [optional]
+ **account_guid** | **str**| Comma separated account_guids to list transfers for. | [optional]
+
+### Return type
+
+[**TransferList**](TransferList.md)
+
+### Authorization
+
+[BearerAuth](../README.md#BearerAuth), [oauth2](../README.md#oauth2)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+
+### HTTP response details
+
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** | get list of transfers |  -  |
+**400** | Invalid requests - malformed authentication header |  -  |
+**401** | Unauthorized - Authentication failed,  |  -  |
+**403** | Invalid scope |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+

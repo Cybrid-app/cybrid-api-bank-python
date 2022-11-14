@@ -43,6 +43,7 @@ from cybrid_api_bank.model.post_identity_verification import PostIdentityVerific
 from cybrid_api_bank.model.post_quote import PostQuote
 from cybrid_api_bank.model.post_reward import PostReward
 from cybrid_api_bank.model.post_trade import PostTrade
+from cybrid_api_bank.model.post_transfer import PostTransfer
 from cybrid_api_bank.model.post_verification_key import PostVerificationKey
 from cybrid_api_bank.model.post_workflow import PostWorkflow
 from cybrid_api_bank.model.quote import Quote
@@ -54,6 +55,8 @@ from cybrid_api_bank.model.symbol_price_response import SymbolPriceResponse
 from cybrid_api_bank.model.symbols import Symbols
 from cybrid_api_bank.model.trade import Trade
 from cybrid_api_bank.model.trade_list import TradeList
+from cybrid_api_bank.model.transfer import Transfer
+from cybrid_api_bank.model.transfer_list import TransferList
 from cybrid_api_bank.model.verification_key import VerificationKey
 from cybrid_api_bank.model.verification_key_list import VerificationKeyList
 from cybrid_api_bank.model.workflow import Workflow
