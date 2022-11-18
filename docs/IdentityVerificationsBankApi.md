@@ -106,7 +106,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_identity_verification**
-> IdentityVerification get_identity_verification(identity_verification_guid)
+> IdentityVerificationWithDetails get_identity_verification(identity_verification_guid)
 
 Get Identity Verification
 
@@ -122,7 +122,7 @@ import time
 import cybrid_api_bank
 from cybrid_api_bank.api import identity_verifications_bank_api
 from cybrid_api_bank.model.error_response import ErrorResponse
-from cybrid_api_bank.model.identity_verification import IdentityVerification
+from cybrid_api_bank.model.identity_verification_with_details import IdentityVerificationWithDetails
 from pprint import pprint
 # Defining the host is optional and defaults to https://bank.demo.cybrid.app
 # See configuration.py for a list of all supported configuration parameters.
@@ -170,7 +170,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**IdentityVerification**](IdentityVerification.md)
+[**IdentityVerificationWithDetails**](IdentityVerificationWithDetails.md)
 
 ### Authorization
 
