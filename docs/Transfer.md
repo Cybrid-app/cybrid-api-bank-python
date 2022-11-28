@@ -9,7 +9,7 @@ Name | Type | Description | Notes
 **customer_guid** | **str** | The associated customer&#39;s identifier. | [optional] 
 **quote_guid** | **str** | The associated quote&#39;s identifier. | [optional] 
 **asset** | **str** | The asset the transfer is related to, e.g., USD. | [optional] 
-**side** | **str** | The direction of the quote: either &#39;buy&#39; or &#39;sell&#39;. | [optional] 
+**side** | **str** | The direction of the quote: &#39;deposit&#39; or &#39;withdrawal&#39;. | [optional] 
 **state** | **str** | The trade&#39;s state | [optional] 
 **amount** | **int** | The amount being transferred. | [optional] 
 **fee** | **int** | The fee associated with the trade. | [optional] 
