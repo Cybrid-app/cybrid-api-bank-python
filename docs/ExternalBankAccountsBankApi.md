@@ -5,6 +5,7 @@ All URIs are relative to *https://bank.demo.cybrid.app*
 Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**create_external_bank_account**](ExternalBankAccountsBankApi.md#create_external_bank_account) | **POST** /api/external_bank_accounts | Create ExternalBankAccount
+[**delete_external_bank_account**](ExternalBankAccountsBankApi.md#delete_external_bank_account) | **DELETE** /api/external_bank_accounts/{external_bank_account_guid} | Delete External Bank Account
 [**get_external_bank_account**](ExternalBankAccountsBankApi.md#get_external_bank_account) | **GET** /api/external_bank_accounts/{external_bank_account_guid} | Get External Bank Account
 [**list_external_bank_accounts**](ExternalBankAccountsBankApi.md#list_external_bank_accounts) | **GET** /api/external_bank_accounts | Get external bank accounts list
 
@@ -103,6 +104,94 @@ Name | Type | Description  | Notes
 **401** | Unauthorized - Authentication failed,  |  -  |
 **403** | Invalid scope |  -  |
 **422** | Unable to process request |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **delete_external_bank_account**
+> ExternalBankAccount delete_external_bank_account(external_bank_account_guid)
+
+Delete External Bank Account
+
+Deletes an external bank account.  Required scope: **external_bank_accounts:execute**
+
+### Example
+
+* Bearer (JWT) Authentication (BearerAuth):
+* OAuth Authentication (oauth2):
+
+```python
+import time
+import cybrid_api_bank
+from cybrid_api_bank.api import external_bank_accounts_bank_api
+from cybrid_api_bank.model.error_response import ErrorResponse
+from cybrid_api_bank.model.external_bank_account import ExternalBankAccount
+from pprint import pprint
+# Defining the host is optional and defaults to https://bank.demo.cybrid.app
+# See configuration.py for a list of all supported configuration parameters.
+configuration = cybrid_api_bank.Configuration(
+    host = "https://bank.demo.cybrid.app"
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
+# Configure Bearer authorization (JWT): BearerAuth
+configuration = cybrid_api_bank.Configuration(
+    access_token = 'YOUR_BEARER_TOKEN'
+)
+
+# Configure OAuth2 access token for authorization: oauth2
+configuration = cybrid_api_bank.Configuration(
+    host = "https://bank.demo.cybrid.app"
+)
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
+
+# Enter a context with an instance of the API client
+with cybrid_api_bank.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = external_bank_accounts_bank_api.ExternalBankAccountsBankApi(api_client)
+    external_bank_account_guid = "external_bank_account_guid_example" # str | Identifier for the external bank account.
+
+    # example passing only required values which don't have defaults set
+    try:
+        # Delete External Bank Account
+        api_response = api_instance.delete_external_bank_account(external_bank_account_guid)
+        pprint(api_response)
+    except cybrid_api_bank.ApiException as e:
+        print("Exception when calling ExternalBankAccountsBankApi->delete_external_bank_account: %s\n" % e)
+```
+
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **external_bank_account_guid** | **str**| Identifier for the external bank account. |
+
+### Return type
+
+[**ExternalBankAccount**](ExternalBankAccount.md)
+
+### Authorization
+
+[BearerAuth](../README.md#BearerAuth), [oauth2](../README.md#oauth2)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+
+### HTTP response details
+
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** | External bank account deleted |  -  |
+**401** | Unauthorized - Authentication failed,  |  -  |
+**403** | Invalid scope |  -  |
+**404** | ExternalBankAccount not found |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
