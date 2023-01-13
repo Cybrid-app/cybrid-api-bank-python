@@ -58,6 +58,7 @@ with cybrid_api_bank.ApiClient(configuration) as api_client:
     post_identity_verification = PostIdentityVerification(
         type="kyc",
         method="id_and_selfie",
+        country_code="country_code_example",
         customer_guid="customer_guid_example",
         expected_behaviours=[
             "passed_immediately",
