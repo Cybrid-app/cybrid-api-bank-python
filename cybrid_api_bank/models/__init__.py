@@ -18,6 +18,8 @@ from cybrid_api_bank.model.bank import Bank
 from cybrid_api_bank.model.bank_list import BankList
 from cybrid_api_bank.model.customer import Customer
 from cybrid_api_bank.model.customer_list import CustomerList
+from cybrid_api_bank.model.deposit_address import DepositAddress
+from cybrid_api_bank.model.deposit_address_list import DepositAddressList
 from cybrid_api_bank.model.error_response import ErrorResponse
 from cybrid_api_bank.model.external_bank_account import ExternalBankAccount
 from cybrid_api_bank.model.external_bank_account_list import ExternalBankAccountList
@@ -36,6 +38,7 @@ from cybrid_api_bank.model.patch_bank import PatchBank
 from cybrid_api_bank.model.post_account import PostAccount
 from cybrid_api_bank.model.post_bank import PostBank
 from cybrid_api_bank.model.post_customer import PostCustomer
+from cybrid_api_bank.model.post_deposit_address import PostDepositAddress
 from cybrid_api_bank.model.post_external_bank_account import PostExternalBankAccount
 from cybrid_api_bank.model.post_fee import PostFee
 from cybrid_api_bank.model.post_fee_configuration import PostFeeConfiguration
