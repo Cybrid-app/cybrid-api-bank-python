@@ -59,6 +59,10 @@ with cybrid_api_bank.ApiClient(configuration) as api_client:
         quote_guid="quote_guid_example",
         transfer_type="funding",
         external_bank_account_guid="external_bank_account_guid_example",
+        one_time_address=PostOneTimeAddress(
+            address="address_example",
+            tag="tag_example",
+        ),
         expected_error="pending",
     ) # PostTransfer | 
 

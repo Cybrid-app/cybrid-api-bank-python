@@ -45,6 +45,7 @@ from cybrid_api_bank.model.post_fee_configuration import PostFeeConfiguration
 from cybrid_api_bank.model.post_identity_record import PostIdentityRecord
 from cybrid_api_bank.model.post_identity_record_attestation_details import PostIdentityRecordAttestationDetails
 from cybrid_api_bank.model.post_identity_verification import PostIdentityVerification
+from cybrid_api_bank.model.post_one_time_address import PostOneTimeAddress
 from cybrid_api_bank.model.post_quote import PostQuote
 from cybrid_api_bank.model.post_reward import PostReward
 from cybrid_api_bank.model.post_trade import PostTrade
