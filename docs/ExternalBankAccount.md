@@ -7,7 +7,7 @@ Name | Type | Description | Notes
 **guid** | **str** | Auto-generated unique identifier for the account. | [optional] 
 **name** | **str** | The name of the account. | [optional] 
 **asset** | **str** | The asset code. | [optional] 
-**account_kind** | **str** | The type of account. | [optional]  if omitted the server will use the default value of "plaid"
+**account_kind** | **str** | The type of account. | [optional] 
 **environment** | **str** | The environment that the external bank account is operating in. | [optional] 
 **bank_guid** | **str, none_type** | The bank identifier. | [optional] 
 **customer_guid** | **str, none_type** | The customer identifier. | [optional] 

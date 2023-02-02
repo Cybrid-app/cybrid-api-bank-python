@@ -63,6 +63,10 @@ with cybrid_api_bank.ApiClient(configuration) as api_client:
         asset="asset_example",
         plaid_public_token="plaid_public_token_example",
         plaid_account_id="plaid_account_id_example",
+        plaid_processor_token="plaid_processor_token_example",
+        plaid_institution_id="plaid_institution_id_example",
+        plaid_account_mask="plaid_account_mask_example",
+        plaid_account_name="plaid_account_name_example",
     ) # PostExternalBankAccount | 
 
     # example passing only required values which don't have defaults set
