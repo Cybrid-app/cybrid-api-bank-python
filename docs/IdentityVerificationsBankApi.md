@@ -100,7 +100,6 @@ Name | Type | Description  | Notes
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
 **201** | Identity Verification created |  -  |
-**400** | Invalid requests - malformed authentication header |  -  |
 **401** | Unauthorized - Authentication failed,  |  -  |
 **403** | Invalid scope |  -  |
 
@@ -188,7 +187,6 @@ Name | Type | Description  | Notes
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
 **200** | identity verification found |  -  |
-**400** | Invalid requests - malformed authentication header |  -  |
 **401** | Unauthorized - Authentication failed,  |  -  |
 **403** | Invalid scope |  -  |
 **404** | identity_verification not found |  -  |
@@ -286,7 +284,7 @@ Name | Type | Description  | Notes
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
 **200** | get list of identity verifications |  -  |
-**400** | Invalid requests - malformed authentication header |  -  |
+**400** | Invalid requests |  -  |
 **401** | Unauthorized - Authentication failed,  |  -  |
 **403** | Invalid scope |  -  |
 

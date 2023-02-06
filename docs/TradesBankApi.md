@@ -95,7 +95,7 @@ Name | Type | Description  | Notes
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
 **201** | Trade created |  -  |
-**400** | Invalid requests - malformed authentication header |  -  |
+**400** | Invalid requests |  -  |
 **401** | Unauthorized - Authentication failed,  |  -  |
 **403** | Invalid scope |  -  |
 **409** | Data already exists |  -  |
@@ -284,7 +284,7 @@ Name | Type | Description  | Notes
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
 **200** | get list of trades |  -  |
-**400** | Invalid requests - malformed authentication header |  -  |
+**400** | Invalid requests |  -  |
 **401** | Unauthorized - Authentication failed,  |  -  |
 **403** | Invalid scope |  -  |
 

@@ -105,7 +105,7 @@ Name | Type | Description  | Notes
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
 **201** | ExternalBankAccount created |  -  |
-**400** | Invalid requests - malformed authentication header |  -  |
+**400** | Invalid requests |  -  |
 **401** | Unauthorized - Authentication failed,  |  -  |
 **403** | Invalid scope |  -  |
 **422** | Unable to process request |  -  |
@@ -379,7 +379,7 @@ Name | Type | Description  | Notes
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
 **200** | Get list of external_bank_accounts |  -  |
-**400** | Invalid requests - malformed authentication header |  -  |
+**400** | Invalid requests |  -  |
 **401** | Unauthorized - Authentication failed,  |  -  |
 **403** | Invalid scope |  -  |
 

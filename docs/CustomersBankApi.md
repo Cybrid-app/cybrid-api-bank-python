@@ -94,7 +94,7 @@ Name | Type | Description  | Notes
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
 **201** | customer created |  -  |
-**400** | Invalid requests - malformed authentication header |  -  |
+**400** | Invalid requests |  -  |
 **401** | Unauthorized - Authentication failed, invalid subject |  -  |
 **403** | Invalid scope |  -  |
 
@@ -182,7 +182,6 @@ Name | Type | Description  | Notes
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
 **200** | customer found |  -  |
-**400** | Invalid requests - malformed authentication header |  -  |
 **401** | Unauthorized - Authentication failed, invalid subject |  -  |
 **403** | Invalid scope |  -  |
 **404** | customer not found |  -  |
@@ -278,7 +277,7 @@ Name | Type | Description  | Notes
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
 **200** | get list of customers |  -  |
-**400** | Invalid requests - malformed authentication header |  -  |
+**400** | Invalid requests |  -  |
 **401** | Unauthorized - Authentication failed, invalid subject, |  -  |
 **403** | Invalid scope |  -  |
 

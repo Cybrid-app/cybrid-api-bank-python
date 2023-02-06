@@ -98,7 +98,6 @@ Name | Type | Description  | Notes
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
 **201** | verification key created |  -  |
-**400** | Invalid requests - malformed authentication header |  -  |
 **401** | Unauthorized - Authentication failed, invalid subject |  -  |
 **403** | Invalid scope |  -  |
 
@@ -186,7 +185,6 @@ Name | Type | Description  | Notes
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
 **200** | Verification Key found |  -  |
-**400** | Invalid requests - malformed authentication header |  -  |
 **401** | Unauthorized - Authentication failed, invalid subject |  -  |
 **403** | Invalid scope |  -  |
 **404** | verification key not found |  -  |
@@ -278,7 +276,6 @@ Name | Type | Description  | Notes
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
 **200** | get list of verification keys |  -  |
-**400** | Invalid requests - malformed authentication header |  -  |
 **401** | Unauthorized - Authentication failed, invalid subject |  -  |
 **403** | Invalid scope |  -  |
 
