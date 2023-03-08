@@ -1,6 +1,6 @@
 # cybrid_api_bank.SymbolsBankApi
 
-All URIs are relative to *https://bank.demo.cybrid.app*
+All URIs are relative to *https://bank.sandbox.cybrid.app*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
@@ -26,10 +26,10 @@ from cybrid_api_bank.api import symbols_bank_api
 from cybrid_api_bank.model.error_response import ErrorResponse
 from cybrid_api_bank.model.symbols import Symbols
 from pprint import pprint
-# Defining the host is optional and defaults to https://bank.demo.cybrid.app
+# Defining the host is optional and defaults to https://bank.sandbox.cybrid.app
 # See configuration.py for a list of all supported configuration parameters.
 configuration = cybrid_api_bank.Configuration(
-    host = "https://bank.demo.cybrid.app"
+    host = "https://bank.sandbox.cybrid.app"
 )
 
 # The client must configure the authentication and authorization parameters
@@ -44,7 +44,7 @@ configuration = cybrid_api_bank.Configuration(
 
 # Configure OAuth2 access token for authorization: oauth2
 configuration = cybrid_api_bank.Configuration(
-    host = "https://bank.demo.cybrid.app"
+    host = "https://bank.sandbox.cybrid.app"
 )
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 

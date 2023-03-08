@@ -1,6 +1,6 @@
 # cybrid_api_bank.AssetsBankApi
 
-All URIs are relative to *https://bank.demo.cybrid.app*
+All URIs are relative to *https://bank.sandbox.cybrid.app*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
@@ -23,10 +23,10 @@ import cybrid_api_bank
 from cybrid_api_bank.api import assets_bank_api
 from cybrid_api_bank.model.asset_list import AssetList
 from pprint import pprint
-# Defining the host is optional and defaults to https://bank.demo.cybrid.app
+# Defining the host is optional and defaults to https://bank.sandbox.cybrid.app
 # See configuration.py for a list of all supported configuration parameters.
 configuration = cybrid_api_bank.Configuration(
-    host = "https://bank.demo.cybrid.app"
+    host = "https://bank.sandbox.cybrid.app"
 )
 
 
