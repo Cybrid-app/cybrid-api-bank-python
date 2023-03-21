@@ -7,7 +7,7 @@ Name | Type | Description | Notes
 **guid** | **str** | Auto-generated unique identifier for the identity verification. | [optional] 
 **customer_guid** | **str** | The customer&#39;s identifier. | [optional] 
 **type** | **str** | The type of identity verification. | [optional]  if omitted the server will use the default value of "kyc"
-**method** | **str** | The identity verification method. | [optional]  if omitted the server will use the default value of "id_and_selfie"
+**method** | **str** | The identity verification method. | [optional] 
 **created_at** | **datetime** | ISO8601 datetime the customer was created at. | [optional] 
 **state** | **str** | The state of the verification process. | [optional] 
 **outcome** | **str, none_type** | The outcome of the verification process. | [optional] 

@@ -57,6 +57,29 @@ with cybrid_api_bank.ApiClient(configuration) as api_client:
     api_instance = customers_bank_api.CustomersBankApi(api_client)
     post_customer = PostCustomer(
         type="individual",
+        name=PostCustomerName(
+            first="first_example",
+            middle="middle_example",
+            last="last_example",
+        ),
+        address=PostCustomerAddress(
+            street="street_example",
+            street2="street2_example",
+            city="city_example",
+            subdivision="subdivision_example",
+            postal_code="postal_code_example",
+            country_code="country_code_example",
+        ),
+        date_of_birth=dateutil_parser('1970-01-01').date(),
+        phone_number="phone_number_example",
+        email_address="email_address_example",
+        identification_numbers=[
+            PostIdentificationNumber(
+                type="drivers_license",
+                issuing_country_code="issuing_country_code_example",
+                identification_number="identification_number_example",
+            ),
+        ],
     ) # PostCustomer | 
 
     # example passing only required values which don't have defaults set

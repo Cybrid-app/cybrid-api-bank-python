@@ -58,8 +58,29 @@ with cybrid_api_bank.ApiClient(configuration) as api_client:
     post_identity_verification = PostIdentityVerification(
         type="kyc",
         method="id_and_selfie",
-        country_code="country_code_example",
         customer_guid="customer_guid_example",
+        country_code="country_code_example",
+        name=PostIdentityVerificationName(
+            first="first_example",
+            middle="middle_example",
+            last="last_example",
+        ),
+        address=PostIdentityVerificationAddress(
+            street="street_example",
+            street2="street2_example",
+            city="city_example",
+            subdivision="subdivision_example",
+            postal_code="postal_code_example",
+            country_code="country_code_example",
+        ),
+        date_of_birth=dateutil_parser('1970-01-01').date(),
+        identification_numbers=[
+            PostIdentificationNumber(
+                type="drivers_license",
+                issuing_country_code="issuing_country_code_example",
+                identification_number="identification_number_example",
+            ),
+        ],
         expected_behaviours=[
             "passed_immediately",
         ],
