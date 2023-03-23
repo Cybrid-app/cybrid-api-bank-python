@@ -111,7 +111,7 @@ Name | Type | Description  | Notes
 **400** | Invalid requests |  -  |
 **401** | Unauthorized - Authentication failed, invalid subject |  -  |
 **403** | Invalid scope |  -  |
-**415** | Unsupported values |  -  |
+**422** | Unable to process request |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
@@ -346,12 +346,6 @@ with cybrid_api_bank.ApiClient(configuration) as api_client:
         name="name_example",
         supported_trading_symbols=[
             "supported_trading_symbols_example",
-        ],
-        supported_fiat_account_assets=[
-            "supported_fiat_account_assets_example",
-        ],
-        supported_country_codes=[
-            "supported_country_codes_example",
         ],
     ) # PatchBank | 
 
