@@ -13,6 +13,8 @@ Name | Type | Description | Notes
 **state** | **str** | The trade&#39;s state | [optional] 
 **amount** | **int** | The amount being transferred. | [optional] 
 **fee** | **int** | The fee associated with the trade. | [optional] 
+**network_fee** | **int, none_type** | The network fee in base units of network_fee_asset. Only present on &#x60;crypto&#x60; transfers. | [optional] 
+**network_fee_asset** | **str, none_type** | The asset code of the network fee. | [optional] 
 **created_at** | **datetime** | ISO8601 datetime the bank was created at. | [optional] 
 **any string name** | **bool, date, datetime, dict, float, int, list, str, none_type** | any string name can be used but the value must be the correct type | [optional]
 
