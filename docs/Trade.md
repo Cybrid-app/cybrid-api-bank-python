@@ -5,7 +5,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **guid** | **str** | Auto-generated unique identifier for the trade. | [optional] 
-**customer_guid** | **str** | The associated customer&#39;s identifier. | [optional] 
+**customer_guid** | **str, none_type** | The associated customer&#39;s identifier. | [optional] 
 **quote_guid** | **str** | The associated quote&#39;s identifier. | [optional] 
 **symbol** | **str** | The trade symbol the pricing is related to. Format is asset-counter_asset, e.g., BTC-USD. | [optional] 
 **side** | **str** | The direction of the quote: either &#39;buy&#39; or &#39;sell&#39;. | [optional] 
