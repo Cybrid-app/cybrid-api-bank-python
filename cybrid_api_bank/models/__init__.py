@@ -23,6 +23,7 @@ from cybrid_api_bank.model.deposit_address_list import DepositAddressList
 from cybrid_api_bank.model.error_response import ErrorResponse
 from cybrid_api_bank.model.external_bank_account import ExternalBankAccount
 from cybrid_api_bank.model.external_bank_account_list import ExternalBankAccountList
+from cybrid_api_bank.model.external_wallet import ExternalWallet
 from cybrid_api_bank.model.identity_record import IdentityRecord
 from cybrid_api_bank.model.identity_record_list import IdentityRecordList
 from cybrid_api_bank.model.identity_verification import IdentityVerification
