@@ -24,6 +24,7 @@ from cybrid_api_bank.model.error_response import ErrorResponse
 from cybrid_api_bank.model.external_bank_account import ExternalBankAccount
 from cybrid_api_bank.model.external_bank_account_list import ExternalBankAccountList
 from cybrid_api_bank.model.external_wallet import ExternalWallet
+from cybrid_api_bank.model.external_wallet_list import ExternalWalletList
 from cybrid_api_bank.model.identity_record import IdentityRecord
 from cybrid_api_bank.model.identity_record_list import IdentityRecordList
 from cybrid_api_bank.model.identity_verification import IdentityVerification
@@ -41,6 +42,7 @@ from cybrid_api_bank.model.post_customer_address import PostCustomerAddress
 from cybrid_api_bank.model.post_customer_name import PostCustomerName
 from cybrid_api_bank.model.post_deposit_address import PostDepositAddress
 from cybrid_api_bank.model.post_external_bank_account import PostExternalBankAccount
+from cybrid_api_bank.model.post_external_wallet import PostExternalWallet
 from cybrid_api_bank.model.post_identification_number import PostIdentificationNumber
 from cybrid_api_bank.model.post_identity_record import PostIdentityRecord
 from cybrid_api_bank.model.post_identity_record_attestation_details import PostIdentityRecordAttestationDetails
