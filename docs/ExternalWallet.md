@@ -6,7 +6,7 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **guid** | **str** | Auto-generated unique identifier for the wallet. | [optional] 
 **name** | **str** | The name of the wallet. | [optional] 
-**asset_code** | **str** | The asset code. | [optional] 
+**asset** | **str** | The asset code. | [optional] 
 **environment** | **str** | The environment that the wallet is configured for. | [optional] 
 **customer_guid** | **str** | The customer identifier. | [optional] 
 **address** | **str** | The blockchain wallet address for the wallet. | [optional] 
