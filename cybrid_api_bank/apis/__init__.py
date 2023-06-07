@@ -22,7 +22,6 @@ from cybrid_api_bank.api.deposit_addresses_bank_api import DepositAddressesBankA
 from cybrid_api_bank.api.external_bank_accounts_bank_api import ExternalBankAccountsBankApi
 from cybrid_api_bank.api.external_wallets_bank_api import ExternalWalletsBankApi
 from cybrid_api_bank.api.identity_verifications_bank_api import IdentityVerificationsBankApi
-from cybrid_api_bank.api.identity_records_bank_api import IdentityRecordsBankApi
 from cybrid_api_bank.api.prices_bank_api import PricesBankApi
 from cybrid_api_bank.api.quotes_bank_api import QuotesBankApi
 from cybrid_api_bank.api.rewards_bank_api import RewardsBankApi
