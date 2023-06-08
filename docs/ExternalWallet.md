@@ -8,6 +8,7 @@ Name | Type | Description | Notes
 **name** | **str** | The name of the wallet. | [optional] 
 **asset** | **str** | The asset code. | [optional] 
 **environment** | **str** | The environment that the wallet is configured for. | [optional] 
+**bank_guid** | **str** | The bank identifier. | [optional] 
 **customer_guid** | **str** | The customer identifier. | [optional] 
 **address** | **str** | The blockchain wallet address for the wallet. | [optional] 
 **tag** | **str, none_type** | The blockchain tag to use when transferring crypto to the wallet. | [optional] 
