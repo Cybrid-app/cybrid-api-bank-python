@@ -8,6 +8,7 @@ Name | Type | Description | Notes
 **transfer_type** | **str** | The type of transfer. | [optional] 
 **customer_guid** | **str** | The associated customer&#39;s identifier. | [optional] 
 **quote_guid** | **str** | The associated quote&#39;s identifier. | [optional] 
+**external_bank_account_guid** | **str, none_type** | The associated external bank account&#39;s identifier. | [optional] 
 **asset** | **str** | The asset the transfer is related to, e.g., USD. | [optional] 
 **side** | **str** | The direction of the quote: &#39;deposit&#39; or &#39;withdrawal&#39;. | [optional] 
 **state** | **str** | The trade&#39;s state | [optional] 
