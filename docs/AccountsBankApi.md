@@ -239,6 +239,7 @@ with cybrid_api_bank.ApiClient(configuration) as api_client:
     page = ListRequestPage(0) # int | The page index to retrieve. (optional)
     per_page = ListRequestPerPage(1) # int | The number of entities per page to return. (optional)
     guid = "guid_example" # str | Comma separated account_guids to list accounts for. (optional)
+    type = "type_example" # str | Comma separated account_types to list accounts for. (optional)
     bank_guid = "bank_guid_example" # str | Comma separated bank_guids to list accounts for. (optional)
     customer_guid = "customer_guid_example" # str | Comma separated customer_guids to list accounts for. (optional)
 
@@ -246,7 +247,7 @@ with cybrid_api_bank.ApiClient(configuration) as api_client:
     # and optional values
     try:
         # List Accounts
-        api_response = api_instance.list_accounts(page=page, per_page=per_page, guid=guid, bank_guid=bank_guid, customer_guid=customer_guid)
+        api_response = api_instance.list_accounts(page=page, per_page=per_page, guid=guid, type=type, bank_guid=bank_guid, customer_guid=customer_guid)
         pprint(api_response)
     except cybrid_api_bank.ApiException as e:
         print("Exception when calling AccountsBankApi->list_accounts: %s\n" % e)
@@ -260,6 +261,7 @@ Name | Type | Description  | Notes
  **page** | **int**| The page index to retrieve. | [optional]
  **per_page** | **int**| The number of entities per page to return. | [optional]
  **guid** | **str**| Comma separated account_guids to list accounts for. | [optional]
+ **type** | **str**| Comma separated account_types to list accounts for. | [optional]
  **bank_guid** | **str**| Comma separated bank_guids to list accounts for. | [optional]
  **customer_guid** | **str**| Comma separated customer_guids to list accounts for. | [optional]
 

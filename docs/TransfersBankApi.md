@@ -241,7 +241,8 @@ with cybrid_api_bank.ApiClient(configuration) as api_client:
     api_instance = transfers_bank_api.TransfersBankApi(api_client)
     page = ListRequestPage(0) # int | The page index to retrieve. (optional)
     per_page = ListRequestPerPage(1) # int | The number of entities per page to return. (optional)
-    guid = "guid_example" # str | Comma separated trade_guids to list transfers for. (optional)
+    guid = "guid_example" # str | Comma separated transfer_guids to list transfers for. (optional)
+    transfer_type = "transfer_type_example" # str | Comma separated transfer_types to list accounts for. (optional)
     bank_guid = "bank_guid_example" # str | Comma separated bank_guids to list transfers for. (optional)
     customer_guid = "customer_guid_example" # str | Comma separated customer_guids to list transfers for. (optional)
     account_guid = "account_guid_example" # str | Comma separated account_guids to list transfers for. (optional)
@@ -251,7 +252,7 @@ with cybrid_api_bank.ApiClient(configuration) as api_client:
     # and optional values
     try:
         # Get transfers list
-        api_response = api_instance.list_transfers(page=page, per_page=per_page, guid=guid, bank_guid=bank_guid, customer_guid=customer_guid, account_guid=account_guid, state=state)
+        api_response = api_instance.list_transfers(page=page, per_page=per_page, guid=guid, transfer_type=transfer_type, bank_guid=bank_guid, customer_guid=customer_guid, account_guid=account_guid, state=state)
         pprint(api_response)
     except cybrid_api_bank.ApiException as e:
         print("Exception when calling TransfersBankApi->list_transfers: %s\n" % e)
@@ -264,7 +265,8 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **page** | **int**| The page index to retrieve. | [optional]
  **per_page** | **int**| The number of entities per page to return. | [optional]
- **guid** | **str**| Comma separated trade_guids to list transfers for. | [optional]
+ **guid** | **str**| Comma separated transfer_guids to list transfers for. | [optional]
+ **transfer_type** | **str**| Comma separated transfer_types to list accounts for. | [optional]
  **bank_guid** | **str**| Comma separated bank_guids to list transfers for. | [optional]
  **customer_guid** | **str**| Comma separated customer_guids to list transfers for. | [optional]
  **account_guid** | **str**| Comma separated account_guids to list transfers for. | [optional]
