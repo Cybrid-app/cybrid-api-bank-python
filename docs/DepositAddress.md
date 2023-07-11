@@ -4,13 +4,13 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**guid** | **str** | Auto-generated unique identifier for the identity verification. | 
-**bank_guid** | **str** | The address&#39; bank identifier. | 
-**customer_guid** | **str** | The address&#39; customer identifier. | 
-**account_guid** | **str** | The address&#39; account identifier. | 
-**created_at** | **datetime** | ISO8601 datetime the address was created at. | 
-**asset** | **str** | The asset the transfer is related to, e.g., USD. | 
-**state** | **str** | The state of the address. | 
+**guid** | **str** | Auto-generated unique identifier for the identity verification. | [optional] 
+**bank_guid** | **str** | The address&#39; bank identifier. | [optional] 
+**customer_guid** | **str, none_type** | The address&#39; customer identifier. | [optional] 
+**account_guid** | **str** | The address&#39; account identifier. | [optional] 
+**created_at** | **datetime** | ISO8601 datetime the address was created at. | [optional] 
+**asset** | **str** | The asset the transfer is related to, e.g., USD. | [optional] 
+**state** | **str** | The state of the address. | [optional] 
 **address** | **str** | The blockchain address. | [optional] 
 **format** | **str** | The blockchain address format. | [optional] 
 **tag** | **str** | The blockchain address tag. | [optional] 
