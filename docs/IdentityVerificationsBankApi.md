@@ -64,6 +64,7 @@ with cybrid_api_bank.ApiClient(configuration) as api_client:
             first="first_example",
             middle="middle_example",
             last="last_example",
+            full="full_example",
         ),
         address=PostIdentityVerificationAddress(
             street="street_example",
@@ -74,6 +75,8 @@ with cybrid_api_bank.ApiClient(configuration) as api_client:
             country_code="country_code_example",
         ),
         date_of_birth=dateutil_parser('1970-01-01').date(),
+        phone_number="phone_number_example",
+        email_address="email_address_example",
         identification_numbers=[
             PostIdentificationNumber(
                 type="drivers_license",
@@ -81,6 +84,7 @@ with cybrid_api_bank.ApiClient(configuration) as api_client:
                 identification_number="identification_number_example",
             ),
         ],
+        external_bank_account_guid="external_bank_account_guid_example",
         expected_behaviours=[
             "passed_immediately",
         ],
