@@ -6,6 +6,7 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **guid** | **str** | Auto-generated unique identifier for the quote. | [optional] 
 **product_type** | **str** | The type of product the quote is for. | [optional] 
+**bank_guid** | **str** | The unique identifier for the bank. | [optional] 
 **customer_guid** | **str** | The unique identifier for the customer. | [optional] 
 **symbol** | **str, none_type** | Symbol the quote was requested for. Format is \&quot;asset-counter_asset\&quot; in uppercase. Populated for trade quotes. | [optional] 
 **side** | **str** | The direction of the quote: either &#39;buy&#39; or &#39;sell&#39; for trade quotes. | [optional] 

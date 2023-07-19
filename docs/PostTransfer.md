@@ -6,6 +6,8 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **quote_guid** | **str** | The associated quote&#39;s identifier. | 
 **transfer_type** | **str** | The type of transfer. | 
+**source_account_guid** | **str** | The source account&#39;s identifier. Required for book transfers. | [optional] 
+**destination_account_guid** | **str** | The destination account&#39;s identifier. Required for book transfers. | [optional] 
 **external_wallet_guid** | **str** | The customer&#39;s external wallet&#39;s identifier. | [optional] 
 **external_bank_account_guid** | **str** | The customer&#39;s &#39;plaid&#39; or &#39;plaid_processor_token&#39; external bank account&#39;s identifier. | [optional] 
 **expected_error** | **str** | The optional expected error to simulate transfer failure. | [optional] 

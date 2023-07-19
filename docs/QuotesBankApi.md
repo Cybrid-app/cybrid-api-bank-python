@@ -57,6 +57,7 @@ with cybrid_api_bank.ApiClient(configuration) as api_client:
     api_instance = quotes_bank_api.QuotesBankApi(api_client)
     post_quote = PostQuote(
         product_type="trading",
+        bank_guid="bank_guid_example",
         customer_guid="customer_guid_example",
         asset="asset_example",
         symbol="symbol_example",
