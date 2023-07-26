@@ -13,13 +13,11 @@ import sys
 import unittest
 
 import cybrid_api_bank
-from cybrid_api_bank.model.trade import Trade
-globals()['Trade'] = Trade
-from cybrid_api_bank.model.trade_list import TradeList
+from cybrid_api_bank.model.list_request_owner import ListRequestOwner
 
 
-class TestTradeList(unittest.TestCase):
-    """TradeList unit test stubs"""
+class TestListRequestOwner(unittest.TestCase):
+    """ListRequestOwner unit test stubs"""
 
     def setUp(self):
         pass
@@ -27,10 +25,10 @@ class TestTradeList(unittest.TestCase):
     def tearDown(self):
         pass
 
-    def testTradeList(self):
-        """Test TradeList"""
+    def testListRequestOwner(self):
+        """Test ListRequestOwner"""
         # FIXME: construct object with mandatory attributes with example values
-        # model = TradeList()  # noqa: E501
+        # model = ListRequestOwner()  # noqa: E501
         pass
 
 
