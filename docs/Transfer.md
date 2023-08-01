@@ -12,7 +12,7 @@ Name | Type | Description | Notes
 **external_bank_account_guid** | **str, none_type** | The associated external bank account&#39;s identifier. | [optional] 
 **asset** | **str** | The asset the transfer is related to, e.g., USD. | [optional] 
 **side** | **str** | The direction of the quote: &#39;deposit&#39; or &#39;withdrawal&#39;. | [optional] 
-**state** | **str** | The trade&#39;s state | [optional] 
+**state** | **str** | The transfer&#39;s state | [optional] 
 **amount** | **int, none_type** | The actual amount in base units of the asset. | [optional] 
 **estimated_amount** | **int** | The estimated amount in base units of the asset. | [optional] 
 **fee** | **int** | The fee associated with the trade. | [optional] 
