@@ -169,11 +169,21 @@ with cybrid_api_bank.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = customers_bank_api.CustomersBankApi(api_client)
     customer_guid = "customer_guid_example" # str | Identifier for the customer.
+    include_pii = True # bool | Include PII in the response. (optional)
 
     # example passing only required values which don't have defaults set
     try:
         # Get Customer
         api_response = api_instance.get_customer(customer_guid)
+        pprint(api_response)
+    except cybrid_api_bank.ApiException as e:
+        print("Exception when calling CustomersBankApi->get_customer: %s\n" % e)
+
+    # example passing only required values which don't have defaults set
+    # and optional values
+    try:
+        # Get Customer
+        api_response = api_instance.get_customer(customer_guid, include_pii=include_pii)
         pprint(api_response)
     except cybrid_api_bank.ApiException as e:
         print("Exception when calling CustomersBankApi->get_customer: %s\n" % e)
@@ -185,6 +195,7 @@ with cybrid_api_bank.ApiClient(configuration) as api_client:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **customer_guid** | **str**| Identifier for the customer. |
+ **include_pii** | **bool**| Include PII in the response. | [optional]
 
 ### Return type
 

@@ -16,7 +16,9 @@ from cybrid_api_bank.model.asset_list import AssetList
 from cybrid_api_bank.model.bank import Bank
 from cybrid_api_bank.model.bank_list import BankList
 from cybrid_api_bank.model.customer import Customer
+from cybrid_api_bank.model.customer_address import CustomerAddress
 from cybrid_api_bank.model.customer_list import CustomerList
+from cybrid_api_bank.model.customer_name import CustomerName
 from cybrid_api_bank.model.deposit_address import DepositAddress
 from cybrid_api_bank.model.deposit_address_list import DepositAddressList
 from cybrid_api_bank.model.error_response import ErrorResponse

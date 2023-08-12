@@ -13,11 +13,11 @@ import sys
 import unittest
 
 import cybrid_api_bank
-from cybrid_api_bank.model.post_account import PostAccount
+from cybrid_api_bank.model.customer_name import CustomerName
 
 
-class TestPostAccount(unittest.TestCase):
-    """PostAccount unit test stubs"""
+class TestCustomerName(unittest.TestCase):
+    """CustomerName unit test stubs"""
 
     def setUp(self):
         pass
@@ -25,10 +25,10 @@ class TestPostAccount(unittest.TestCase):
     def tearDown(self):
         pass
 
-    def testPostAccount(self):
-        """Test PostAccount"""
+    def testCustomerName(self):
+        """Test CustomerName"""
         # FIXME: construct object with mandatory attributes with example values
-        # model = PostAccount()  # noqa: E501
+        # model = CustomerName()  # noqa: E501
         pass
 
 
