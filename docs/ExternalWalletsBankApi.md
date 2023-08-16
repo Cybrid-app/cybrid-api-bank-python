@@ -299,6 +299,7 @@ Retrieves a listing of external wallets.  Required scope: **external_wallets:rea
 import time
 import cybrid_api_bank
 from cybrid_api_bank.api import external_wallets_bank_api
+from cybrid_api_bank.model.list_request_owner import ListRequestOwner
 from cybrid_api_bank.model.error_response import ErrorResponse
 from cybrid_api_bank.model.external_wallet_list import ExternalWalletList
 from pprint import pprint
@@ -330,6 +331,7 @@ with cybrid_api_bank.ApiClient(configuration) as api_client:
     api_instance = external_wallets_bank_api.ExternalWalletsBankApi(api_client)
     page = ListRequestPage(0) # int | The page index to retrieve. (optional)
     per_page = ListRequestPerPage(1) # int | The number of entities per page to return. (optional)
+    owner = ListRequestOwner("bank") # ListRequestOwner | The owner of the entity. (optional)
     guid = "guid_example" # str | Comma separated external_wallet_guids to list external_wallets for. (optional)
     bank_guid = "bank_guid_example" # str | Comma separated bank_guids to list external_wallets for. (optional)
     customer_guid = "customer_guid_example" # str | Comma separated customer_guids to list external_wallets for. (optional)
@@ -339,7 +341,7 @@ with cybrid_api_bank.ApiClient(configuration) as api_client:
     # and optional values
     try:
         # Get external wallets list
-        api_response = api_instance.list_external_wallets(page=page, per_page=per_page, guid=guid, bank_guid=bank_guid, customer_guid=customer_guid, state=state)
+        api_response = api_instance.list_external_wallets(page=page, per_page=per_page, owner=owner, guid=guid, bank_guid=bank_guid, customer_guid=customer_guid, state=state)
         pprint(api_response)
     except cybrid_api_bank.ApiException as e:
         print("Exception when calling ExternalWalletsBankApi->list_external_wallets: %s\n" % e)
@@ -352,6 +354,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **page** | **int**| The page index to retrieve. | [optional]
  **per_page** | **int**| The number of entities per page to return. | [optional]
+ **owner** | **ListRequestOwner**| The owner of the entity. | [optional]
  **guid** | **str**| Comma separated external_wallet_guids to list external_wallets for. | [optional]
  **bank_guid** | **str**| Comma separated bank_guids to list external_wallets for. | [optional]
  **customer_guid** | **str**| Comma separated customer_guids to list external_wallets for. | [optional]
