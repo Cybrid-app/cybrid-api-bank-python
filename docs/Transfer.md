@@ -23,6 +23,8 @@ Name | Type | Description | Notes
 **network_fee_liability_amount** | **int, none_type** | The equivalent fiat network fee in base units of network_fee_liability_amount_asset. Only present on &#x60;crypto&#x60; transfers that have successfully completed. | [optional] 
 **network_fee_liability_amount_asset** | **str, none_type** | The fiat asset the network_fee_liability_amount is denominated in. Only present on &#x60;crypto&#x60; transfers that have successfully completed. | [optional] 
 **txn_hash** | **str, none_type** | The hash of the blockchain transaction | [optional] 
+**source_account** | [**TransferSourceAccount**](TransferSourceAccount.md) |  | [optional] 
+**destination_account** | [**TransferDestinationAccount**](TransferDestinationAccount.md) |  | [optional] 
 **created_at** | **datetime** | ISO8601 datetime the bank was created at. | [optional] 
 **updated_at** | **datetime** | ISO8601 datetime the trade was last updated at. | [optional] 
 **any string name** | **bool, date, datetime, dict, float, int, list, str, none_type** | any string name can be used but the value must be the correct type | [optional]
