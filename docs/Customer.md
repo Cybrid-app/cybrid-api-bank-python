@@ -13,7 +13,7 @@ Name | Type | Description | Notes
 **address** | [**CustomerAddress**](CustomerAddress.md) |  | [optional] 
 **date_of_birth** | **date, none_type** | The customer&#39;s DOB. Only available for GET operations when &#39;include_pii&#39; is set. | [optional] 
 **phone_number** | **str, none_type** | The customer&#39;s phone number. Only available for GET operations when &#39;include_pii&#39; is set. | [optional] 
-**email_address** | **str, none_type** | The customer&#39;s phone number. Only available for GET operations when &#39;include_pii&#39; is set. | [optional] 
+**email_address** | **str, none_type** | The customer&#39;s email address. Only available for GET operations when &#39;include_pii&#39; is set. | [optional] 
 **any string name** | **bool, date, datetime, dict, float, int, list, str, none_type** | any string name can be used but the value must be the correct type | [optional]
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
