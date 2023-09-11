@@ -24,7 +24,6 @@ from cybrid_api_bank.api.external_wallets_bank_api import ExternalWalletsBankApi
 from cybrid_api_bank.api.identity_verifications_bank_api import IdentityVerificationsBankApi
 from cybrid_api_bank.api.prices_bank_api import PricesBankApi
 from cybrid_api_bank.api.quotes_bank_api import QuotesBankApi
-from cybrid_api_bank.api.rewards_bank_api import RewardsBankApi
 from cybrid_api_bank.api.symbols_bank_api import SymbolsBankApi
 from cybrid_api_bank.api.trades_bank_api import TradesBankApi
 from cybrid_api_bank.api.transfers_bank_api import TransfersBankApi
