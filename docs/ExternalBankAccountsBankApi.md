@@ -16,7 +16,7 @@ Method | HTTP request | Description
 
 Create ExternalBankAccount
 
-Create an ExternalBankAccount.  ## State  | State | Description | |-------|-------------| | storing | The Platform is storing the external bank account details in our private store | | completed | The Platform has created the external bank account | | unverified | The external bank account is created, but it has not yet been verified | | failed | The Platform was not able to successfully create the external bank account | | refresh_required | The Platform has created the external bank account, but needs to be refreshed | | deleting | The Platform is deleting the external bank account | | deleted | The Platform has deleted the external bank account |    Required scope: **external_bank_accounts:execute**
+Create an ExternalBankAccount.  ## State  | State | Description | |-------|-------------| | storing | The Platform is storing the external bank account details in our private store | | completed | The Platform has created the external bank account | | unverified | The external bank account is created, but it has not yet been verified | | failed | The Platform was not able to successfully create the external bank account | | refresh_required | The Platform has created the external bank account, but needs to be refreshed | | deleting | The Platform is deleting the external bank account | | deleted | The Platform has deleted the external bank account |  ## Failure codes  | Code | Description | |------|-------------| | invalid_routing_number | The provided routing number is invalid |    Required scope: **external_bank_accounts:execute**
 
 ### Example
 
@@ -68,6 +68,25 @@ with cybrid_api_bank.ApiClient(configuration) as api_client:
         plaid_institution_id="plaid_institution_id_example",
         plaid_account_mask="plaid_account_mask_example",
         plaid_account_name="plaid_account_name_example",
+        counterparty_bank_account=PostExternalBankAccountCounterpartyBankAccount(
+            routing_number_type="CPA",
+            routing_number="routing_number_example",
+            account_number="account_number_example",
+        ),
+        counterparty_name=PostExternalBankAccountCounterpartyName(
+            first="first_example",
+            middle="middle_example",
+            last="last_example",
+        ),
+        counterparty_address=PostExternalBankAccountCounterpartyAddress(
+            street="street_example",
+            street2="street2_example",
+            city="city_example",
+            subdivision="subdivision_example",
+            postal_code="postal_code_example",
+            country_code="country_code_example",
+        ),
+        counterparty_email_address="counterparty_email_address_example",
     ) # PostExternalBankAccount | 
 
     # example passing only required values which don't have defaults set
