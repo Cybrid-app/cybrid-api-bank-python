@@ -51,7 +51,6 @@ from cybrid_api_bank.model.post_identity_verification import PostIdentityVerific
 from cybrid_api_bank.model.post_identity_verification_address import PostIdentityVerificationAddress
 from cybrid_api_bank.model.post_identity_verification_name import PostIdentityVerificationName
 from cybrid_api_bank.model.post_quote import PostQuote
-from cybrid_api_bank.model.post_reward import PostReward
 from cybrid_api_bank.model.post_trade import PostTrade
 from cybrid_api_bank.model.post_transfer import PostTransfer
 from cybrid_api_bank.model.post_workflow import PostWorkflow
