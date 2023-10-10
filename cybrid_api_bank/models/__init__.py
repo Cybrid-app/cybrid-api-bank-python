@@ -34,6 +34,7 @@ from cybrid_api_bank.model.list_request_owner import ListRequestOwner
 from cybrid_api_bank.model.list_request_page import ListRequestPage
 from cybrid_api_bank.model.list_request_per_page import ListRequestPerPage
 from cybrid_api_bank.model.patch_bank import PatchBank
+from cybrid_api_bank.model.patch_customer import PatchCustomer
 from cybrid_api_bank.model.patch_external_bank_account import PatchExternalBankAccount
 from cybrid_api_bank.model.post_account import PostAccount
 from cybrid_api_bank.model.post_bank import PostBank

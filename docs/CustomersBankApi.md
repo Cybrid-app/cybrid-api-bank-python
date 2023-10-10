@@ -7,6 +7,7 @@ Method | HTTP request | Description
 [**create_customer**](CustomersBankApi.md#create_customer) | **POST** /api/customers | Create Customer
 [**get_customer**](CustomersBankApi.md#get_customer) | **GET** /api/customers/{customer_guid} | Get Customer
 [**list_customers**](CustomersBankApi.md#list_customers) | **GET** /api/customers | Get customers list
+[**update_customer**](CustomersBankApi.md#update_customer) | **PATCH** /api/customers/{customer_guid} | Patch Customer
 
 
 # **create_customer**
@@ -314,6 +315,99 @@ Name | Type | Description  | Notes
 **400** | Invalid requests |  -  |
 **401** | Unauthorized - Authentication failed, invalid subject, |  -  |
 **403** | Invalid scope |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **update_customer**
+> Customer update_customer(customer_guid, patch_customer)
+
+Patch Customer
+
+Update a customer.  Required scope: **customers:write**
+
+### Example
+
+* Bearer (JWT) Authentication (BearerAuth):
+* OAuth Authentication (oauth2):
+
+```python
+import time
+import cybrid_api_bank
+from cybrid_api_bank.api import customers_bank_api
+from cybrid_api_bank.model.customer import Customer
+from cybrid_api_bank.model.error_response import ErrorResponse
+from cybrid_api_bank.model.patch_customer import PatchCustomer
+from pprint import pprint
+# Defining the host is optional and defaults to https://bank.sandbox.cybrid.app
+# See configuration.py for a list of all supported configuration parameters.
+configuration = cybrid_api_bank.Configuration(
+    host = "https://bank.sandbox.cybrid.app"
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
+# Configure Bearer authorization (JWT): BearerAuth
+configuration = cybrid_api_bank.Configuration(
+    access_token = 'YOUR_BEARER_TOKEN'
+)
+
+# Configure OAuth2 access token for authorization: oauth2
+configuration = cybrid_api_bank.Configuration(
+    host = "https://bank.sandbox.cybrid.app"
+)
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
+
+# Enter a context with an instance of the API client
+with cybrid_api_bank.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = customers_bank_api.CustomersBankApi(api_client)
+    customer_guid = "customer_guid_example" # str | Identifier for the customer.
+    patch_customer = PatchCustomer(
+        state="unverified",
+    ) # PatchCustomer | 
+
+    # example passing only required values which don't have defaults set
+    try:
+        # Patch Customer
+        api_response = api_instance.update_customer(customer_guid, patch_customer)
+        pprint(api_response)
+    except cybrid_api_bank.ApiException as e:
+        print("Exception when calling CustomersBankApi->update_customer: %s\n" % e)
+```
+
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **customer_guid** | **str**| Identifier for the customer. |
+ **patch_customer** | [**PatchCustomer**](PatchCustomer.md)|  |
+
+### Return type
+
+[**Customer**](Customer.md)
+
+### Authorization
+
+[BearerAuth](../README.md#BearerAuth), [oauth2](../README.md#oauth2)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+
+### HTTP response details
+
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** | customer found |  -  |
+**401** | Unauthorized - Authentication failed, invalid subject |  -  |
+**403** | Invalid scope |  -  |
+**404** | customer not found |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 

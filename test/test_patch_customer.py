@@ -13,11 +13,11 @@ import sys
 import unittest
 
 import cybrid_api_bank
-from cybrid_api_bank.model.error_response import ErrorResponse
+from cybrid_api_bank.model.patch_customer import PatchCustomer
 
 
-class TestErrorResponse(unittest.TestCase):
-    """ErrorResponse unit test stubs"""
+class TestPatchCustomer(unittest.TestCase):
+    """PatchCustomer unit test stubs"""
 
     def setUp(self):
         pass
@@ -25,10 +25,10 @@ class TestErrorResponse(unittest.TestCase):
     def tearDown(self):
         pass
 
-    def testErrorResponse(self):
-        """Test ErrorResponse"""
+    def testPatchCustomer(self):
+        """Test PatchCustomer"""
         # FIXME: construct object with mandatory attributes with example values
-        # model = ErrorResponse()  # noqa: E501
+        # model = PatchCustomer()  # noqa: E501
         pass
 
 
