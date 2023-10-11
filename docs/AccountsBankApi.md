@@ -60,6 +60,9 @@ with cybrid_api_bank.ApiClient(configuration) as api_client:
         customer_guid="customer_guid_example",
         asset="asset_example",
         name="name_example",
+        labels=[
+            "labels_example",
+        ],
     ) # PostAccount | 
 
     # example passing only required values which don't have defaults set
@@ -244,12 +247,13 @@ with cybrid_api_bank.ApiClient(configuration) as api_client:
     type = "type_example" # str | Comma separated account_types to list accounts for. (optional)
     bank_guid = "bank_guid_example" # str | Comma separated bank_guids to list accounts for. (optional)
     customer_guid = "customer_guid_example" # str | Comma separated customer_guids to list accounts for. (optional)
+    label = "label_example" # str | Comma separated labels to list accounts for. (optional)
 
     # example passing only required values which don't have defaults set
     # and optional values
     try:
         # List Accounts
-        api_response = api_instance.list_accounts(page=page, per_page=per_page, owner=owner, guid=guid, type=type, bank_guid=bank_guid, customer_guid=customer_guid)
+        api_response = api_instance.list_accounts(page=page, per_page=per_page, owner=owner, guid=guid, type=type, bank_guid=bank_guid, customer_guid=customer_guid, label=label)
         pprint(api_response)
     except cybrid_api_bank.ApiException as e:
         print("Exception when calling AccountsBankApi->list_accounts: %s\n" % e)
@@ -267,6 +271,7 @@ Name | Type | Description  | Notes
  **type** | **str**| Comma separated account_types to list accounts for. | [optional]
  **bank_guid** | **str**| Comma separated bank_guids to list accounts for. | [optional]
  **customer_guid** | **str**| Comma separated customer_guids to list accounts for. | [optional]
+ **label** | **str**| Comma separated labels to list accounts for. | [optional]
 
 ### Return type
 

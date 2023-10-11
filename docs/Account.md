@@ -14,6 +14,7 @@ Name | Type | Description | Notes
 **platform_balance** | **int** | The amount of funds that are in the account, in base units of the asset. | [optional] 
 **platform_available** | **int** | The amount of funds that are in the account, in base units of the asset, that are available for use on the platform. | [optional] 
 **state** | **str** | The account&#39;s state. | [optional] 
+**labels** | **[str], none_type** | The labels associated with the account. | [optional] 
 **any string name** | **bool, date, datetime, dict, float, int, list, str, none_type** | any string name can be used but the value must be the correct type | [optional]
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
