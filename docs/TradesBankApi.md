@@ -58,6 +58,9 @@ with cybrid_api_bank.ApiClient(configuration) as api_client:
     post_trade = PostTrade(
         quote_guid="quote_guid_example",
         expected_error="invalid_quote_guid",
+        labels=[
+            "labels_example",
+        ],
     ) # PostTrade | 
 
     # example passing only required values which don't have defaults set
@@ -243,12 +246,13 @@ with cybrid_api_bank.ApiClient(configuration) as api_client:
     customer_guid = "customer_guid_example" # str | Comma separated customer_guids to list trades for. (optional)
     account_guid = "account_guid_example" # str | Comma separated account_guids to list trades for. (optional)
     state = "state_example" # str | Comma separated states to list trades for. (optional)
+    label = "label_example" # str | Comma separated labels to list trades for. (optional)
 
     # example passing only required values which don't have defaults set
     # and optional values
     try:
         # Get trades list
-        api_response = api_instance.list_trades(page=page, per_page=per_page, guid=guid, bank_guid=bank_guid, customer_guid=customer_guid, account_guid=account_guid, state=state)
+        api_response = api_instance.list_trades(page=page, per_page=per_page, guid=guid, bank_guid=bank_guid, customer_guid=customer_guid, account_guid=account_guid, state=state, label=label)
         pprint(api_response)
     except cybrid_api_bank.ApiException as e:
         print("Exception when calling TradesBankApi->list_trades: %s\n" % e)
@@ -266,6 +270,7 @@ Name | Type | Description  | Notes
  **customer_guid** | **str**| Comma separated customer_guids to list trades for. | [optional]
  **account_guid** | **str**| Comma separated account_guids to list trades for. | [optional]
  **state** | **str**| Comma separated states to list trades for. | [optional]
+ **label** | **str**| Comma separated labels to list trades for. | [optional]
 
 ### Return type
 
