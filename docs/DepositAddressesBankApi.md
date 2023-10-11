@@ -57,6 +57,9 @@ with cybrid_api_bank.ApiClient(configuration) as api_client:
     api_instance = deposit_addresses_bank_api.DepositAddressesBankApi(api_client)
     post_deposit_address = PostDepositAddress(
         account_guid="account_guid_example",
+        labels=[
+            "labels_example",
+        ],
     ) # PostDepositAddress | 
 
     # example passing only required values which don't have defaults set
@@ -237,12 +240,13 @@ with cybrid_api_bank.ApiClient(configuration) as api_client:
     guid = "guid_example" # str | Comma separated guids to list deposit addresses for. (optional)
     bank_guid = "bank_guid_example" # str | Comma separated bank_guids to list deposit addresses for. (optional)
     customer_guid = "customer_guid_example" # str | Comma separated customer_guids to list deposit addresses for. (optional)
+    label = "label_example" # str | Comma separated labels to list deposit addresses for. (optional)
 
     # example passing only required values which don't have defaults set
     # and optional values
     try:
         # List Deposit Addresses
-        api_response = api_instance.list_deposit_addresses(page=page, per_page=per_page, guid=guid, bank_guid=bank_guid, customer_guid=customer_guid)
+        api_response = api_instance.list_deposit_addresses(page=page, per_page=per_page, guid=guid, bank_guid=bank_guid, customer_guid=customer_guid, label=label)
         pprint(api_response)
     except cybrid_api_bank.ApiException as e:
         print("Exception when calling DepositAddressesBankApi->list_deposit_addresses: %s\n" % e)
@@ -258,6 +262,7 @@ Name | Type | Description  | Notes
  **guid** | **str**| Comma separated guids to list deposit addresses for. | [optional]
  **bank_guid** | **str**| Comma separated bank_guids to list deposit addresses for. | [optional]
  **customer_guid** | **str**| Comma separated customer_guids to list deposit addresses for. | [optional]
+ **label** | **str**| Comma separated labels to list deposit addresses for. | [optional]
 
 ### Return type
 
