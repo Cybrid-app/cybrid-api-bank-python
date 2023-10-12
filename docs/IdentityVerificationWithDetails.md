@@ -11,7 +11,7 @@ Name | Type | Description | Notes
 **created_at** | **datetime** | ISO8601 datetime the customer was created at. | [optional] 
 **state** | **str** | The state of the verification process. | [optional] 
 **outcome** | **str, none_type** | The outcome of the verification process. | [optional] 
-**failure_codes** | **[str]** | The reason codes explaining the outcome. | [optional] 
+**failure_codes** | **[str], none_type** | The reason codes explaining the outcome. | [optional] 
 **persona_inquiry_id** | **str, none_type** | The Persona identifier of the backing inquiry. | [optional] 
 **persona_state** | **str, none_type** | The Persona state of the backing inquiry. | [optional] 
 **external_bank_account_guid** | **str, none_type** | The external bank account&#39;s identifier. | [optional] 
