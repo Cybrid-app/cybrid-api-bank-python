@@ -62,7 +62,7 @@ with cybrid_api_bank.ApiClient(configuration) as api_client:
         destination_account_guid="destination_account_guid_example",
         external_wallet_guid="external_wallet_guid_example",
         external_bank_account_guid="external_bank_account_guid_example",
-        expected_error="pending",
+        expected_error="expected_error_example",
         labels=[
             "labels_example",
         ],
