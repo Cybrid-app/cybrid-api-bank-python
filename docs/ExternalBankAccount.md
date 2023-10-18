@@ -17,6 +17,9 @@ Name | Type | Description | Notes
 **plaid_account_name** | **str, none_type** | The name for the account. | [optional] 
 **state** | **str** | The state of the external bank account. | [optional] 
 **failure_code** | **str, none_type** | The failure code for failed transfers. | [optional] 
+**balance_updated_at** | **datetime, none_type** | The timestamp that the balance information was last updated at. | [optional] 
+**balances** | [**ExternalBankAccountBalances**](ExternalBankAccountBalances.md) |  | [optional] 
+**pii** | [**[ExternalBankAccountPiiInner], none_type**](ExternalBankAccountPiiInner.md) | The account holder information. | [optional] 
 **any string name** | **bool, date, datetime, dict, float, int, list, str, none_type** | any string name can be used but the value must be the correct type | [optional]
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

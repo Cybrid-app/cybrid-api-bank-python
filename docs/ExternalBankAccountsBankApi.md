@@ -265,11 +265,23 @@ with cybrid_api_bank.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = external_bank_accounts_bank_api.ExternalBankAccountsBankApi(api_client)
     external_bank_account_guid = "external_bank_account_guid_example" # str | Identifier for the external bank account.
+    force_balance_refresh = True # bool | Force the balance on the account to be updated. (optional)
+    include_balances = True # bool | Include account balances in the response. (optional)
+    include_pii = True # bool | Include account holder's PII in the response. (optional)
 
     # example passing only required values which don't have defaults set
     try:
         # Get External Bank Account
         api_response = api_instance.get_external_bank_account(external_bank_account_guid)
+        pprint(api_response)
+    except cybrid_api_bank.ApiException as e:
+        print("Exception when calling ExternalBankAccountsBankApi->get_external_bank_account: %s\n" % e)
+
+    # example passing only required values which don't have defaults set
+    # and optional values
+    try:
+        # Get External Bank Account
+        api_response = api_instance.get_external_bank_account(external_bank_account_guid, force_balance_refresh=force_balance_refresh, include_balances=include_balances, include_pii=include_pii)
         pprint(api_response)
     except cybrid_api_bank.ApiException as e:
         print("Exception when calling ExternalBankAccountsBankApi->get_external_bank_account: %s\n" % e)
@@ -281,6 +293,9 @@ with cybrid_api_bank.ApiClient(configuration) as api_client:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **external_bank_account_guid** | **str**| Identifier for the external bank account. |
+ **force_balance_refresh** | **bool**| Force the balance on the account to be updated. | [optional]
+ **include_balances** | **bool**| Include account balances in the response. | [optional]
+ **include_pii** | **bool**| Include account holder&#39;s PII in the response. | [optional]
 
 ### Return type
 
@@ -304,6 +319,7 @@ Name | Type | Description  | Notes
 **401** | Unauthorized - Authentication failed,  |  -  |
 **403** | Invalid scope |  -  |
 **404** | ExternalBankAccount not found |  -  |
+**422** | Unable to process request |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
