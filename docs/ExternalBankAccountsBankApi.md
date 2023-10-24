@@ -265,9 +265,9 @@ with cybrid_api_bank.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = external_bank_accounts_bank_api.ExternalBankAccountsBankApi(api_client)
     external_bank_account_guid = "external_bank_account_guid_example" # str | Identifier for the external bank account.
-    force_balance_refresh = True # bool | Force the balance on the account to be updated. (optional)
-    include_balances = True # bool | Include account balances in the response. (optional)
-    include_pii = True # bool | Include account holder's PII in the response. (optional)
+    force_balance_refresh = True # bool | Force the balance on the account to be retrieved. (optional)
+    include_balances = True # bool | Include balance information in the response. If `force_balance_refresh` is `true`, the most up to date balance will be returned. If `force_balance_refresh` is `false`, the cached balance will be returned. `balance_updated_at` in the response will provide the timestamp the balance was last updated. (optional)
+    include_pii = True # bool | Include the account holder's PII in the response. (optional)
 
     # example passing only required values which don't have defaults set
     try:
@@ -293,9 +293,9 @@ with cybrid_api_bank.ApiClient(configuration) as api_client:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **external_bank_account_guid** | **str**| Identifier for the external bank account. |
- **force_balance_refresh** | **bool**| Force the balance on the account to be updated. | [optional]
- **include_balances** | **bool**| Include account balances in the response. | [optional]
- **include_pii** | **bool**| Include account holder&#39;s PII in the response. | [optional]
+ **force_balance_refresh** | **bool**| Force the balance on the account to be retrieved. | [optional]
+ **include_balances** | **bool**| Include balance information in the response. If &#x60;force_balance_refresh&#x60; is &#x60;true&#x60;, the most up to date balance will be returned. If &#x60;force_balance_refresh&#x60; is &#x60;false&#x60;, the cached balance will be returned. &#x60;balance_updated_at&#x60; in the response will provide the timestamp the balance was last updated. | [optional]
+ **include_pii** | **bool**| Include the account holder&#39;s PII in the response. | [optional]
 
 ### Return type
 
