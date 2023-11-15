@@ -1,6 +1,6 @@
 # PostExternalBankAccountCounterpartyAddress
 
-The counterparty's address on the account.
+The counterparty's address on the external account.
 
 ## Properties
 Name | Type | Description | Notes

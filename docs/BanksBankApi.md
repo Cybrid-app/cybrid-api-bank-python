@@ -71,6 +71,7 @@ with cybrid_api_bank.ApiClient(configuration) as api_client:
         supported_country_codes=[
             "supported_country_codes_example",
         ],
+        routable_accounts="unsupported",
     ) # PostBank | 
 
     # example passing only required values which don't have defaults set
