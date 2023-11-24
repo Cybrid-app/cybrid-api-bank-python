@@ -6,7 +6,8 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **type** | **str** | The account type. | [optional] 
 **guid** | **str** | Auto-generated unique identifier for the account. | [optional] 
-**created_at** | **datetime** | ISO8601 datetime the account was created at. | [optional] 
+**created_at** | **datetime** | ISO8601 datetime the record was created at. | [optional] 
+**updated_at** | **datetime** | ISO8601 datetime the record was last updated at. | [optional] 
 **asset** | **str** | The asset code. | [optional] 
 **name** | **str** | The name of the account. | [optional] 
 **bank_guid** | **str** | The bank identifier associated with the account. | [optional] 

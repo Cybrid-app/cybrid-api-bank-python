@@ -15,8 +15,8 @@ Name | Type | Description | Notes
 **receive_amount** | **int** | The amount to be received in base units of the currency: currency is \&quot;asset\&quot; for buy and \&quot;counter_asset\&quot; for sell. | [optional] 
 **deliver_amount** | **int** | The amount to be delivered in base units of the currency: currency is \&quot;counter_asset\&quot; for buy and \&quot;asset\&quot; for sell. | [optional] 
 **fee** | **int** | The fee associated with the trade. Denominated in \&quot;counter_asset\&quot; base units | [optional] 
-**created_at** | **datetime** | ISO8601 datetime the trade was created at. | [optional] 
-**updated_at** | **datetime** | ISO8601 datetime the trade was last updated at. | [optional] 
+**created_at** | **datetime** | ISO8601 datetime the record was created at. | [optional] 
+**updated_at** | **datetime** | ISO8601 datetime the record was last updated at. | [optional] 
 **labels** | **[str], none_type** | The labels associated with the trade. | [optional] 
 **any string name** | **bool, date, datetime, dict, float, int, list, str, none_type** | any string name can be used but the value must be the correct type | [optional]
 

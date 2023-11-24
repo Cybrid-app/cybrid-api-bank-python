@@ -7,7 +7,8 @@ Name | Type | Description | Notes
 **guid** | **str** | Auto-generated unique identifier for the customer. | [optional] 
 **bank_guid** | **str** | Auto-generated unique identifier for the customer&#39;s bank. | [optional] 
 **type** | **str** | The customer&#39;s type. | [optional]  if omitted the server will use the default value of "individual"
-**created_at** | **datetime** | ISO8601 datetime the customer was created at. | [optional] 
+**created_at** | **datetime** | ISO8601 datetime the record was created at. | [optional] 
+**updated_at** | **datetime** | ISO8601 datetime the record was last updated at. | [optional] 
 **state** | **str** | The customer&#39;s state. | [optional] 
 **name** | [**CustomerName**](CustomerName.md) |  | [optional] 
 **address** | [**CustomerAddress**](CustomerAddress.md) |  | [optional] 

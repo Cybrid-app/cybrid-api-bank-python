@@ -26,8 +26,8 @@ Name | Type | Description | Notes
 **reference_transfer_guid** | **str, none_type** | The guid of the related transfer. Only present on &#x60;funding_return&#x60; transfers. | [optional] 
 **source_account** | [**TransferSourceAccount**](TransferSourceAccount.md) |  | [optional] 
 **destination_account** | [**TransferDestinationAccount**](TransferDestinationAccount.md) |  | [optional] 
-**created_at** | **datetime** | ISO8601 datetime the bank was created at. | [optional] 
-**updated_at** | **datetime** | ISO8601 datetime the transfer was last updated at. | [optional] 
+**created_at** | **datetime** | ISO8601 datetime the record was created at. | [optional] 
+**updated_at** | **datetime** | ISO8601 datetime the record was last updated at. | [optional] 
 **labels** | **[str], none_type** | The labels associated with the transfer. | [optional] 
 **any string name** | **bool, date, datetime, dict, float, int, list, str, none_type** | any string name can be used but the value must be the correct type | [optional]
 
