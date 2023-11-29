@@ -4,7 +4,7 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**type** | **str** | The customer&#39;s type. | defaults to "individual"
+**type** | **str** | The customer&#39;s type. | 
 **name** | [**PostCustomerName**](PostCustomerName.md) |  | [optional] 
 **address** | [**PostCustomerAddress**](PostCustomerAddress.md) |  | [optional] 
 **date_of_birth** | **date, none_type** | The customer&#39;s date of birth. | [optional] 

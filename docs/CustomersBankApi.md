@@ -57,7 +57,7 @@ with cybrid_api_bank.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = customers_bank_api.CustomersBankApi(api_client)
     post_customer = PostCustomer(
-        type="individual",
+        type="business",
         name=PostCustomerName(
             first="first_example",
             middle="middle_example",
