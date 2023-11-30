@@ -57,7 +57,7 @@ with cybrid_api_bank.ApiClient(configuration) as api_client:
     api_instance = identity_verifications_bank_api.IdentityVerificationsBankApi(api_client)
     post_identity_verification = PostIdentityVerification(
         type="kyc",
-        method="id_and_selfie",
+        method="business_registration",
         customer_guid="customer_guid_example",
         country_code="country_code_example",
         name=PostIdentityVerificationName(
