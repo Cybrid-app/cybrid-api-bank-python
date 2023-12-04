@@ -28,6 +28,7 @@ Name | Type | Description | Notes
 **destination_account** | [**TransferDestinationAccount**](TransferDestinationAccount.md) |  | [optional] 
 **created_at** | **datetime** | ISO8601 datetime the record was created at. | [optional] 
 **updated_at** | **datetime** | ISO8601 datetime the record was last updated at. | [optional] 
+**transfer_details** | **{str: (bool, date, datetime, dict, float, int, list, str, none_type)}, none_type** | The raw details on the transfer from the bank. | [optional] 
 **labels** | **[str], none_type** | The labels associated with the transfer. | [optional] 
 **any string name** | **bool, date, datetime, dict, float, int, list, str, none_type** | any string name can be used but the value must be the correct type | [optional]
 
