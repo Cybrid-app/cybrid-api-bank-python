@@ -75,6 +75,7 @@ from cybrid_api_bank.model.transfer import Transfer
 from cybrid_api_bank.model.transfer_destination_account import TransferDestinationAccount
 from cybrid_api_bank.model.transfer_list import TransferList
 from cybrid_api_bank.model.transfer_source_account import TransferSourceAccount
+from cybrid_api_bank.model.verification_check import VerificationCheck
 from cybrid_api_bank.model.workflow import Workflow
 from cybrid_api_bank.model.workflow_with_details import WorkflowWithDetails
 from cybrid_api_bank.model.workflow_with_details_all_of import WorkflowWithDetailsAllOf
