@@ -299,7 +299,6 @@ Retrieves a listing of external wallets.  Required scope: **external_wallets:rea
 import time
 import cybrid_api_bank
 from cybrid_api_bank.api import external_wallets_bank_api
-from cybrid_api_bank.model.list_request_owner import ListRequestOwner
 from cybrid_api_bank.model.error_response import ErrorResponse
 from cybrid_api_bank.model.external_wallet_list import ExternalWalletList
 from pprint import pprint
@@ -331,7 +330,7 @@ with cybrid_api_bank.ApiClient(configuration) as api_client:
     api_instance = external_wallets_bank_api.ExternalWalletsBankApi(api_client)
     page = ListRequestPage(0) # int | The page index to retrieve. (optional)
     per_page = ListRequestPerPage(1) # int | The number of entities per page to return. (optional)
-    owner = ListRequestOwner("bank") # ListRequestOwner | The owner of the entity. (optional)
+    owner = "owner_example" # str | The owner of the entity. (optional)
     guid = "guid_example" # str | Comma separated external_wallet_guids to list external_wallets for. (optional)
     bank_guid = "bank_guid_example" # str | Comma separated bank_guids to list external_wallets for. (optional)
     customer_guid = "customer_guid_example" # str | Comma separated customer_guids to list external_wallets for. (optional)
@@ -354,7 +353,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **page** | **int**| The page index to retrieve. | [optional]
  **per_page** | **int**| The number of entities per page to return. | [optional]
- **owner** | **ListRequestOwner**| The owner of the entity. | [optional]
+ **owner** | **str**| The owner of the entity. | [optional]
  **guid** | **str**| Comma separated external_wallet_guids to list external_wallets for. | [optional]
  **bank_guid** | **str**| Comma separated bank_guids to list external_wallets for. | [optional]
  **customer_guid** | **str**| Comma separated customer_guids to list external_wallets for. | [optional]

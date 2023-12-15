@@ -6,10 +6,10 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **guid** | **str** | Auto-generated unique identifier for the customer. | [optional] 
 **bank_guid** | **str** | Auto-generated unique identifier for the customer&#39;s bank. | [optional] 
-**type** | **str** | The customer&#39;s type. | [optional] 
+**type** | **str** | The customer type; one of business or individual. | [optional] 
 **created_at** | **datetime** | ISO8601 datetime the record was created at. | [optional] 
 **updated_at** | **datetime** | ISO8601 datetime the record was last updated at. | [optional] 
-**state** | **str** | The customer&#39;s state. | [optional] 
+**state** | **str** | The customer state; one of storing, unverified, verified, rejected, or frozen. | [optional] 
 **name** | [**CustomerName**](CustomerName.md) |  | [optional] 
 **address** | [**CustomerAddress**](CustomerAddress.md) |  | [optional] 
 **date_of_birth** | **date, none_type** | The customer&#39;s DOB. Only available for GET operations when &#39;include_pii&#39; is set. | [optional] 

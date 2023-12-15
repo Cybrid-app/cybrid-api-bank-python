@@ -4,7 +4,7 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**type** | **str** | The asset type. | 
+**type** | **str** | The asset type; one of fiat or crypto. | 
 **code** | **str** | The unique code for the asset. | 
 **name** | **str** | The name of the asset. | 
 **symbol** | **str** | The currency symbol for the asset. | 

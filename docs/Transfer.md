@@ -5,14 +5,14 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **guid** | **str** | Auto-generated unique identifier for the transfer. | [optional] 
-**transfer_type** | **str** | The type of transfer. | [optional] 
+**transfer_type** | **str** | The type of transfer; one of funding, book, crypto, instant_funding, funding_return, or crypto_return. | [optional] 
 **bank_guid** | **str, none_type** | The associated bank&#39;s identifier. | [optional] 
 **customer_guid** | **str, none_type** | The associated customer&#39;s identifier. | [optional] 
 **quote_guid** | **str** | The associated quote&#39;s identifier. | [optional] 
 **external_bank_account_guid** | **str, none_type** | The associated external bank account&#39;s identifier. | [optional] 
 **asset** | **str** | The asset the transfer is related to, e.g., USD. | [optional] 
-**side** | **str** | The direction of the quote: &#39;deposit&#39; or &#39;withdrawal&#39;. | [optional] 
-**state** | **str** | The transfer&#39;s state | [optional] 
+**side** | **str** | The direction of the quote; one of deposit or withdrawal. | [optional] 
+**state** | **str** | The state of the transfer; one of storing, pending, reviewing, completed, or failed. | [optional] 
 **failure_code** | **str, none_type** | The failure code for failed transfers. | [optional] 
 **amount** | **int, none_type** | The actual amount in base units of the asset. | [optional] 
 **estimated_amount** | **int** | The estimated amount in base units of the asset. | [optional] 

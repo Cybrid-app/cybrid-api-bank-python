@@ -210,7 +210,6 @@ Retrieves a list of accounts.  Required scope: **accounts:read**
 import time
 import cybrid_api_bank
 from cybrid_api_bank.api import accounts_bank_api
-from cybrid_api_bank.model.list_request_owner import ListRequestOwner
 from cybrid_api_bank.model.error_response import ErrorResponse
 from cybrid_api_bank.model.account_list import AccountList
 from pprint import pprint
@@ -242,7 +241,7 @@ with cybrid_api_bank.ApiClient(configuration) as api_client:
     api_instance = accounts_bank_api.AccountsBankApi(api_client)
     page = ListRequestPage(0) # int | The page index to retrieve. (optional)
     per_page = ListRequestPerPage(1) # int | The number of entities per page to return. (optional)
-    owner = ListRequestOwner("bank") # ListRequestOwner | The owner of the entity. (optional)
+    owner = "owner_example" # str | The owner of the entity. (optional)
     guid = "guid_example" # str | Comma separated account_guids to list accounts for. (optional)
     type = "type_example" # str | Comma separated account_types to list accounts for. (optional)
     bank_guid = "bank_guid_example" # str | Comma separated bank_guids to list accounts for. (optional)
@@ -266,7 +265,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **page** | **int**| The page index to retrieve. | [optional]
  **per_page** | **int**| The number of entities per page to return. | [optional]
- **owner** | **ListRequestOwner**| The owner of the entity. | [optional]
+ **owner** | **str**| The owner of the entity. | [optional]
  **guid** | **str**| Comma separated account_guids to list accounts for. | [optional]
  **type** | **str**| Comma separated account_types to list accounts for. | [optional]
  **bank_guid** | **str**| Comma separated bank_guids to list accounts for. | [optional]

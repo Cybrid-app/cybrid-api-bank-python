@@ -4,7 +4,7 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**type** | **str** | The account type. | [optional] 
+**type** | **str** | The account type; one of trading, fee, fiat, or gas. | [optional] 
 **guid** | **str** | Auto-generated unique identifier for the account. | [optional] 
 **created_at** | **datetime** | ISO8601 datetime the record was created at. | [optional] 
 **updated_at** | **datetime** | ISO8601 datetime the record was last updated at. | [optional] 
@@ -14,7 +14,7 @@ Name | Type | Description | Notes
 **customer_guid** | **str** | The customer identifier associated with the account. | [optional] 
 **platform_balance** | **int** | The amount of funds that are in the account, in base units of the asset. | [optional] 
 **platform_available** | **int** | The amount of funds that are in the account, in base units of the asset, that are available for use on the platform. | [optional] 
-**state** | **str** | The account&#39;s state. | [optional] 
+**state** | **str** | The state of the account; one of storing or created. | [optional] 
 **labels** | **[str], none_type** | The labels associated with the account. | [optional] 
 **any string name** | **bool, date, datetime, dict, float, int, list, str, none_type** | any string name can be used but the value must be the correct type | [optional]
 

@@ -6,8 +6,8 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **guid** | **str** | Auto-generated unique identifier for the workflow. | [optional] 
 **customer_guid** | **str** | The associated customer&#39;s identifier. | [optional] 
-**type** | **str** | The type of workflow. | [optional]  if omitted the server will use the default value of "plaid"
-**state** | **str** | The state of the workflow. | [optional] 
+**type** | **str** | The type of workflow; one of plaid. | [optional] 
+**state** | **str** | The state of the workflow; one of storing, completed, or failed. | [optional] 
 **failure_code** | **str, none_type** | The failure code for failed workflows. | [optional] 
 **created_at** | **datetime** | ISO8601 datetime the record was created at. | [optional] 
 **updated_at** | **datetime** | ISO8601 datetime the record was last updated at. | [optional] 

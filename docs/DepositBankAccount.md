@@ -11,7 +11,7 @@ Name | Type | Description | Notes
 **created_at** | **datetime** | ISO8601 datetime the record was created at. | [optional] 
 **updated_at** | **datetime** | ISO8601 datetime the record was last updated at. | [optional] 
 **asset** | **str** | The asset the transfer is related to, e.g., USD. | [optional] 
-**state** | **str** | The state of the address. | [optional] 
+**state** | **str** | The state of the address; one of storing or created. | [optional] 
 **unique_memo_id** | **str** | The unique memo identifier for the address. This is used to identify the recipient when sending funds to the account. This value MUST be included in all wire transfers to this account. | [optional] 
 **counterparty_name** | **str, none_type** | The name of the account holder. | [optional] 
 **counterparty_address** | [**DepositBankAccountCounterpartyAddress**](DepositBankAccountCounterpartyAddress.md) |  | [optional] 
