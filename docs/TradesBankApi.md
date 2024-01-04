@@ -246,6 +246,7 @@ with cybrid_api_bank.ApiClient(configuration) as api_client:
     customer_guid = "customer_guid_example" # str | Comma separated customer_guids to list trades for. (optional)
     account_guid = "account_guid_example" # str | Comma separated account_guids to list trades for. (optional)
     state = "state_example" # str | Comma separated states to list trades for. (optional)
+    side = "side_example" # str | Comma separated sides to list trades for. (optional)
     label = "label_example" # str | Comma separated labels to list trades for. (optional)
     created_at_gte = "created_at_gte_example" # str | Created at start date inclusive lower bound, ISO8601. (optional)
     created_at_lt = "created_at_lt_example" # str | Created at end date exclusive upper bound, ISO8601. (optional)
@@ -256,7 +257,7 @@ with cybrid_api_bank.ApiClient(configuration) as api_client:
     # and optional values
     try:
         # Get trades list
-        api_response = api_instance.list_trades(page=page, per_page=per_page, guid=guid, bank_guid=bank_guid, customer_guid=customer_guid, account_guid=account_guid, state=state, label=label, created_at_gte=created_at_gte, created_at_lt=created_at_lt, updated_at_gte=updated_at_gte, updated_at_lt=updated_at_lt)
+        api_response = api_instance.list_trades(page=page, per_page=per_page, guid=guid, bank_guid=bank_guid, customer_guid=customer_guid, account_guid=account_guid, state=state, side=side, label=label, created_at_gte=created_at_gte, created_at_lt=created_at_lt, updated_at_gte=updated_at_gte, updated_at_lt=updated_at_lt)
         pprint(api_response)
     except cybrid_api_bank.ApiException as e:
         print("Exception when calling TradesBankApi->list_trades: %s\n" % e)
@@ -274,6 +275,7 @@ Name | Type | Description  | Notes
  **customer_guid** | **str**| Comma separated customer_guids to list trades for. | [optional]
  **account_guid** | **str**| Comma separated account_guids to list trades for. | [optional]
  **state** | **str**| Comma separated states to list trades for. | [optional]
+ **side** | **str**| Comma separated sides to list trades for. | [optional]
  **label** | **str**| Comma separated labels to list trades for. | [optional]
  **created_at_gte** | **str**| Created at start date inclusive lower bound, ISO8601. | [optional]
  **created_at_lt** | **str**| Created at end date exclusive upper bound, ISO8601. | [optional]
