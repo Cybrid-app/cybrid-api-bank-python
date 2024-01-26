@@ -77,6 +77,7 @@ with cybrid_api_bank.ApiClient(configuration) as api_client:
             first="first_example",
             middle="middle_example",
             last="last_example",
+            full="full_example",
         ),
         counterparty_address=PostExternalBankAccountCounterpartyAddress(
             street="street_example",
