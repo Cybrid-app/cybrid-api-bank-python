@@ -17,7 +17,7 @@ Name | Type | Description | Notes
 **counterparty_bank_account** | [**PostExternalBankAccountCounterpartyBankAccount**](PostExternalBankAccountCounterpartyBankAccount.md) |  | [optional] 
 **counterparty_name** | [**PostExternalBankAccountCounterpartyName**](PostExternalBankAccountCounterpartyName.md) |  | [optional] 
 **counterparty_address** | [**PostExternalBankAccountCounterpartyAddress**](PostExternalBankAccountCounterpartyAddress.md) |  | [optional] 
-**counterparty_email_address** | **str, none_type** | The counterparty&#39;s email address on the account. | [optional] 
+**counterparty_email_address** | **str, none_type** | The counterparty&#39;s email address on their checking account. | [optional] 
 **any string name** | **bool, date, datetime, dict, float, int, list, str, none_type** | any string name can be used but the value must be the correct type | [optional]
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

@@ -1,6 +1,6 @@
 # PostExternalBankAccountCounterpartyBankAccount
 
-The counterparty's bank account information.
+The counterparty's checking bank account information.
 
 ## Properties
 Name | Type | Description | Notes
