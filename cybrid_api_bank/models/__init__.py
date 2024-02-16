@@ -58,11 +58,15 @@ from cybrid_api_bank.model.identity_verification_state import IdentityVerificati
 from cybrid_api_bank.model.identity_verification_type import IdentityVerificationType
 from cybrid_api_bank.model.identity_verification_with_details import IdentityVerificationWithDetails
 from cybrid_api_bank.model.identity_verification_with_details_all_of import IdentityVerificationWithDetailsAllOf
+from cybrid_api_bank.model.invoice import Invoice
+from cybrid_api_bank.model.invoice_list import InvoiceList
 from cybrid_api_bank.model.list_request_page import ListRequestPage
 from cybrid_api_bank.model.list_request_per_page import ListRequestPerPage
 from cybrid_api_bank.model.patch_bank import PatchBank
 from cybrid_api_bank.model.patch_customer import PatchCustomer
 from cybrid_api_bank.model.patch_external_bank_account import PatchExternalBankAccount
+from cybrid_api_bank.model.payment_instruction import PaymentInstruction
+from cybrid_api_bank.model.payment_instruction_list import PaymentInstructionList
 from cybrid_api_bank.model.post_account import PostAccount
 from cybrid_api_bank.model.post_bank import PostBank
 from cybrid_api_bank.model.post_customer import PostCustomer
@@ -79,6 +83,8 @@ from cybrid_api_bank.model.post_identification_number import PostIdentificationN
 from cybrid_api_bank.model.post_identity_verification import PostIdentityVerification
 from cybrid_api_bank.model.post_identity_verification_address import PostIdentityVerificationAddress
 from cybrid_api_bank.model.post_identity_verification_name import PostIdentityVerificationName
+from cybrid_api_bank.model.post_invoice import PostInvoice
+from cybrid_api_bank.model.post_payment_instruction import PostPaymentInstruction
 from cybrid_api_bank.model.post_quote import PostQuote
 from cybrid_api_bank.model.post_trade import PostTrade
 from cybrid_api_bank.model.post_transfer import PostTransfer
