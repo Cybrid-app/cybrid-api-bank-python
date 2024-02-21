@@ -4,10 +4,99 @@ All URIs are relative to *https://bank.sandbox.cybrid.app*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
+[**cancel_invoice**](InvoicesBankApi.md#cancel_invoice) | **DELETE** /api/invoices/{invoice_guid} | Cancel Invoice
 [**create_invoice**](InvoicesBankApi.md#create_invoice) | **POST** /api/invoices | Create Invoice
 [**get_invoice**](InvoicesBankApi.md#get_invoice) | **GET** /api/invoices/{invoice_guid} | Get Invoice
 [**list_invoices**](InvoicesBankApi.md#list_invoices) | **GET** /api/invoices | List Invoices
 
+
+# **cancel_invoice**
+> Invoice cancel_invoice(invoice_guid)
+
+Cancel Invoice
+
+Cancels an invoice.  Required scope: **invoices:execute**
+
+### Example
+
+* Bearer (JWT) Authentication (BearerAuth):
+* OAuth Authentication (oauth2):
+
+```python
+import time
+import cybrid_api_bank
+from cybrid_api_bank.api import invoices_bank_api
+from cybrid_api_bank.model.error_response import ErrorResponse
+from cybrid_api_bank.model.invoice import Invoice
+from pprint import pprint
+# Defining the host is optional and defaults to https://bank.sandbox.cybrid.app
+# See configuration.py for a list of all supported configuration parameters.
+configuration = cybrid_api_bank.Configuration(
+    host = "https://bank.sandbox.cybrid.app"
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
+# Configure Bearer authorization (JWT): BearerAuth
+configuration = cybrid_api_bank.Configuration(
+    access_token = 'YOUR_BEARER_TOKEN'
+)
+
+# Configure OAuth2 access token for authorization: oauth2
+configuration = cybrid_api_bank.Configuration(
+    host = "https://bank.sandbox.cybrid.app"
+)
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
+
+# Enter a context with an instance of the API client
+with cybrid_api_bank.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = invoices_bank_api.InvoicesBankApi(api_client)
+    invoice_guid = "invoice_guid_example" # str | Identifier for the invoice.
+
+    # example passing only required values which don't have defaults set
+    try:
+        # Cancel Invoice
+        api_response = api_instance.cancel_invoice(invoice_guid)
+        pprint(api_response)
+    except cybrid_api_bank.ApiException as e:
+        print("Exception when calling InvoicesBankApi->cancel_invoice: %s\n" % e)
+```
+
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **invoice_guid** | **str**| Identifier for the invoice. |
+
+### Return type
+
+[**Invoice**](Invoice.md)
+
+### Authorization
+
+[BearerAuth](../README.md#BearerAuth), [oauth2](../README.md#oauth2)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+
+### HTTP response details
+
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** | Invoice cancelled |  -  |
+**401** | Unauthorized - Authentication failed,  |  -  |
+**403** | Invalid scope |  -  |
+**404** | Invoice not found |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **create_invoice**
 > Invoice create_invoice(post_invoice)
