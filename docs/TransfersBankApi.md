@@ -103,11 +103,11 @@ Name | Type | Description  | Notes
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
 **201** | Transfer created |  -  |
-**400** | Invalid requests |  -  |
+**400** | Bad Request |  -  |
+**409** | Conflict |  -  |
+**422** | Unprocessable Entity |  -  |
 **401** | Unauthorized - Authentication failed,  |  -  |
 **403** | Invalid scope |  -  |
-**409** | Data already exists |  -  |
-**422** | Unable to process request |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
