@@ -12,6 +12,8 @@ Name | Type | Description | Notes
 **state** | **str** | The customer state; one of storing, unverified, verified, rejected, or frozen. | [optional] 
 **name** | [**CustomerName**](CustomerName.md) |  | [optional] 
 **address** | [**CustomerAddress**](CustomerAddress.md) |  | [optional] 
+**aliases** | [**[CustomerAliasesInner], none_type**](CustomerAliasesInner.md) | The customer&#39;s aliases. Only available for GET operations when &#39;include_pii&#39; is set. | [optional] 
+**website** | **str, none_type** | The customer&#39;s website. Only available for GET operations when &#39;include_pii&#39; is set. | [optional] 
 **date_of_birth** | **date, none_type** | The customer&#39;s DOB. Only available for GET operations when &#39;include_pii&#39; is set. | [optional] 
 **phone_number** | **str, none_type** | The customer&#39;s phone number. Only available for GET operations when &#39;include_pii&#39; is set. | [optional] 
 **email_address** | **str, none_type** | The customer&#39;s email address. Only available for GET operations when &#39;include_pii&#39; is set. | [optional] 

@@ -22,6 +22,7 @@ from cybrid_api_bank.model.bank_list import BankList
 from cybrid_api_bank.model.bank_type import BankType
 from cybrid_api_bank.model.customer import Customer
 from cybrid_api_bank.model.customer_address import CustomerAddress
+from cybrid_api_bank.model.customer_aliases_inner import CustomerAliasesInner
 from cybrid_api_bank.model.customer_list import CustomerList
 from cybrid_api_bank.model.customer_name import CustomerName
 from cybrid_api_bank.model.customer_state import CustomerState
