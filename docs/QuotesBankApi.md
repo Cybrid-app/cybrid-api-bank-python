@@ -64,6 +64,13 @@ with cybrid_api_bank.ApiClient(configuration) as api_client:
         side="side_example",
         receive_amount=1,
         deliver_amount=1,
+        fees=[
+            PostFee(
+                type="spread",
+                spread_fee=1,
+                fixed_fee=1,
+            ),
+        ],
     ) # PostQuote | 
 
     # example passing only required values which don't have defaults set

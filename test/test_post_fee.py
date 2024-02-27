@@ -9,47 +9,26 @@
 """
 
 
+import sys
 import unittest
 
 import cybrid_api_bank
-from cybrid_api_bank.api.customers_bank_api import CustomersBankApi  # noqa: E501
+from cybrid_api_bank.model.post_fee import PostFee
 
 
-class TestCustomersBankApi(unittest.TestCase):
-    """CustomersBankApi unit test stubs"""
+class TestPostFee(unittest.TestCase):
+    """PostFee unit test stubs"""
 
     def setUp(self):
-        self.api = CustomersBankApi()  # noqa: E501
+        pass
 
     def tearDown(self):
         pass
 
-    def test_create_customer(self):
-        """Test case for create_customer
-
-        Create Customer  # noqa: E501
-        """
-        pass
-
-    def test_get_customer(self):
-        """Test case for get_customer
-
-        Get Customer  # noqa: E501
-        """
-        pass
-
-    def test_list_customers(self):
-        """Test case for list_customers
-
-        Get customers list  # noqa: E501
-        """
-        pass
-
-    def test_update_customer(self):
-        """Test case for update_customer
-
-        Patch Customer  # noqa: E501
-        """
+    def testPostFee(self):
+        """Test PostFee"""
+        # FIXME: construct object with mandatory attributes with example values
+        # model = PostFee()  # noqa: E501
         pass
 
 
