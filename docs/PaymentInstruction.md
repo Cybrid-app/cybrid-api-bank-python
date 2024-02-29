@@ -10,10 +10,12 @@ Name | Type | Description | Notes
 **created_at** | **datetime** | ISO8601 datetime the record was created at. | [optional] 
 **updated_at** | **datetime** | ISO8601 datetime the record was last updated at. | [optional] 
 **expired_at** | **datetime, none_type** | ISO8601 datetime the instructions expired at. | [optional] 
+**failed_at** | **datetime, none_type** | ISO8601 datetime the instructions failed to be created at. | [optional] 
 **network_address** | **str, none_type** | The network address to pay the invoice to. | [optional] 
 **expected_payment_asset** | **str, none_type** | The asset the payor must pay the invoice in, e.g., BTC. | [optional] 
 **expected_payment_amount** | **int, none_type** | The amount to be paid in base units of expected_payment_asset. | [optional] 
-**state** | **str** | The state of the payment instruction; one of storing, created, or expired. | [optional] 
+**failure_code** | **str, none_type** | The reason code explaining the failure; ond of invoice_paid, invoice_cancelled, or invalid_amount. | [optional] 
+**state** | **str** | The state of the payment instruction; one of storing, created, expired, or failed. | [optional] 
 **any string name** | **bool, date, datetime, dict, float, int, list, str, none_type** | any string name can be used but the value must be the correct type | [optional]
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
