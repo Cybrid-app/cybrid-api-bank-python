@@ -63,6 +63,7 @@ with cybrid_api_bank.ApiClient(configuration) as api_client:
         external_wallet_guid="external_wallet_guid_example",
         external_bank_account_guid="external_bank_account_guid_example",
         payment_rail="payment_rail_example",
+        beneficiary_memo="beneficiary_memo_example",
         labels=[
             "labels_example",
         ],
