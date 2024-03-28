@@ -57,7 +57,7 @@ with cybrid_api_bank.ApiClient(configuration) as api_client:
     api_instance = trades_bank_api.TradesBankApi(api_client)
     post_trade = PostTrade(
         quote_guid="quote_guid_example",
-        expected_error="invalid_quote_guid",
+        expected_error="expired_quote",
         labels=[
             "labels_example",
         ],
