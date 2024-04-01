@@ -176,11 +176,21 @@ with cybrid_api_bank.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = identity_verifications_bank_api.IdentityVerificationsBankApi(api_client)
     identity_verification_guid = "identity_verification_guid_example" # str | Identifier for the identity verification.
+    include_pii = True # bool | Include PII in the response. (optional)
 
     # example passing only required values which don't have defaults set
     try:
         # Get Identity Verification
         api_response = api_instance.get_identity_verification(identity_verification_guid)
+        pprint(api_response)
+    except cybrid_api_bank.ApiException as e:
+        print("Exception when calling IdentityVerificationsBankApi->get_identity_verification: %s\n" % e)
+
+    # example passing only required values which don't have defaults set
+    # and optional values
+    try:
+        # Get Identity Verification
+        api_response = api_instance.get_identity_verification(identity_verification_guid, include_pii=include_pii)
         pprint(api_response)
     except cybrid_api_bank.ApiException as e:
         print("Exception when calling IdentityVerificationsBankApi->get_identity_verification: %s\n" % e)
@@ -192,6 +202,7 @@ with cybrid_api_bank.ApiClient(configuration) as api_client:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **identity_verification_guid** | **str**| Identifier for the identity verification. |
+ **include_pii** | **bool**| Include PII in the response. | [optional]
 
 ### Return type
 
