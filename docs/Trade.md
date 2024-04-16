@@ -11,7 +11,7 @@ Name | Type | Description | Notes
 **symbol** | **str** | The trade symbol the pricing is related to. Format is asset-counter_asset, e.g., BTC-USD. | [optional] 
 **side** | **str** | The direction of the trade; one of buy or sell. | [optional] 
 **state** | **str** | The state of the trade; one of storing, pending, cancelled, completed, settling, or failed. | [optional] 
-**failure_code** | **str, none_type** | The failure code for failed trades. | [optional] 
+**failure_code** | **str, none_type** | The failure code for failed trades; one of non_sufficient_funds, unsupported, limit_exceeded, expired_quote, or market_volatility. | [optional] 
 **receive_amount** | **int** | The amount to be received in base units of the currency: currency is \&quot;asset\&quot; for buy and \&quot;counter_asset\&quot; for sell. | [optional] 
 **deliver_amount** | **int** | The amount to be delivered in base units of the currency: currency is \&quot;counter_asset\&quot; for buy and \&quot;asset\&quot; for sell. | [optional] 
 **fee** | **int** | The fee associated with the trade. Denominated in \&quot;counter_asset\&quot; base units | [optional] 

@@ -101,6 +101,7 @@ from cybrid_api_bank.model.symbol_price import SymbolPrice
 from cybrid_api_bank.model.symbol_price_response import SymbolPriceResponse
 from cybrid_api_bank.model.symbols import Symbols
 from cybrid_api_bank.model.trade import Trade
+from cybrid_api_bank.model.trade_failure_code import TradeFailureCode
 from cybrid_api_bank.model.trade_list import TradeList
 from cybrid_api_bank.model.trade_side import TradeSide
 from cybrid_api_bank.model.trade_state import TradeState
@@ -108,6 +109,7 @@ from cybrid_api_bank.model.trade_type import TradeType
 from cybrid_api_bank.model.transfer import Transfer
 from cybrid_api_bank.model.transfer_account_type import TransferAccountType
 from cybrid_api_bank.model.transfer_destination_account import TransferDestinationAccount
+from cybrid_api_bank.model.transfer_failure_code import TransferFailureCode
 from cybrid_api_bank.model.transfer_list import TransferList
 from cybrid_api_bank.model.transfer_side import TransferSide
 from cybrid_api_bank.model.transfer_source_account import TransferSourceAccount
