@@ -20,6 +20,13 @@ from cybrid_api_bank.model.bank import Bank
 from cybrid_api_bank.model.bank_feature import BankFeature
 from cybrid_api_bank.model.bank_list import BankList
 from cybrid_api_bank.model.bank_type import BankType
+from cybrid_api_bank.model.counterparty import Counterparty
+from cybrid_api_bank.model.counterparty_address import CounterpartyAddress
+from cybrid_api_bank.model.counterparty_aliases_inner import CounterpartyAliasesInner
+from cybrid_api_bank.model.counterparty_list import CounterpartyList
+from cybrid_api_bank.model.counterparty_name import CounterpartyName
+from cybrid_api_bank.model.counterparty_state import CounterpartyState
+from cybrid_api_bank.model.counterparty_type import CounterpartyType
 from cybrid_api_bank.model.customer import Customer
 from cybrid_api_bank.model.customer_address import CustomerAddress
 from cybrid_api_bank.model.customer_aliases_inner import CustomerAliasesInner
@@ -72,6 +79,8 @@ from cybrid_api_bank.model.payment_instruction import PaymentInstruction
 from cybrid_api_bank.model.payment_instruction_list import PaymentInstructionList
 from cybrid_api_bank.model.post_account import PostAccount
 from cybrid_api_bank.model.post_bank import PostBank
+from cybrid_api_bank.model.post_counterparty import PostCounterparty
+from cybrid_api_bank.model.post_counterparty_name import PostCounterpartyName
 from cybrid_api_bank.model.post_customer import PostCustomer
 from cybrid_api_bank.model.post_customer_address import PostCustomerAddress
 from cybrid_api_bank.model.post_customer_name import PostCustomerName

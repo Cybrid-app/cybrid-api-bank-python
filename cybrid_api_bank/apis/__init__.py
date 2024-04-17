@@ -17,6 +17,7 @@
 from cybrid_api_bank.api.accounts_bank_api import AccountsBankApi
 from cybrid_api_bank.api.assets_bank_api import AssetsBankApi
 from cybrid_api_bank.api.banks_bank_api import BanksBankApi
+from cybrid_api_bank.api.counterparties_bank_api import CounterpartiesBankApi
 from cybrid_api_bank.api.customers_bank_api import CustomersBankApi
 from cybrid_api_bank.api.deposit_addresses_bank_api import DepositAddressesBankApi
 from cybrid_api_bank.api.deposit_bank_accounts_bank_api import DepositBankAccountsBankApi
