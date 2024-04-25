@@ -57,6 +57,7 @@ with cybrid_api_bank.ApiClient(configuration) as api_client:
     api_instance = payment_instructions_bank_api.PaymentInstructionsBankApi(api_client)
     post_payment_instruction = PostPaymentInstruction(
         invoice_guid="invoice_guid_example",
+        expected_behaviour="invoice_paid_immediately",
     ) # PostPaymentInstruction | 
 
     # example passing only required values which don't have defaults set
