@@ -5,7 +5,8 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **guid** | **str** | Auto-generated unique identifier for the workflow. | [optional] 
-**customer_guid** | **str** | The associated customer&#39;s identifier. | [optional] 
+**bank_guid** | **str, none_type** | The associated banks&#39;s identifier. | [optional] 
+**customer_guid** | **str, none_type** | The associated customer&#39;s identifier. | [optional] 
 **type** | **str** | The type of workflow; one of plaid. | [optional] 
 **state** | **str** | The state of the workflow; one of storing, completed, or failed. | [optional] 
 **failure_code** | **str, none_type** | The failure code for failed workflows. | [optional] 
