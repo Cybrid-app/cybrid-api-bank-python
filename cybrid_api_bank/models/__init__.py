@@ -20,6 +20,12 @@ from cybrid_api_bank.model.bank import Bank
 from cybrid_api_bank.model.bank_feature import BankFeature
 from cybrid_api_bank.model.bank_list import BankList
 from cybrid_api_bank.model.bank_type import BankType
+from cybrid_api_bank.model.compliance_check import ComplianceCheck
+from cybrid_api_bank.model.compliance_check_outcome import ComplianceCheckOutcome
+from cybrid_api_bank.model.compliance_check_type import ComplianceCheckType
+from cybrid_api_bank.model.compliance_decision import ComplianceDecision
+from cybrid_api_bank.model.compliance_decision_state import ComplianceDecisionState
+from cybrid_api_bank.model.compliance_decision_type import ComplianceDecisionType
 from cybrid_api_bank.model.counterparty import Counterparty
 from cybrid_api_bank.model.counterparty_address import CounterpartyAddress
 from cybrid_api_bank.model.counterparty_aliases_inner import CounterpartyAliasesInner
@@ -124,9 +130,6 @@ from cybrid_api_bank.model.transfer_side import TransferSide
 from cybrid_api_bank.model.transfer_source_account import TransferSourceAccount
 from cybrid_api_bank.model.transfer_state import TransferState
 from cybrid_api_bank.model.transfer_type import TransferType
-from cybrid_api_bank.model.verification_check import VerificationCheck
-from cybrid_api_bank.model.verification_check_state import VerificationCheckState
-from cybrid_api_bank.model.verification_check_type import VerificationCheckType
 from cybrid_api_bank.model.workflow import Workflow
 from cybrid_api_bank.model.workflow_state import WorkflowState
 from cybrid_api_bank.model.workflow_type import WorkflowType

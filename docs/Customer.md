@@ -18,7 +18,8 @@ Name | Type | Description | Notes
 **phone_number** | **str, none_type** | The customer&#39;s phone number. Only available for GET operations when &#39;include_pii&#39; is set. | [optional] 
 **email_address** | **str, none_type** | The customer&#39;s email address. Only available for GET operations when &#39;include_pii&#39; is set. | [optional] 
 **labels** | **[str], none_type** | The labels associated with the customer. | [optional] 
-**verification_checks** | [**[VerificationCheck]**](VerificationCheck.md) | The verification checks associated with the customer. | [optional] 
+**compliance_decisions** | [**[ComplianceDecision]**](ComplianceDecision.md) | The compliance decisions associated with the customer. | [optional] 
+**verification_checks** | [**[ComplianceDecision]**](ComplianceDecision.md) | Deprecated; use compliance_decisions instead. | [optional] 
 **any string name** | **bool, date, datetime, dict, float, int, list, str, none_type** | any string name can be used but the value must be the correct type | [optional]
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

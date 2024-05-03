@@ -1,4 +1,4 @@
-# VerificationCheckState
+# ComplianceDecisionState
 
 
 ## Properties
