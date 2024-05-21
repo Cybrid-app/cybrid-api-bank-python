@@ -60,6 +60,7 @@ with cybrid_api_bank.ApiClient(configuration) as api_client:
         bank_guid="bank_guid_example",
         customer_guid="customer_guid_example",
         asset="asset_example",
+        network_address="network_address_example",
         symbol="symbol_example",
         side="side_example",
         receive_amount=1,
