@@ -280,12 +280,13 @@ with cybrid_api_bank.ApiClient(configuration) as api_client:
     bank_guid = "bank_guid_example" # str | Comma separated bank_guids to list identity verifications for. (optional)
     customer_guid = "customer_guid_example" # str | Comma separated customer_guids to list identity verifications for. (optional)
     state = "state_example" # str | Comma separated states to list identity verifications for. (optional)
+    type = "type_example" # str | Comma separated types to list identity verifications for. (optional)
 
     # example passing only required values which don't have defaults set
     # and optional values
     try:
         # List Identity Verifications
-        api_response = api_instance.list_identity_verifications(page=page, per_page=per_page, guid=guid, bank_guid=bank_guid, customer_guid=customer_guid, state=state)
+        api_response = api_instance.list_identity_verifications(page=page, per_page=per_page, guid=guid, bank_guid=bank_guid, customer_guid=customer_guid, state=state, type=type)
         pprint(api_response)
     except cybrid_api_bank.ApiException as e:
         print("Exception when calling IdentityVerificationsBankApi->list_identity_verifications: %s\n" % e)
@@ -302,6 +303,7 @@ Name | Type | Description  | Notes
  **bank_guid** | **str**| Comma separated bank_guids to list identity verifications for. | [optional]
  **customer_guid** | **str**| Comma separated customer_guids to list identity verifications for. | [optional]
  **state** | **str**| Comma separated states to list identity verifications for. | [optional]
+ **type** | **str**| Comma separated types to list identity verifications for. | [optional]
 
 ### Return type
 

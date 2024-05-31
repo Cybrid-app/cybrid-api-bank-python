@@ -255,6 +255,7 @@ with cybrid_api_bank.ApiClient(configuration) as api_client:
     state = "state_example" # str | Comma separated states to list transfers for. (optional)
     side = "side_example" # str | Comma separated sides to list transfers for. (optional)
     label = "label_example" # str | Comma separated labels to list transfers for. (optional)
+    txn_hash = "txn_hash_example" # str | Comma separated transaction hashes to list transfers for. (optional)
     created_at_gte = "created_at_gte_example" # str | Created at start date inclusive lower bound, ISO8601 (optional)
     created_at_lt = "created_at_lt_example" # str | Created at end date exclusive upper bound, ISO8601. (optional)
     updated_at_gte = "updated_at_gte_example" # str | Created at start date inclusive lower bound, ISO8601 (optional)
@@ -264,7 +265,7 @@ with cybrid_api_bank.ApiClient(configuration) as api_client:
     # and optional values
     try:
         # Get transfers list
-        api_response = api_instance.list_transfers(page=page, per_page=per_page, guid=guid, transfer_type=transfer_type, bank_guid=bank_guid, customer_guid=customer_guid, account_guid=account_guid, state=state, side=side, label=label, created_at_gte=created_at_gte, created_at_lt=created_at_lt, updated_at_gte=updated_at_gte, updated_at_lt=updated_at_lt)
+        api_response = api_instance.list_transfers(page=page, per_page=per_page, guid=guid, transfer_type=transfer_type, bank_guid=bank_guid, customer_guid=customer_guid, account_guid=account_guid, state=state, side=side, label=label, txn_hash=txn_hash, created_at_gte=created_at_gte, created_at_lt=created_at_lt, updated_at_gte=updated_at_gte, updated_at_lt=updated_at_lt)
         pprint(api_response)
     except cybrid_api_bank.ApiException as e:
         print("Exception when calling TransfersBankApi->list_transfers: %s\n" % e)
@@ -285,6 +286,7 @@ Name | Type | Description  | Notes
  **state** | **str**| Comma separated states to list transfers for. | [optional]
  **side** | **str**| Comma separated sides to list transfers for. | [optional]
  **label** | **str**| Comma separated labels to list transfers for. | [optional]
+ **txn_hash** | **str**| Comma separated transaction hashes to list transfers for. | [optional]
  **created_at_gte** | **str**| Created at start date inclusive lower bound, ISO8601 | [optional]
  **created_at_lt** | **str**| Created at end date exclusive upper bound, ISO8601. | [optional]
  **updated_at_gte** | **str**| Created at start date inclusive lower bound, ISO8601 | [optional]
