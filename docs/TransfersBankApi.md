@@ -58,10 +58,12 @@ with cybrid_api_bank.ApiClient(configuration) as api_client:
     post_transfer = PostTransfer(
         quote_guid="quote_guid_example",
         transfer_type="funding",
+        customer_guid="customer_guid_example",
         source_account_guid="source_account_guid_example",
         destination_account_guid="destination_account_guid_example",
         external_wallet_guid="external_wallet_guid_example",
         external_bank_account_guid="external_bank_account_guid_example",
+        network_fee_account_guid="network_fee_account_guid_example",
         payment_rail="payment_rail_example",
         beneficiary_memo="beneficiary_memo_example",
         labels=[
