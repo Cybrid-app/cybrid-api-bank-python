@@ -17,7 +17,6 @@ Name | Type | Description | Notes
 **failure_codes** | **[str], none_type** | The reason codes explaining the outcome. | [optional] 
 **compliance_checks** | [**[ComplianceCheck]**](ComplianceCheck.md) | The compliance checks associated with the identity verification. | [optional] 
 **compliance_decisions** | [**[ComplianceDecision]**](ComplianceDecision.md) | The compliance decisions associated with the identity verification. | [optional] 
-**verification_checks** | [**[ComplianceDecision]**](ComplianceDecision.md) | Deprecated; use compliance_decisions instead. | [optional] 
 **persona_inquiry_id** | **str, none_type** | The Persona identifier of the backing inquiry. | [optional] 
 **persona_state** | **str, none_type** | The Persona state of the backing inquiry; one of waiting, pending, reviewing, processing, expired, completed, or unknown. | [optional] 
 **pii** | [**IdentityVerificationWithDetailsPii**](IdentityVerificationWithDetailsPii.md) |  | [optional] 
