@@ -13,6 +13,8 @@ from cybrid_api_bank.model.account import Account
 from cybrid_api_bank.model.account_list import AccountList
 from cybrid_api_bank.model.account_state import AccountState
 from cybrid_api_bank.model.account_type import AccountType
+from cybrid_api_bank.model.activity_limit import ActivityLimit
+from cybrid_api_bank.model.activity_type import ActivityType
 from cybrid_api_bank.model.asset import Asset
 from cybrid_api_bank.model.asset_list import AssetList
 from cybrid_api_bank.model.asset_types import AssetTypes
@@ -63,6 +65,7 @@ from cybrid_api_bank.model.external_wallet import ExternalWallet
 from cybrid_api_bank.model.external_wallet_environment import ExternalWalletEnvironment
 from cybrid_api_bank.model.external_wallet_list import ExternalWalletList
 from cybrid_api_bank.model.external_wallet_state import ExternalWalletState
+from cybrid_api_bank.model.identification_number import IdentificationNumber
 from cybrid_api_bank.model.identity_verification import IdentityVerification
 from cybrid_api_bank.model.identity_verification_list import IdentityVerificationList
 from cybrid_api_bank.model.identity_verification_method import IdentityVerificationMethod

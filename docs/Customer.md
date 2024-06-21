@@ -19,6 +19,8 @@ Name | Type | Description | Notes
 **email_address** | **str, none_type** | The customer&#39;s email address. Only available for GET operations when &#39;include_pii&#39; is set. | [optional] 
 **labels** | **[str], none_type** | The labels associated with the customer. | [optional] 
 **compliance_decisions** | [**[ComplianceDecision]**](ComplianceDecision.md) | The compliance decisions associated with the customer. | [optional] 
+**identification_numbers** | [**[IdentificationNumber], none_type**](IdentificationNumber.md) | The customer&#39;s identification numbers. Only available for GET operations when &#39;include_pii&#39; is set and bank has access. | [optional] 
+**activity_limits** | [**[ActivityLimit]**](ActivityLimit.md) | The asset limits associated with the customer. | [optional] 
 **any string name** | **bool, date, datetime, dict, float, int, list, str, none_type** | any string name can be used but the value must be the correct type | [optional]
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
