@@ -60,7 +60,21 @@ with cybrid_api_bank.ApiClient(configuration) as api_client:
         transfer_type="funding",
         customer_guid="customer_guid_example",
         source_account_guid="source_account_guid_example",
+        source_participants=[
+            TransferParticipant(
+                type="type_example",
+                amount=1,
+                guid="guid_example",
+            ),
+        ],
         destination_account_guid="destination_account_guid_example",
+        destination_participants=[
+            TransferParticipant(
+                type="type_example",
+                amount=1,
+                guid="guid_example",
+            ),
+        ],
         external_wallet_guid="external_wallet_guid_example",
         external_bank_account_guid="external_bank_account_guid_example",
         network_fee_account_guid="network_fee_account_guid_example",

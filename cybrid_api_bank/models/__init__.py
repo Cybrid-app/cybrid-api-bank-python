@@ -129,6 +129,7 @@ from cybrid_api_bank.model.transfer_account_type import TransferAccountType
 from cybrid_api_bank.model.transfer_destination_account import TransferDestinationAccount
 from cybrid_api_bank.model.transfer_failure_code import TransferFailureCode
 from cybrid_api_bank.model.transfer_list import TransferList
+from cybrid_api_bank.model.transfer_participant import TransferParticipant
 from cybrid_api_bank.model.transfer_side import TransferSide
 from cybrid_api_bank.model.transfer_source_account import TransferSourceAccount
 from cybrid_api_bank.model.transfer_state import TransferState
