@@ -7,6 +7,7 @@ Name | Type | Description | Notes
 **type** | **str** | The type of identity verification. | 
 **method** | **str** | The identity verification method. | 
 **customer_guid** | **str, none_type** | The customer&#39;s identifier. | [optional] 
+**counterparty_guid** | **str, none_type** | The counterparty&#39;s identifier. | [optional] 
 **country_code** | **str, none_type** | The ISO 3166 country 2-Alpha country the customer is being verified in; required when method is set to &#39;id_and_selfie&#39;. If not present, will default to the Bank&#39;s configured country code. | [optional] 
 **name** | [**PostIdentityVerificationName**](PostIdentityVerificationName.md) |  | [optional] 
 **address** | [**PostIdentityVerificationAddress**](PostIdentityVerificationAddress.md) |  | [optional] 
