@@ -110,6 +110,7 @@ from cybrid_api_bank.model.post_payment_instruction import PostPaymentInstructio
 from cybrid_api_bank.model.post_quote import PostQuote
 from cybrid_api_bank.model.post_trade import PostTrade
 from cybrid_api_bank.model.post_transfer import PostTransfer
+from cybrid_api_bank.model.post_transfer_participant import PostTransferParticipant
 from cybrid_api_bank.model.post_workflow import PostWorkflow
 from cybrid_api_bank.model.quote import Quote
 from cybrid_api_bank.model.quote_list import QuoteList

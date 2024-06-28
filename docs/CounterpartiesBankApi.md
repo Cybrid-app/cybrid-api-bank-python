@@ -57,6 +57,7 @@ with cybrid_api_bank.ApiClient(configuration) as api_client:
     api_instance = counterparties_bank_api.CounterpartiesBankApi(api_client)
     post_counterparty = PostCounterparty(
         type="business",
+        customer_guid="customer_guid_example",
         name=PostCounterpartyName(
             first="first_example",
             middle="middle_example",

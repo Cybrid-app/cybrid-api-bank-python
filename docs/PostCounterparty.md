@@ -5,6 +5,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **type** | **str** | The counterparty&#39;s type. | 
+**customer_guid** | **str, none_type** | The owning customer&#39;s identifier. | [optional] 
 **name** | [**PostCounterpartyName**](PostCounterpartyName.md) |  | [optional] 
 **address** | [**PostCustomerAddress**](PostCustomerAddress.md) |  | [optional] 
 **date_of_birth** | **date, none_type** | The counterparty&#39;s date of birth. | [optional] 

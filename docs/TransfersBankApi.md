@@ -61,16 +61,16 @@ with cybrid_api_bank.ApiClient(configuration) as api_client:
         customer_guid="customer_guid_example",
         source_account_guid="source_account_guid_example",
         source_participants=[
-            TransferParticipant(
-                type="type_example",
+            PostTransferParticipant(
+                type="bank",
                 amount=1,
                 guid="guid_example",
             ),
         ],
         destination_account_guid="destination_account_guid_example",
         destination_participants=[
-            TransferParticipant(
-                type="type_example",
+            PostTransferParticipant(
+                type="bank",
                 amount=1,
                 guid="guid_example",
             ),
