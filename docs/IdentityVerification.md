@@ -6,7 +6,7 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **guid** | **str** | Auto-generated unique identifier for the identity verification. | [optional] 
 **type** | **str** | The identity verification type; one of kyc, bank_account, or counterparty. | [optional] 
-**method** | **str** | The identity verification method; one of business_registration, id_and_selfie, tax_id_and_selfie, attested, attested_ownership, account_ownership, plaid_identity_match, document_submission, or watchlists. | [optional] 
+**method** | **str** | The identity verification method; one of attested, document_submission, id_and_selfie, tax_id_and_selfie, business_registration, plaid_identity_match, attested_ownership, account_ownership, or watchlists. | [optional] 
 **created_at** | **datetime** | ISO8601 datetime the record was created at. | [optional] 
 **updated_at** | **datetime** | ISO8601 datetime the record was last updated at. | [optional] 
 **customer_guid** | **str, none_type** | The customer&#39;s identifier. | [optional] 
