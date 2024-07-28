@@ -13,7 +13,7 @@ Name | Type | Description | Notes
 **asset** | **str** | The asset the transfer is related to, e.g., USD. | [optional] 
 **side** | **str** | The direction of the quote; one of deposit or withdrawal. | [optional] 
 **state** | **str** | The state of the transfer; one of storing, pending, reviewing, completed, or failed. | [optional] 
-**failure_code** | **str, none_type** | The failure code for failed transfers; one of non_sufficient_funds, refresh_required, party_name_invalid, payment_rail_invalid, compliance_rejection, cancelled, reversed, limit_exceeded, network_fee_too_low, or amount_too_low. | [optional] 
+**failure_code** | **str, none_type** | The failure code for failed transfers; one of non_sufficient_funds, refresh_required, party_name_invalid, payment_rail_invalid, compliance_rejection, cancelled, reversed, limit_exceeded, network_fee_too_low, amount_too_low, or internal_error. | [optional] 
 **amount** | **int, none_type** | The actual amount in base units of the asset. | [optional] 
 **estimated_amount** | **int** | The estimated amount in base units of the asset. | [optional] 
 **fee** | **int** | The fee associated with the transfer. | [optional] 
