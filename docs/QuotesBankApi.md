@@ -72,6 +72,7 @@ with cybrid_api_bank.ApiClient(configuration) as api_client:
                 fixed_fee=1,
             ),
         ],
+        reference_trade_guid="reference_trade_guid_example",
     ) # PostQuote | 
 
     # example passing only required values which don't have defaults set
