@@ -273,6 +273,7 @@ with cybrid_api_bank.ApiClient(configuration) as api_client:
     api_instance = customers_bank_api.CustomersBankApi(api_client)
     page = ListRequestPage(0) # int |  (optional)
     per_page = ListRequestPerPage(1) # int |  (optional)
+    type = "type_example" # str | Comma separated types to list customers for. (optional)
     bank_guid = "bank_guid_example" # str | Comma separated bank_guids to list customers for. (optional)
     guid = "guid_example" # str | Comma separated customer_guids to list customers for. (optional)
     label = "label_example" # str | Comma separated labels to list customers for. (optional)
@@ -281,7 +282,7 @@ with cybrid_api_bank.ApiClient(configuration) as api_client:
     # and optional values
     try:
         # Get customers list
-        api_response = api_instance.list_customers(page=page, per_page=per_page, bank_guid=bank_guid, guid=guid, label=label)
+        api_response = api_instance.list_customers(page=page, per_page=per_page, type=type, bank_guid=bank_guid, guid=guid, label=label)
         pprint(api_response)
     except cybrid_api_bank.ApiException as e:
         print("Exception when calling CustomersBankApi->list_customers: %s\n" % e)
@@ -294,6 +295,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **page** | **int**|  | [optional]
  **per_page** | **int**|  | [optional]
+ **type** | **str**| Comma separated types to list customers for. | [optional]
  **bank_guid** | **str**| Comma separated bank_guids to list customers for. | [optional]
  **guid** | **str**| Comma separated customer_guids to list customers for. | [optional]
  **label** | **str**| Comma separated labels to list customers for. | [optional]

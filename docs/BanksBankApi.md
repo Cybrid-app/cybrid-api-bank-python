@@ -250,13 +250,14 @@ with cybrid_api_bank.ApiClient(configuration) as api_client:
     api_instance = banks_bank_api.BanksBankApi(api_client)
     page = ListRequestPage(0) # int | The page index to retrieve. (optional)
     per_page = ListRequestPerPage(1) # int | The number of entities per page to return. (optional)
+    type = "type_example" # str | Comma separated types to list banks for. (optional)
     guid = "guid_example" # str | Comma separated bank_guids to list banks for. (optional)
 
     # example passing only required values which don't have defaults set
     # and optional values
     try:
         # Get banks list
-        api_response = api_instance.list_banks(page=page, per_page=per_page, guid=guid)
+        api_response = api_instance.list_banks(page=page, per_page=per_page, type=type, guid=guid)
         pprint(api_response)
     except cybrid_api_bank.ApiException as e:
         print("Exception when calling BanksBankApi->list_banks: %s\n" % e)
@@ -269,6 +270,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **page** | **int**| The page index to retrieve. | [optional]
  **per_page** | **int**| The number of entities per page to return. | [optional]
+ **type** | **str**| Comma separated types to list banks for. | [optional]
  **guid** | **str**| Comma separated bank_guids to list banks for. | [optional]
 
 ### Return type

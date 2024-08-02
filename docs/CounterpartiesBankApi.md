@@ -258,8 +258,8 @@ with cybrid_api_bank.ApiClient(configuration) as api_client:
     api_instance = counterparties_bank_api.CounterpartiesBankApi(api_client)
     page = ListRequestPage(0) # int |  (optional)
     per_page = ListRequestPerPage(1) # int |  (optional)
+    type = "type_example" # str | Comma separated types to list counterparties for. (optional)
     bank_guid = "bank_guid_example" # str | Comma separated bank_guids to list counterparties for. (optional)
-    type = "type_example" # str | Comma separated counterparty_types to list counterparties for. (optional)
     customer_guid = "customer_guid_example" # str | Comma separated customer_guids to list counterparties for. (optional)
     guid = "guid_example" # str | Comma separated counterparty_guids to list counterparties for. (optional)
     label = "label_example" # str | Comma separated labels to list counterparties for. (optional)
@@ -268,7 +268,7 @@ with cybrid_api_bank.ApiClient(configuration) as api_client:
     # and optional values
     try:
         # Get counterparties list
-        api_response = api_instance.list_counterparties(page=page, per_page=per_page, bank_guid=bank_guid, type=type, customer_guid=customer_guid, guid=guid, label=label)
+        api_response = api_instance.list_counterparties(page=page, per_page=per_page, type=type, bank_guid=bank_guid, customer_guid=customer_guid, guid=guid, label=label)
         pprint(api_response)
     except cybrid_api_bank.ApiException as e:
         print("Exception when calling CounterpartiesBankApi->list_counterparties: %s\n" % e)
@@ -281,8 +281,8 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **page** | **int**|  | [optional]
  **per_page** | **int**|  | [optional]
+ **type** | **str**| Comma separated types to list counterparties for. | [optional]
  **bank_guid** | **str**| Comma separated bank_guids to list counterparties for. | [optional]
- **type** | **str**| Comma separated counterparty_types to list counterparties for. | [optional]
  **customer_guid** | **str**| Comma separated customer_guids to list counterparties for. | [optional]
  **guid** | **str**| Comma separated counterparty_guids to list counterparties for. | [optional]
  **label** | **str**| Comma separated labels to list counterparties for. | [optional]
