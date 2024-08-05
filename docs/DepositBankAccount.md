@@ -18,6 +18,7 @@ Name | Type | Description | Notes
 **counterparty_address** | [**DepositBankAccountCounterpartyAddress**](DepositBankAccountCounterpartyAddress.md) |  | [optional] 
 **account_details** | [**[DepositBankAccountAccountDetailsInner], none_type**](DepositBankAccountAccountDetailsInner.md) | The account details for the bank account. | [optional] 
 **routing_details** | [**[DepositBankAccountRoutingDetailsInner], none_type**](DepositBankAccountRoutingDetailsInner.md) | The account details for the bank account. | [optional] 
+**parent_deposit_bank_account_guid** | **str, none_type** | The unique identifier for the bank-level deposit bank account. This is only set for sub-accounts. | [optional] 
 **labels** | **[str], none_type** | The labels associated with the address. | [optional] 
 **any string name** | **bool, date, datetime, dict, float, int, list, str, none_type** | any string name can be used but the value must be the correct type | [optional]
 
