@@ -8,6 +8,7 @@ Name | Type | Description | Notes
 **customer_guid** | **str, none_type** | The unique identifier for the customer. | [optional] 
 **receive_amount** | **int, none_type** | The amount to be received in base units of the asset, i.e., the amount the customer will receive after fees. ONLY one of receive_amount or deliver_amount is required. | [optional] 
 **deliver_amount** | **int, none_type** | The amount to be delivered in base units of the asset, i.e., the amount the customer will receive before fees. ONLY one of receive_amount or deliver_amount is required. | [optional] 
+**account_guid** | **str, none_type** | The identifier for the account to use for the transfer. Required if the customer has multiple fiat accounts. Currently only valid for invoices paid to a fiat account. | [optional] 
 **labels** | **[str], none_type** | The labels associated with the customer. | [optional] 
 **any string name** | **bool, date, datetime, dict, float, int, list, str, none_type** | any string name can be used but the value must be the correct type | [optional]
 

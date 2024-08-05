@@ -56,8 +56,10 @@ with cybrid_api_bank.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = deposit_bank_accounts_bank_api.DepositBankAccountsBankApi(api_client)
     post_deposit_bank_account = PostDepositBankAccount(
+        type="main",
         account_guid="account_guid_example",
         customer_guid="customer_guid_example",
+        parent_deposit_bank_account_guid="parent_deposit_bank_account_guid_example",
         labels=[
             "labels_example",
         ],
@@ -244,12 +246,14 @@ with cybrid_api_bank.ApiClient(configuration) as api_client:
     customer_guid = "customer_guid_example" # str | Comma separated customer_guids to list deposit bank accounts for. (optional)
     label = "label_example" # str | Comma separated labels to list deposit bank accounts for. (optional)
     unique_memo_id = "unique_memo_id_example" # str | Comma separated unique memo ids to list deposit bank accounts for. (optional)
+    type = "type_example" # str | Comma separated types to list deposit bank accounts for. (optional)
+    parent_deposit_bank_account_guid = "parent_deposit_bank_account_guid_example" # str | Comma separated guids for parent accounts to list deposit bank accounts for. (optional)
 
     # example passing only required values which don't have defaults set
     # and optional values
     try:
         # List Deposit Bank Accounts
-        api_response = api_instance.list_deposit_bank_accounts(page=page, per_page=per_page, guid=guid, bank_guid=bank_guid, customer_guid=customer_guid, label=label, unique_memo_id=unique_memo_id)
+        api_response = api_instance.list_deposit_bank_accounts(page=page, per_page=per_page, guid=guid, bank_guid=bank_guid, customer_guid=customer_guid, label=label, unique_memo_id=unique_memo_id, type=type, parent_deposit_bank_account_guid=parent_deposit_bank_account_guid)
         pprint(api_response)
     except cybrid_api_bank.ApiException as e:
         print("Exception when calling DepositBankAccountsBankApi->list_deposit_bank_accounts: %s\n" % e)
@@ -267,6 +271,8 @@ Name | Type | Description  | Notes
  **customer_guid** | **str**| Comma separated customer_guids to list deposit bank accounts for. | [optional]
  **label** | **str**| Comma separated labels to list deposit bank accounts for. | [optional]
  **unique_memo_id** | **str**| Comma separated unique memo ids to list deposit bank accounts for. | [optional]
+ **type** | **str**| Comma separated types to list deposit bank accounts for. | [optional]
+ **parent_deposit_bank_account_guid** | **str**| Comma separated guids for parent accounts to list deposit bank accounts for. | [optional]
 
 ### Return type
 

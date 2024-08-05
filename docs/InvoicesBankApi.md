@@ -149,6 +149,7 @@ with cybrid_api_bank.ApiClient(configuration) as api_client:
         customer_guid="customer_guid_example",
         receive_amount=1,
         deliver_amount=1,
+        account_guid="account_guid_example",
         labels=[
             "labels_example",
         ],
