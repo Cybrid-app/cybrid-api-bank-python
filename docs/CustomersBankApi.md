@@ -121,9 +121,7 @@ Name | Type | Description  | Notes
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
 **201** | customer created |  -  |
-**400** | Invalid requests |  -  |
-**401** | Unauthorized - Authentication failed, invalid subject |  -  |
-**403** | Invalid scope |  -  |
+**422** | Unprocessable Content |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
@@ -412,9 +410,7 @@ Name | Type | Description  | Notes
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
 **200** | customer found |  -  |
-**401** | Unauthorized - Authentication failed, invalid subject |  -  |
-**403** | Invalid scope |  -  |
-**404** | customer not found |  -  |
+**400** | Bad Request |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
