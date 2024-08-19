@@ -113,6 +113,8 @@ Name | Type | Description  | Notes
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
 **201** | counterparty created |  -  |
+**401** | Unauthorized |  -  |
+**403** | Forbidden |  -  |
 **422** | Unprocessable Content |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
@@ -133,6 +135,7 @@ Retrieves a counterparty.  Required scope: **counterparties:read**
 import time
 import cybrid_api_bank
 from cybrid_api_bank.api import counterparties_bank_api
+from cybrid_api_bank.model.error_response import ErrorResponse
 from cybrid_api_bank.model.counterparty import Counterparty
 from pprint import pprint
 # Defining the host is optional and defaults to https://bank.sandbox.cybrid.app
@@ -209,6 +212,8 @@ Name | Type | Description  | Notes
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
 **200** | counterparty found |  -  |
+**401** | Unauthorized |  -  |
+**403** | Forbidden |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
@@ -229,6 +234,7 @@ import time
 import cybrid_api_bank
 from cybrid_api_bank.api import counterparties_bank_api
 from cybrid_api_bank.model.counterparty_list import CounterpartyList
+from cybrid_api_bank.model.error_response import ErrorResponse
 from pprint import pprint
 # Defining the host is optional and defaults to https://bank.sandbox.cybrid.app
 # See configuration.py for a list of all supported configuration parameters.
@@ -306,6 +312,8 @@ Name | Type | Description  | Notes
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
 **200** | get list of counterparties |  -  |
+**401** | Unauthorized |  -  |
+**403** | Forbidden |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
