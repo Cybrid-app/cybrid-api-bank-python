@@ -13,11 +13,11 @@ import sys
 import unittest
 
 import cybrid_api_bank
-from cybrid_api_bank.model.post_customer_address import PostCustomerAddress
+from cybrid_api_bank.model.external_bank_account_pii_inner_routing_details_inner import ExternalBankAccountPiiInnerRoutingDetailsInner
 
 
-class TestPostCustomerAddress(unittest.TestCase):
-    """PostCustomerAddress unit test stubs"""
+class TestExternalBankAccountPiiInnerRoutingDetailsInner(unittest.TestCase):
+    """ExternalBankAccountPiiInnerRoutingDetailsInner unit test stubs"""
 
     def setUp(self):
         pass
@@ -25,10 +25,10 @@ class TestPostCustomerAddress(unittest.TestCase):
     def tearDown(self):
         pass
 
-    def testPostCustomerAddress(self):
-        """Test PostCustomerAddress"""
+    def testExternalBankAccountPiiInnerRoutingDetailsInner(self):
+        """Test ExternalBankAccountPiiInnerRoutingDetailsInner"""
         # FIXME: construct object with mandatory attributes with example values
-        # model = PostCustomerAddress()  # noqa: E501
+        # model = ExternalBankAccountPiiInnerRoutingDetailsInner()  # noqa: E501
         pass
 
 
