@@ -72,6 +72,14 @@ with cybrid_api_bank.ApiClient(configuration) as api_client:
             postal_code="postal_code_example",
             country_code="country_code_example",
         ),
+        aliases=[
+            CounterpartyAliasesInner(
+                first="first_example",
+                middle="middle_example",
+                last="last_example",
+                full="full_example",
+            ),
+        ],
         date_of_birth=dateutil_parser('1970-01-01').date(),
         labels=[
             "labels_example",
