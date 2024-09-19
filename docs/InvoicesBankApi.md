@@ -335,6 +335,7 @@ with cybrid_api_bank.ApiClient(configuration) as api_client:
     customer_guid = "customer_guid_example" # str | Comma separated customer_guids to list invoices for. (optional)
     account_guid = "account_guid_example" # str | Comma separated account_guids to list invoices for. (optional)
     state = "state_example" # str | Comma separated states to list invoices for. (optional)
+    asset = "asset_example" # str | Comma separated assets to list invoices for. (optional)
     environment = "sandbox" # str |  (optional)
     label = "label_example" # str | Comma separated labels to list invoices for. (optional)
 
@@ -342,7 +343,7 @@ with cybrid_api_bank.ApiClient(configuration) as api_client:
     # and optional values
     try:
         # List Invoices
-        api_response = api_instance.list_invoices(page=page, per_page=per_page, guid=guid, bank_guid=bank_guid, customer_guid=customer_guid, account_guid=account_guid, state=state, environment=environment, label=label)
+        api_response = api_instance.list_invoices(page=page, per_page=per_page, guid=guid, bank_guid=bank_guid, customer_guid=customer_guid, account_guid=account_guid, state=state, asset=asset, environment=environment, label=label)
         pprint(api_response)
     except cybrid_api_bank.ApiException as e:
         print("Exception when calling InvoicesBankApi->list_invoices: %s\n" % e)
@@ -360,6 +361,7 @@ Name | Type | Description  | Notes
  **customer_guid** | **str**| Comma separated customer_guids to list invoices for. | [optional]
  **account_guid** | **str**| Comma separated account_guids to list invoices for. | [optional]
  **state** | **str**| Comma separated states to list invoices for. | [optional]
+ **asset** | **str**| Comma separated assets to list invoices for. | [optional]
  **environment** | **str**|  | [optional]
  **label** | **str**| Comma separated labels to list invoices for. | [optional]
 
