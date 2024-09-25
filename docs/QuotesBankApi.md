@@ -73,6 +73,8 @@ with cybrid_api_bank.ApiClient(configuration) as api_client:
             ),
         ],
         reference_trade_guid="reference_trade_guid_example",
+        source_account_guid="source_account_guid_example",
+        destination_account_guid="destination_account_guid_example",
     ) # PostQuote | 
 
     # example passing only required values which don't have defaults set
