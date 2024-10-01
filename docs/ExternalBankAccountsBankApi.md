@@ -88,6 +88,7 @@ with cybrid_api_bank.ApiClient(configuration) as api_client:
             country_code="country_code_example",
         ),
         counterparty_email_address="counterparty_email_address_example",
+        counterparty_guid="counterparty_guid_example",
     ) # PostExternalBankAccount | 
 
     # example passing only required values which don't have defaults set
