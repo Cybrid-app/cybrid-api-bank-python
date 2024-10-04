@@ -5,9 +5,9 @@ The attested address.
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**street** | **str** | The first line of the address. | 
-**city** | **str** | The city of the address. | 
-**country_code** | **str** | The ISO 3166 country 2-Alpha country code of the address. | 
+**street** | **str, none_type** | The first line of the address. | 
+**city** | **str, none_type** | The city of the address. | 
+**country_code** | **str, none_type** | The ISO 3166 country 2-Alpha country code of the address. | 
 **street2** | **str, none_type** | The optional second line of the address. | [optional] 
 **subdivision** | **str, none_type** | The provide/state/region of the address; not used by all countries. | [optional] 
 **postal_code** | **str, none_type** | The postal/post/zip code of the address; not used by all countries. | [optional] 
