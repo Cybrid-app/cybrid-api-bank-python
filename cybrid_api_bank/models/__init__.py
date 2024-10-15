@@ -90,6 +90,8 @@ from cybrid_api_bank.model.payment_instruction_list import PaymentInstructionLis
 from cybrid_api_bank.model.post_account import PostAccount
 from cybrid_api_bank.model.post_bank import PostBank
 from cybrid_api_bank.model.post_counterparty import PostCounterparty
+from cybrid_api_bank.model.post_counterparty_address import PostCounterpartyAddress
+from cybrid_api_bank.model.post_counterparty_aliases_inner import PostCounterpartyAliasesInner
 from cybrid_api_bank.model.post_counterparty_name import PostCounterpartyName
 from cybrid_api_bank.model.post_customer import PostCustomer
 from cybrid_api_bank.model.post_customer_address import PostCustomerAddress
