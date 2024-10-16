@@ -1,5 +1,6 @@
 # PostCounterpartyAddress
 
+The address of the counterparty.
 
 ## Properties
 Name | Type | Description | Notes

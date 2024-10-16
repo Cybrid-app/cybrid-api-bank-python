@@ -58,12 +58,6 @@ with cybrid_api_bank.ApiClient(configuration) as api_client:
     post_counterparty = PostCounterparty(
         type="business",
         customer_guid="customer_guid_example",
-        name=PostCounterpartyName(
-            first="first_example",
-            middle="middle_example",
-            last="last_example",
-            full="full_example",
-        ),
         address=PostCounterpartyAddress(
             street="street_example",
             street2="street2_example",
@@ -71,6 +65,12 @@ with cybrid_api_bank.ApiClient(configuration) as api_client:
             subdivision="subdivision_example",
             postal_code="postal_code_example",
             country_code="country_code_example",
+        ),
+        name=PostCounterpartyName(
+            full="full_example",
+            first="first_example",
+            middle="middle_example",
+            last="last_example",
         ),
         aliases=[
             PostCounterpartyAliasesInner(

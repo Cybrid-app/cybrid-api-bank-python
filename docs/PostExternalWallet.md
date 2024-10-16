@@ -1,10 +1,11 @@
 # PostExternalWallet
 
+Request body for external wallet creation.
 
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**name** | **str** | The name of the account. | 
+**name** | **str** | Name of the external wallet. | 
 **asset** | **str** | The asset code. | 
 **address** | **str** | The blockchain wallet address for the wallet. | 
 **customer_guid** | **str, none_type** | The customer identifier. | [optional] 

@@ -1,5 +1,6 @@
 # PostDepositAddress
 
+Request body for deposit address creation.
 
 ## Properties
 Name | Type | Description | Notes

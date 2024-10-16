@@ -1,5 +1,6 @@
 # PatchExternalBankAccount
 
+Request body for external bank account modification.
 
 ## Properties
 Name | Type | Description | Notes

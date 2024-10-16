@@ -59,12 +59,10 @@ with cybrid_api_bank.ApiClient(configuration) as api_client:
         product_type="trading",
         bank_guid="bank_guid_example",
         customer_guid="customer_guid_example",
-        asset="asset_example",
-        network_address="network_address_example",
-        symbol="symbol_example",
-        side="side_example",
         receive_amount=1,
         deliver_amount=1,
+        asset="asset_example",
+        network_address="network_address_example",
         fees=[
             PostFee(
                 type="spread",
@@ -72,6 +70,8 @@ with cybrid_api_bank.ApiClient(configuration) as api_client:
                 fixed_fee=1,
             ),
         ],
+        side="deposit",
+        symbol="symbol_example",
         reference_trade_guid="reference_trade_guid_example",
         source_account_guid="source_account_guid_example",
         destination_account_guid="destination_account_guid_example",

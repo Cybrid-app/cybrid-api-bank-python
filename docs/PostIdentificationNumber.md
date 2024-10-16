@@ -1,5 +1,6 @@
 # PostIdentificationNumber
 
+Identification number details.
 
 ## Properties
 Name | Type | Description | Notes

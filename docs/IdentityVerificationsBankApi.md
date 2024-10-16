@@ -57,8 +57,11 @@ with cybrid_api_bank.ApiClient(configuration) as api_client:
     api_instance = identity_verifications_bank_api.IdentityVerificationsBankApi(api_client)
     post_identity_verification = PostIdentityVerification(
         type="kyc",
-        method="attested",
         customer_guid="customer_guid_example",
+        expected_behaviours=[
+            "passed_immediately",
+        ],
+        method="watchlists",
         counterparty_guid="counterparty_guid_example",
         country_code="country_code_example",
         name=PostIdentityVerificationName(
@@ -76,8 +79,6 @@ with cybrid_api_bank.ApiClient(configuration) as api_client:
             country_code="country_code_example",
         ),
         date_of_birth=dateutil_parser('1970-01-01').date(),
-        phone_number="phone_number_example",
-        email_address="email_address_example",
         identification_numbers=[
             PostIdentificationNumber(
                 type="drivers_license",
@@ -86,9 +87,8 @@ with cybrid_api_bank.ApiClient(configuration) as api_client:
             ),
         ],
         external_bank_account_guid="external_bank_account_guid_example",
-        expected_behaviours=[
-            "passed_immediately",
-        ],
+        phone_number="phone_number_example",
+        email_address="email_address_example",
     ) # PostIdentityVerification | 
 
     # example passing only required values which don't have defaults set

@@ -57,19 +57,19 @@ with cybrid_api_bank.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = banks_bank_api.BanksBankApi(api_client)
     post_bank = PostBank(
-        name="name_example",
         type="sandbox",
+        name="name_example",
         supported_trading_symbols=[
             "supported_trading_symbols_example",
-        ],
-        features=[
-            "attestation_identity_records",
         ],
         supported_fiat_account_assets=[
             "supported_fiat_account_assets_example",
         ],
         supported_country_codes=[
             "supported_country_codes_example",
+        ],
+        features=[
+            "attestation_identity_records",
         ],
     ) # PostBank | 
 
