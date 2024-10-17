@@ -77,7 +77,6 @@ with cybrid_api_bank.ApiClient(configuration) as api_client:
                 guid="guid_example",
             ),
         ],
-        expected_error="expected_error_example",
         bank_fiat_account_guid="bank_fiat_account_guid_example",
         customer_fiat_account_guid="customer_fiat_account_guid_example",
         source_account_guid="source_account_guid_example",
