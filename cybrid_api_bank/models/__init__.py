@@ -111,11 +111,15 @@ from cybrid_api_bank.model.post_identity_verification_name import PostIdentityVe
 from cybrid_api_bank.model.post_invoice import PostInvoice
 from cybrid_api_bank.model.post_payment_instruction import PostPaymentInstruction
 from cybrid_api_bank.model.post_quote import PostQuote
+from cybrid_api_bank.model.post_quote_entry import PostQuoteEntry
 from cybrid_api_bank.model.post_trade import PostTrade
 from cybrid_api_bank.model.post_transfer import PostTransfer
 from cybrid_api_bank.model.post_transfer_participant import PostTransferParticipant
 from cybrid_api_bank.model.post_workflow import PostWorkflow
 from cybrid_api_bank.model.quote import Quote
+from cybrid_api_bank.model.quote_entry import QuoteEntry
+from cybrid_api_bank.model.quote_entry_destination_account import QuoteEntryDestinationAccount
+from cybrid_api_bank.model.quote_entry_source_account import QuoteEntrySourceAccount
 from cybrid_api_bank.model.quote_list import QuoteList
 from cybrid_api_bank.model.quote_side import QuoteSide
 from cybrid_api_bank.model.quote_type import QuoteType
@@ -131,6 +135,8 @@ from cybrid_api_bank.model.trade_type import TradeType
 from cybrid_api_bank.model.transfer import Transfer
 from cybrid_api_bank.model.transfer_account_type import TransferAccountType
 from cybrid_api_bank.model.transfer_destination_account import TransferDestinationAccount
+from cybrid_api_bank.model.transfer_entry import TransferEntry
+from cybrid_api_bank.model.transfer_entry_destination_account import TransferEntryDestinationAccount
 from cybrid_api_bank.model.transfer_failure_code import TransferFailureCode
 from cybrid_api_bank.model.transfer_list import TransferList
 from cybrid_api_bank.model.transfer_participant import TransferParticipant

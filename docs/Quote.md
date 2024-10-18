@@ -21,6 +21,7 @@ Name | Type | Description | Notes
 **network_fee** | **int, none_type** | The network fee in base units of network_fee_asset. Only present on &#x60;crypto_transfer&#x60; quotes. | [optional] 
 **network_fee_asset** | **str, none_type** | The asset code of the network fee. | [optional] 
 **network_address** | **str, none_type** | The network address to pay the invoice to. Populated for lightning_transfer quotes. | [optional] 
+**entries** | [**[QuoteEntry], none_type**](QuoteEntry.md) | The quote entries for a batch transfer quote | [optional] 
 **any string name** | **bool, date, datetime, dict, float, int, list, str, none_type** | any string name can be used but the value must be the correct type | [optional]
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

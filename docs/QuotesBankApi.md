@@ -72,6 +72,14 @@ with cybrid_api_bank.ApiClient(configuration) as api_client:
         ],
         side="deposit",
         symbol="symbol_example",
+        destination_accounts=[
+            PostQuoteEntry(
+                type="external_wallet",
+                guid="guid_example",
+                receive_amount=1,
+                deliver_amount=1,
+            ),
+        ],
         reference_trade_guid="reference_trade_guid_example",
         source_account_guid="source_account_guid_example",
         destination_account_guid="destination_account_guid_example",

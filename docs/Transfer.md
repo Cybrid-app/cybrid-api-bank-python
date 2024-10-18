@@ -33,6 +33,7 @@ Name | Type | Description | Notes
 **transfer_details** | **{str: (bool, date, datetime, dict, float, int, list, str, none_type)}, none_type** | The raw details on the transfer from the bank. | [optional] 
 **payment_rail** | **str, none_type** | The rail the payment was done on. One of: ach, eft, wire, rtp | [optional] 
 **labels** | **[str], none_type** | The labels associated with the transfer. | [optional] 
+**entries** | [**[TransferEntry], none_type**](TransferEntry.md) | Transfer entries associated with the batch transfer | [optional] 
 **any string name** | **bool, date, datetime, dict, float, int, list, str, none_type** | any string name can be used but the value must be the correct type | [optional]
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
