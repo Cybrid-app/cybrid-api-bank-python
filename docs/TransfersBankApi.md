@@ -84,6 +84,9 @@ with cybrid_api_bank.ApiClient(configuration) as api_client:
         external_wallet_guid="external_wallet_guid_example",
         customer_guid="customer_guid_example",
         network_fee_account_guid="network_fee_account_guid_example",
+        expected_behaviours=[
+            "force_review",
+        ],
         labels=[
             "labels_example",
         ],
@@ -126,7 +129,6 @@ Name | Type | Description  | Notes
 **201** | Transfer created |  -  |
 **401** | Unauthorized |  -  |
 **403** | Forbidden |  -  |
-**400** | Bad Request |  -  |
 **409** | Conflict |  -  |
 **422** | Unprocessable Content |  -  |
 
