@@ -22,6 +22,8 @@ Name | Type | Description | Notes
 **network_fee_asset** | **str, none_type** | The asset code of the network fee. | [optional] 
 **network_address** | **str, none_type** | The network address to pay the invoice to. Populated for lightning_transfer quotes. | [optional] 
 **entries** | [**[QuoteEntry], none_type**](QuoteEntry.md) | The quote entries for a batch transfer quote | [optional] 
+**trade_guid** | **str, none_type** | The unique identifier for the trade. | [optional] 
+**transfer_guid** | **str, none_type** | The unique identifier for the transfer. | [optional] 
 **any string name** | **bool, date, datetime, dict, float, int, list, str, none_type** | any string name can be used but the value must be the correct type | [optional]
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
