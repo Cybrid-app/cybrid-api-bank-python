@@ -16,8 +16,8 @@ Name | Type | Description | Notes
 **date_of_birth** | **date, none_type** | The customer&#39;s date of birth. Required when type is kyc and method is attested. | [optional] 
 **identification_numbers** | [**[PostIdentificationNumber], none_type**](PostIdentificationNumber.md) | The customer&#39;s identification numbers. Required when type is kyc and method is attested. | [optional] 
 **external_bank_account_guid** | **str, none_type** | The external bank account&#39;s identifier. Required when type is bank_account. | [optional] 
-**phone_number** | **str, none_type** | The customer&#39;s phone number. Optional when type is bank_account and method is attested or type is bank_account and method is attested_ownership. | [optional] 
-**email_address** | **str, none_type** | The customer&#39;s email address. Optional when type is bank_account and method is attested or type is bank_account and method is attested_ownership. | [optional] 
+**phone_number** | **str, none_type** | The customer&#39;s phone number. Optional when type is bank_account and method is attested_ownership. | [optional] 
+**email_address** | **str, none_type** | The customer&#39;s email address. Optional when type is bank_account and method is attested_ownership. | [optional] 
 **any string name** | **bool, date, datetime, dict, float, int, list, str, none_type** | any string name can be used but the value must be the correct type | [optional]
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
