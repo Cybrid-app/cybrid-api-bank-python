@@ -71,6 +71,9 @@ with cybrid_api_bank.ApiClient(configuration) as api_client:
         features=[
             "attestation_identity_records",
         ],
+        cors_allowed_origins=[
+            "cors_allowed_origins_example",
+        ],
     ) # PostBank | 
 
     # example passing only required values which don't have defaults set
@@ -347,6 +350,9 @@ with cybrid_api_bank.ApiClient(configuration) as api_client:
         name="name_example",
         supported_trading_symbols=[
             "supported_trading_symbols_example",
+        ],
+        cors_allowed_origins=[
+            "cors_allowed_origins_example",
         ],
     ) # PatchBank | 
 
