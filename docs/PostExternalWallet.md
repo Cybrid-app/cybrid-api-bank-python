@@ -9,6 +9,7 @@ Name | Type | Description | Notes
 **asset** | **str** | The asset code. | 
 **address** | **str** | The blockchain wallet address for the wallet. | 
 **customer_guid** | **str, none_type** | The customer identifier. | [optional] 
+**counterparty_guid** | **str, none_type** | The counterparty identifier. | [optional] 
 **tag** | **str, none_type** | The blockchain tag to use when transferring crypto to the wallet. | [optional] 
 **any string name** | **bool, date, datetime, dict, float, int, list, str, none_type** | any string name can be used but the value must be the correct type | [optional]
 

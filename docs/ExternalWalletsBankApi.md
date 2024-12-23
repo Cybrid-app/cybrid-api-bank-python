@@ -59,6 +59,7 @@ with cybrid_api_bank.ApiClient(configuration) as api_client:
     post_external_wallet = PostExternalWallet(
         name="name_example",
         customer_guid="customer_guid_example",
+        counterparty_guid="counterparty_guid_example",
         asset="asset_example",
         address="address_example",
         tag="tag_example",
