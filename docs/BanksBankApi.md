@@ -62,6 +62,9 @@ with cybrid_api_bank.ApiClient(configuration) as api_client:
         supported_trading_symbols=[
             "supported_trading_symbols_example",
         ],
+        supported_payout_symbols=[
+            {},
+        ],
         supported_fiat_account_assets=[
             "supported_fiat_account_assets_example",
         ],
@@ -350,6 +353,9 @@ with cybrid_api_bank.ApiClient(configuration) as api_client:
         name="name_example",
         supported_trading_symbols=[
             "supported_trading_symbols_example",
+        ],
+        supported_payout_symbols=[
+            {},
         ],
         cors_allowed_origins=[
             "cors_allowed_origins_example",

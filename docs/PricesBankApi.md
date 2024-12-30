@@ -52,14 +52,19 @@ configuration.access_token = 'YOUR_ACCESS_TOKEN'
 with cybrid_api_bank.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = prices_bank_api.PricesBankApi(api_client)
-    symbol = "symbol_example" # str | Comma separated symbols to list prices for. (optional)
+    symbol = "symbol_example" # str | Comma separated trading symbols to list prices for. (optional)
+    trading_symbol = "trading_symbol_example" # str | Comma separated trading symbols to list prices for. (optional)
+    payout_symbol = "payout_symbol_example" # str | Comma separated payout symbols to list prices for. (optional)
+    payout_country_code = "payout_country_code_example" # str | Comma separated payout country codes to list prices for. (optional)
+    payout_participants_type = "payout_participants_type_example" # str | Comma separated payout participants types to list prices for. (optional)
+    payout_route = "payout_route_example" # str | Comma separated payout routes to list prices for. (optional)
     bank_guid = "bank_guid_example" # str | The bank identifier to retrieve prices for. (optional)
 
     # example passing only required values which don't have defaults set
     # and optional values
     try:
         # Get Price
-        api_response = api_instance.list_prices(symbol=symbol, bank_guid=bank_guid)
+        api_response = api_instance.list_prices(symbol=symbol, trading_symbol=trading_symbol, payout_symbol=payout_symbol, payout_country_code=payout_country_code, payout_participants_type=payout_participants_type, payout_route=payout_route, bank_guid=bank_guid)
         pprint(api_response)
     except cybrid_api_bank.ApiException as e:
         print("Exception when calling PricesBankApi->list_prices: %s\n" % e)
@@ -70,7 +75,12 @@ with cybrid_api_bank.ApiClient(configuration) as api_client:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **symbol** | **str**| Comma separated symbols to list prices for. | [optional]
+ **symbol** | **str**| Comma separated trading symbols to list prices for. | [optional]
+ **trading_symbol** | **str**| Comma separated trading symbols to list prices for. | [optional]
+ **payout_symbol** | **str**| Comma separated payout symbols to list prices for. | [optional]
+ **payout_country_code** | **str**| Comma separated payout country codes to list prices for. | [optional]
+ **payout_participants_type** | **str**| Comma separated payout participants types to list prices for. | [optional]
+ **payout_route** | **str**| Comma separated payout routes to list prices for. | [optional]
  **bank_guid** | **str**| The bank identifier to retrieve prices for. | [optional]
 
 ### Return type
