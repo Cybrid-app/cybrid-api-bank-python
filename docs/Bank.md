@@ -11,6 +11,7 @@ Name | Type | Description | Notes
 **features** | **[str]** | The bank&#39;s enabled features. | 
 **created_at** | **datetime** | ISO8601 datetime the record was created at. | 
 **supported_trading_symbols** | **[str]** | The bank&#39;s list of supported trading symbols. | [optional] 
+**supported_payout_symbols** | [**[BankSupportedPayoutSymbolsInner]**](BankSupportedPayoutSymbolsInner.md) | The bank&#39;s list of supported payout symbols. | [optional] 
 **supported_fiat_account_assets** | **[str]** | The bank&#39;s list of supported fiat symbols. | [optional] 
 **supported_country_codes** | **[str]** | The bank&#39;s list of supported country codes. | [optional] 
 **cors_allowed_origins** | **[str]** | The bank&#39;s list of CORS allowed origins. | [optional] 

@@ -21,6 +21,7 @@ from cybrid_api_bank.model.asset_types import AssetTypes
 from cybrid_api_bank.model.bank import Bank
 from cybrid_api_bank.model.bank_feature import BankFeature
 from cybrid_api_bank.model.bank_list import BankList
+from cybrid_api_bank.model.bank_supported_payout_symbols_inner import BankSupportedPayoutSymbolsInner
 from cybrid_api_bank.model.bank_type import BankType
 from cybrid_api_bank.model.compliance_check import ComplianceCheck
 from cybrid_api_bank.model.compliance_check_outcome import ComplianceCheckOutcome

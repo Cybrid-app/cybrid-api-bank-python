@@ -13,11 +13,11 @@ import sys
 import unittest
 
 import cybrid_api_bank
-from cybrid_api_bank.model.account_state import AccountState
+from cybrid_api_bank.model.bank_supported_payout_symbols_inner import BankSupportedPayoutSymbolsInner
 
 
-class TestAccountState(unittest.TestCase):
-    """AccountState unit test stubs"""
+class TestBankSupportedPayoutSymbolsInner(unittest.TestCase):
+    """BankSupportedPayoutSymbolsInner unit test stubs"""
 
     def setUp(self):
         pass
@@ -25,10 +25,10 @@ class TestAccountState(unittest.TestCase):
     def tearDown(self):
         pass
 
-    def testAccountState(self):
-        """Test AccountState"""
+    def testBankSupportedPayoutSymbolsInner(self):
+        """Test BankSupportedPayoutSymbolsInner"""
         # FIXME: construct object with mandatory attributes with example values
-        # model = AccountState()  # noqa: E501
+        # model = BankSupportedPayoutSymbolsInner()  # noqa: E501
         pass
 
 
