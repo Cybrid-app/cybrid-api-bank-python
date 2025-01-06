@@ -1,6 +1,6 @@
 # PostIdentityVerificationAddress
 
-The customer's address. Required when type is kyc and method is attested or type is bank_account and method is attested_ownership.
+The customer's address. Required when type is kyc and method is attested. Optional when type is bank_account and method is attested_ownership.
 
 ## Properties
 Name | Type | Description | Notes
