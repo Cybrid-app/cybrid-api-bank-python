@@ -86,9 +86,29 @@ with cybrid_api_bank.ApiClient(configuration) as api_client:
                 identification_number="identification_number_example",
             ),
         ],
-        external_bank_account_guid="external_bank_account_guid_example",
+        aliases=[
+            PostIdentityVerificationAliasesInner(
+                full="full_example",
+            ),
+        ],
         phone_number="phone_number_example",
         email_address="email_address_example",
+        website="website_example",
+        nature_of_business="nature_of_business_example",
+        director_customer_guids=[
+            "director_customer_guids_example",
+        ],
+        ultimate_beneficial_owners=[
+            PostUltimateBeneficialOwner(
+                customer_guid="customer_guid_example",
+                ownership_percentage=3.14,
+            ),
+        ],
+        supporting_file_guids=[
+            "supporting_file_guids_example",
+        ],
+        occupation="occupation_example",
+        external_bank_account_guid="external_bank_account_guid_example",
     ) # PostIdentityVerification | 
 
     # example passing only required values which don't have defaults set

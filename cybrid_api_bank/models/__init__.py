@@ -88,6 +88,8 @@ from cybrid_api_bank.model.patch_customer import PatchCustomer
 from cybrid_api_bank.model.patch_external_bank_account import PatchExternalBankAccount
 from cybrid_api_bank.model.payment_instruction import PaymentInstruction
 from cybrid_api_bank.model.payment_instruction_list import PaymentInstructionList
+from cybrid_api_bank.model.platform_file import PlatformFile
+from cybrid_api_bank.model.platform_file_list import PlatformFileList
 from cybrid_api_bank.model.post_account import PostAccount
 from cybrid_api_bank.model.post_bank import PostBank
 from cybrid_api_bank.model.post_counterparty import PostCounterparty
@@ -96,6 +98,7 @@ from cybrid_api_bank.model.post_counterparty_aliases_inner import PostCounterpar
 from cybrid_api_bank.model.post_counterparty_name import PostCounterpartyName
 from cybrid_api_bank.model.post_customer import PostCustomer
 from cybrid_api_bank.model.post_customer_address import PostCustomerAddress
+from cybrid_api_bank.model.post_customer_aliases_inner import PostCustomerAliasesInner
 from cybrid_api_bank.model.post_customer_name import PostCustomerName
 from cybrid_api_bank.model.post_deposit_address import PostDepositAddress
 from cybrid_api_bank.model.post_deposit_bank_account import PostDepositBankAccount
@@ -105,9 +108,11 @@ from cybrid_api_bank.model.post_external_bank_account_counterparty_bank_account 
 from cybrid_api_bank.model.post_external_bank_account_counterparty_name import PostExternalBankAccountCounterpartyName
 from cybrid_api_bank.model.post_external_wallet import PostExternalWallet
 from cybrid_api_bank.model.post_fee import PostFee
+from cybrid_api_bank.model.post_file import PostFile
 from cybrid_api_bank.model.post_identification_number import PostIdentificationNumber
 from cybrid_api_bank.model.post_identity_verification import PostIdentityVerification
 from cybrid_api_bank.model.post_identity_verification_address import PostIdentityVerificationAddress
+from cybrid_api_bank.model.post_identity_verification_aliases_inner import PostIdentityVerificationAliasesInner
 from cybrid_api_bank.model.post_identity_verification_name import PostIdentityVerificationName
 from cybrid_api_bank.model.post_invoice import PostInvoice
 from cybrid_api_bank.model.post_payment_instruction import PostPaymentInstruction
@@ -116,6 +121,7 @@ from cybrid_api_bank.model.post_quote_entry import PostQuoteEntry
 from cybrid_api_bank.model.post_trade import PostTrade
 from cybrid_api_bank.model.post_transfer import PostTransfer
 from cybrid_api_bank.model.post_transfer_participant import PostTransferParticipant
+from cybrid_api_bank.model.post_ultimate_beneficial_owner import PostUltimateBeneficialOwner
 from cybrid_api_bank.model.post_workflow import PostWorkflow
 from cybrid_api_bank.model.quote import Quote
 from cybrid_api_bank.model.quote_entry import QuoteEntry
