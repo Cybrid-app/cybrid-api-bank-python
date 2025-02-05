@@ -63,7 +63,13 @@ with cybrid_api_bank.ApiClient(configuration) as api_client:
             "supported_trading_symbols_example",
         ],
         supported_payout_symbols=[
-            {},
+            PostSupportedPayoutSymbols(
+                primary_asset="primary_asset_example",
+                counter_asset="counter_asset_example",
+                country_code="country_code_example",
+                participants_type="C2C",
+                route="bank_account",
+            ),
         ],
         supported_fiat_account_assets=[
             "supported_fiat_account_assets_example",
@@ -355,7 +361,13 @@ with cybrid_api_bank.ApiClient(configuration) as api_client:
             "supported_trading_symbols_example",
         ],
         supported_payout_symbols=[
-            {},
+            PostSupportedPayoutSymbols(
+                primary_asset="primary_asset_example",
+                counter_asset="counter_asset_example",
+                country_code="country_code_example",
+                participants_type="C2C",
+                route="bank_account",
+            ),
         ],
         cors_allowed_origins=[
             "cors_allowed_origins_example",

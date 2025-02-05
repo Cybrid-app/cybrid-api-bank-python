@@ -11,7 +11,7 @@ Name | Type | Description | Notes
 **supported_country_codes** | **[str]** | The country codes supported by the bank. | 
 **features** | **[str]** | The features supported by the bank. | 
 **type** | **str** | The type of bank. | defaults to "sandbox"
-**supported_payout_symbols** | **[{str: (bool, date, datetime, dict, float, int, list, str, none_type)}], none_type** | The payout symbols supported by the bank. This is not yet supported and should be nil or empty. | [optional] 
+**supported_payout_symbols** | [**[PostSupportedPayoutSymbols], none_type**](PostSupportedPayoutSymbols.md) | The payout symbols supported by the bank. This is not yet supported and should be nil or empty. | [optional] 
 **cors_allowed_origins** | **[str], none_type** | The list of allowed CORS origin URIs. | [optional] 
 **any string name** | **bool, date, datetime, dict, float, int, list, str, none_type** | any string name can be used but the value must be the correct type | [optional]
 
