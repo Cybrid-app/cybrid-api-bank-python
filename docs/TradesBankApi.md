@@ -250,10 +250,10 @@ with cybrid_api_bank.ApiClient(configuration) as api_client:
     state = "state_example" # str | Comma separated states to list trades for. (optional)
     side = "side_example" # str | Comma separated sides to list trades for. (optional)
     label = "label_example" # str | Comma separated labels to list trades for. (optional)
-    created_at_gte = "created_at_gte_example" # str | Created at start date inclusive lower bound, ISO8601. (optional)
-    created_at_lt = "created_at_lt_example" # str | Created at end date exclusive upper bound, ISO8601. (optional)
-    updated_at_gte = "updated_at_gte_example" # str | Updated at start date inclusive lower bound, ISO8601. (optional)
-    updated_at_lt = "updated_at_lt_example" # str | Updated at end date exclusive upper bound, ISO8601. (optional)
+    created_at_gte = "created_at_gte_example" # str | Created at start date-time inclusive lower bound, ISO8601. (optional)
+    created_at_lt = "created_at_lt_example" # str | Created at end date-time exclusive upper bound, ISO8601. (optional)
+    updated_at_gte = "updated_at_gte_example" # str | Updated at start date-time inclusive lower bound, ISO8601. (optional)
+    updated_at_lt = "updated_at_lt_example" # str | Updated at end date-time exclusive upper bound, ISO8601. (optional)
 
     # example passing only required values which don't have defaults set
     # and optional values
@@ -279,10 +279,10 @@ Name | Type | Description  | Notes
  **state** | **str**| Comma separated states to list trades for. | [optional]
  **side** | **str**| Comma separated sides to list trades for. | [optional]
  **label** | **str**| Comma separated labels to list trades for. | [optional]
- **created_at_gte** | **str**| Created at start date inclusive lower bound, ISO8601. | [optional]
- **created_at_lt** | **str**| Created at end date exclusive upper bound, ISO8601. | [optional]
- **updated_at_gte** | **str**| Updated at start date inclusive lower bound, ISO8601. | [optional]
- **updated_at_lt** | **str**| Updated at end date exclusive upper bound, ISO8601. | [optional]
+ **created_at_gte** | **str**| Created at start date-time inclusive lower bound, ISO8601. | [optional]
+ **created_at_lt** | **str**| Created at end date-time exclusive upper bound, ISO8601. | [optional]
+ **updated_at_gte** | **str**| Updated at start date-time inclusive lower bound, ISO8601. | [optional]
+ **updated_at_lt** | **str**| Updated at end date-time exclusive upper bound, ISO8601. | [optional]
 
 ### Return type
 
