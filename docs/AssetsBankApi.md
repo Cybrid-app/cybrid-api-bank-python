@@ -36,12 +36,13 @@ with cybrid_api_bank.ApiClient() as api_client:
     api_instance = assets_bank_api.AssetsBankApi(api_client)
     page = ListRequestPage(0) # int | The page index to retrieve. (optional)
     per_page = ListRequestPerPage(1) # int | The number of entities per page to return. (optional)
+    code = "code_example" # str | Comma separated codes to list assets for. (optional)
 
     # example passing only required values which don't have defaults set
     # and optional values
     try:
         # Get assets list
-        api_response = api_instance.list_assets(page=page, per_page=per_page)
+        api_response = api_instance.list_assets(page=page, per_page=per_page, code=code)
         pprint(api_response)
     except cybrid_api_bank.ApiException as e:
         print("Exception when calling AssetsBankApi->list_assets: %s\n" % e)
@@ -54,6 +55,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **page** | **int**| The page index to retrieve. | [optional]
  **per_page** | **int**| The number of entities per page to return. | [optional]
+ **code** | **str**| Comma separated codes to list assets for. | [optional]
 
 ### Return type
 
