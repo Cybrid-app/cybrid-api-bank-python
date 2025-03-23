@@ -5,8 +5,8 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **guid** | **str** | The unique identifier for the file. | [optional] 
-**file_type** | **str** | The file type; one of drivers_license_front, drivers_license_back, passport, visa, identification_card, residence_card, selfie, selfie_video, selfie_left, selfie_right, utility_bill, bank_statement, property_tax, tax_document, ein_letter, or incorporation_certificate. | [optional] 
-**content_type** | **str** | The media type; one of image/jpeg, image/png, application/pdf, or video/mp4. | [optional] 
+**file_type** | **str** | The file type; one of drivers_license_front, drivers_license_back, passport, visa, identification_card, residence_card, selfie, selfie_video, selfie_left, selfie_right, utility_bill, bank_statement, property_tax, tax_document, ein_letter, incorporation_certificate, persona_inquiry_report, or persona_inquiry_export. | [optional] 
+**content_type** | **str** | The media type; one of image/jpeg, image/png, application/pdf, application/json, or video/mp4. | [optional] 
 **completed_at** | **datetime** | The ISO8601 datetime the file was completed at. | [optional] 
 **failed_at** | **datetime** | The ISO8601 datetime the file failed at. | [optional] 
 **state** | **str** | The state of the file. One of storing, completed, or failed. | [optional] 
