@@ -86,6 +86,8 @@ from cybrid_api_bank.model.list_request_per_page import ListRequestPerPage
 from cybrid_api_bank.model.patch_bank import PatchBank
 from cybrid_api_bank.model.patch_customer import PatchCustomer
 from cybrid_api_bank.model.patch_external_bank_account import PatchExternalBankAccount
+from cybrid_api_bank.model.patch_transfer import PatchTransfer
+from cybrid_api_bank.model.patch_transfer_participant import PatchTransferParticipant
 from cybrid_api_bank.model.payment_instruction import PaymentInstruction
 from cybrid_api_bank.model.payment_instruction_list import PaymentInstructionList
 from cybrid_api_bank.model.platform_file import PlatformFile
