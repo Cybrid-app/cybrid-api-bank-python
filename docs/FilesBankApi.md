@@ -150,11 +150,21 @@ with cybrid_api_bank.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = files_bank_api.FilesBankApi(api_client)
     file_guid = "file_guid_example" # str | Identifier for the file.
+    include_download_url = "include_download_url_example" # str | Include download information in response. (optional)
 
     # example passing only required values which don't have defaults set
     try:
         # Get File
         api_response = api_instance.get_file(file_guid)
+        pprint(api_response)
+    except cybrid_api_bank.ApiException as e:
+        print("Exception when calling FilesBankApi->get_file: %s\n" % e)
+
+    # example passing only required values which don't have defaults set
+    # and optional values
+    try:
+        # Get File
+        api_response = api_instance.get_file(file_guid, include_download_url=include_download_url)
         pprint(api_response)
     except cybrid_api_bank.ApiException as e:
         print("Exception when calling FilesBankApi->get_file: %s\n" % e)
@@ -166,6 +176,7 @@ with cybrid_api_bank.ApiClient(configuration) as api_client:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **file_guid** | **str**| Identifier for the file. |
+ **include_download_url** | **str**| Include download information in response. | [optional]
 
 ### Return type
 
