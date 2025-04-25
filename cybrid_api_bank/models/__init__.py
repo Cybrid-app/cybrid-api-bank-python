@@ -14,6 +14,7 @@ from cybrid_api_bank.model.account_list import AccountList
 from cybrid_api_bank.model.account_state import AccountState
 from cybrid_api_bank.model.account_type import AccountType
 from cybrid_api_bank.model.activity_limit import ActivityLimit
+from cybrid_api_bank.model.activity_side import ActivitySide
 from cybrid_api_bank.model.activity_type import ActivityType
 from cybrid_api_bank.model.asset import Asset
 from cybrid_api_bank.model.asset_list import AssetList
