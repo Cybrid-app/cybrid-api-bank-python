@@ -11,6 +11,10 @@ Name | Type | Description | Notes
 **failed_at** | **datetime** | The ISO8601 datetime the file failed at. | [optional] 
 **state** | **str** | The state of the file. One of storing, completed, or failed. | [optional] 
 **failure_code** | **str, none_type** | The failure code for failed files. | [optional] 
+**upload_url** | **str, none_type** | The URL to upload the file to. | [optional] 
+**upload_expires_at** | **datetime, none_type** | The ISO8601 datetime the upload URL expires at. | [optional] 
+**download_url** | **str, none_type** | The URL to download the file from. | [optional] 
+**download_expires_at** | **datetime, none_type** | The ISO8601 datetime the download URL expires at. | [optional] 
 **any string name** | **bool, date, datetime, dict, float, int, list, str, none_type** | any string name can be used but the value must be the correct type | [optional]
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
