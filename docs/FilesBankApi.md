@@ -150,7 +150,7 @@ with cybrid_api_bank.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = files_bank_api.FilesBankApi(api_client)
     file_guid = "file_guid_example" # str | Identifier for the file.
-    include_download_url = "include_download_url_example" # str | Include download information in response. (optional)
+    include_download_url = "include_download_url_example" # str | Include download information in response. Note, the files:pii:read scope is required if this parameter is set. (optional)
 
     # example passing only required values which don't have defaults set
     try:
@@ -176,7 +176,7 @@ with cybrid_api_bank.ApiClient(configuration) as api_client:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **file_guid** | **str**| Identifier for the file. |
- **include_download_url** | **str**| Include download information in response. | [optional]
+ **include_download_url** | **str**| Include download information in response. Note, the files:pii:read scope is required if this parameter is set. | [optional]
 
 ### Return type
 
