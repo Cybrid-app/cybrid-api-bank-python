@@ -19,6 +19,7 @@ Name | Type | Description | Notes
 **compliance_decisions** | [**[ComplianceDecision]**](ComplianceDecision.md) | The compliance decisions associated with the identity verification. | [optional] 
 **persona_inquiry_id** | **str, none_type** | The Persona identifier of the backing inquiry. | [optional] 
 **persona_state** | **str, none_type** | The Persona state of the backing inquiry; one of waiting, pending, reviewing, processing, expired, completed, or unknown. | [optional] 
+**business_associates** | [**[IdentityVerificationBusinessAssociate]**](IdentityVerificationBusinessAssociate.md) | List of associates declared for the business customer. | [optional] 
 **pii** | [**IdentityVerificationWithDetailsPii**](IdentityVerificationWithDetailsPii.md) |  | [optional] 
 **documents** | [**[IdentityVerificationDocument]**](IdentityVerificationDocument.md) | The documents associated with the identity verification. | [optional] 
 **supporting_files** | [**[IdentityVerificationDocument]**](IdentityVerificationDocument.md) | The supporting documents associated with the attested identity verification. | [optional] 
