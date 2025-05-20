@@ -29,6 +29,7 @@ Name | Type | Description | Notes
 **source_participants** | [**[TransferParticipant], none_type**](TransferParticipant.md) | The participants in the source account. | [optional] 
 **destination_account** | [**TransferDestinationAccount**](TransferDestinationAccount.md) |  | [optional] 
 **destination_participants** | [**[TransferParticipant], none_type**](TransferParticipant.md) | The participants in the source account. | [optional] 
+**deposit_address_guid** | **str, none_type** | The guid of the deposit address. Only present on crypto deposits. | [optional] 
 **created_at** | **datetime** | ISO8601 datetime the record was created at. | [optional] 
 **updated_at** | **datetime** | ISO8601 datetime the record was last updated at. | [optional] 
 **transfer_details** | **{str: (bool, date, datetime, dict, float, int, list, str, none_type)}, none_type** | The raw details on the transfer from the bank. | [optional] 
