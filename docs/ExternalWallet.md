@@ -10,6 +10,7 @@ Name | Type | Description | Notes
 **environment** | **str** | The environment that the wallet is configured for; one of sandbox or production. | [optional] 
 **bank_guid** | **str** | The bank identifier. | [optional] 
 **customer_guid** | **str, none_type** | The customer identifier. | [optional] 
+**counterparty_guid** | **str, none_type** | The counterparty identifier. | [optional] 
 **address** | **str** | The blockchain wallet address for the wallet. | [optional] 
 **tag** | **str, none_type** | The blockchain tag to use when transferring crypto to the wallet. | [optional] 
 **created_at** | **datetime** | ISO8601 datetime the record was created at. | [optional] 

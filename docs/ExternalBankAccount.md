@@ -11,6 +11,7 @@ Name | Type | Description | Notes
 **environment** | **str** | The environment that the external bank account is operating in; one of sandbox or production. | [optional] 
 **bank_guid** | **str** | The bank identifier. | [optional] 
 **customer_guid** | **str, none_type** | The customer identifier. | [optional] 
+**counterparty_guid** | **str, none_type** | The counterparty identifier. | [optional] 
 **created_at** | **datetime** | ISO8601 datetime the record was created at. | [optional] 
 **updated_at** | **datetime** | ISO8601 datetime the record was last updated at. | [optional] 
 **plaid_institution_id** | **str, none_type** | The Plaid institution ID for the account. | [optional] 
