@@ -32,6 +32,8 @@ Name | Type | Description | Notes
 **deposit_address_guid** | **str, none_type** | The guid of the deposit address. Only present on crypto deposits. | [optional] 
 **created_at** | **datetime** | ISO8601 datetime the record was created at. | [optional] 
 **updated_at** | **datetime** | ISO8601 datetime the record was last updated at. | [optional] 
+**hold_started_at** | **datetime, none_type** | ISO8601 datetime the transfer hold was started at. | [optional] 
+**hold_duration** | **int, none_type** | The approximate time (in seconds) that the transfer will be held for. | [optional] 
 **transfer_details** | **{str: (bool, date, datetime, dict, float, int, list, str, none_type)}, none_type** | The raw details on the transfer from the bank. | [optional] 
 **payment_rail** | **str, none_type** | The rail the payment was done on. One of: ach, eft, wire, rtp | [optional] 
 **labels** | **[str], none_type** | The labels associated with the transfer. | [optional] 
