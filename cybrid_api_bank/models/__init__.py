@@ -95,6 +95,7 @@ from cybrid_api_bank.model.patch_transfer import PatchTransfer
 from cybrid_api_bank.model.patch_transfer_participant import PatchTransferParticipant
 from cybrid_api_bank.model.payment_instruction import PaymentInstruction
 from cybrid_api_bank.model.payment_instruction_list import PaymentInstructionList
+from cybrid_api_bank.model.persona_session import PersonaSession
 from cybrid_api_bank.model.platform_file import PlatformFile
 from cybrid_api_bank.model.platform_file_list import PlatformFileList
 from cybrid_api_bank.model.post_account import PostAccount
@@ -123,6 +124,7 @@ from cybrid_api_bank.model.post_identity_verification_aliases_inner import PostI
 from cybrid_api_bank.model.post_identity_verification_name import PostIdentityVerificationName
 from cybrid_api_bank.model.post_invoice import PostInvoice
 from cybrid_api_bank.model.post_payment_instruction import PostPaymentInstruction
+from cybrid_api_bank.model.post_persona_session import PostPersonaSession
 from cybrid_api_bank.model.post_quote import PostQuote
 from cybrid_api_bank.model.post_quote_entry import PostQuoteEntry
 from cybrid_api_bank.model.post_supported_payout_symbols import PostSupportedPayoutSymbols

@@ -27,6 +27,7 @@ from cybrid_api_bank.api.files_bank_api import FilesBankApi
 from cybrid_api_bank.api.identity_verifications_bank_api import IdentityVerificationsBankApi
 from cybrid_api_bank.api.invoices_bank_api import InvoicesBankApi
 from cybrid_api_bank.api.payment_instructions_bank_api import PaymentInstructionsBankApi
+from cybrid_api_bank.api.persona_sessions_bank_api import PersonaSessionsBankApi
 from cybrid_api_bank.api.prices_bank_api import PricesBankApi
 from cybrid_api_bank.api.quotes_bank_api import QuotesBankApi
 from cybrid_api_bank.api.symbols_bank_api import SymbolsBankApi
