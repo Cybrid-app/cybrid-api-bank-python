@@ -55,7 +55,6 @@ with cybrid_api_bank.ApiClient(configuration) as api_client:
     api_instance = persona_sessions_bank_api.PersonaSessionsBankApi(api_client)
     post_persona_session = PostPersonaSession(
         persona_inquiry_id="persona_inquiry_id_example",
-        customer_guid="customer_guid_example",
         identity_verification_guid="identity_verification_guid_example",
     ) # PostPersonaSession | 
 

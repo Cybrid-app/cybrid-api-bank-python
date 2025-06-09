@@ -5,7 +5,6 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **persona_inquiry_id** | **str** | The unique identifier for the Persona inquiry. | 
-**customer_guid** | **str** | The unique identifier for the customer. | 
 **identity_verification_guid** | **str** | The unique identifier for the identity verification. | 
 **any string name** | **bool, date, datetime, dict, float, int, list, str, none_type** | any string name can be used but the value must be the correct type | [optional]
 
