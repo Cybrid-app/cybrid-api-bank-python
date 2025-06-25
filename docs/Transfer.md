@@ -12,7 +12,7 @@ Name | Type | Description | Notes
 **external_bank_account_guid** | **str, none_type** | The associated external bank account&#39;s identifier. | [optional] 
 **asset** | **str** | The asset the transfer is related to, e.g., USD. | [optional] 
 **side** | **str** | The direction of the quote; one of deposit or withdrawal. | [optional] 
-**state** | **str** | The state of the transfer; one of storing, pending, reviewing, completed, or failed. | [optional] 
+**state** | **str** | The state of the transfer; one of storing, pending, holding, reviewing, completed, or failed. | [optional] 
 **failure_code** | **str, none_type** | The failure code for failed transfers; one of non_sufficient_funds, refresh_required, party_name_invalid, payment_rail_invalid, compliance_rejection, cancelled, reversed, limit_exceeded, network_fee_too_low, amount_too_low, internal_error, invalid_address, invalid_destination, customer_action_required, or external_vendor_error. | [optional] 
 **return_code** | **str, none_type** | The return code for reversed transfers | [optional] 
 **amount** | **int, none_type** | The actual amount in base units of the asset. | [optional] 
