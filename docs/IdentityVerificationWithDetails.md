@@ -21,7 +21,7 @@ Name | Type | Description | Notes
 **persona_state** | **str, none_type** | The Persona state of the backing inquiry; one of waiting, pending, reviewing, processing, expired, completed, or unknown. | [optional] 
 **business_associates** | [**[IdentityVerificationBusinessAssociate]**](IdentityVerificationBusinessAssociate.md) | List of associates declared for the business customer. | [optional] 
 **pii** | [**IdentityVerificationWithDetailsPii**](IdentityVerificationWithDetailsPii.md) |  | [optional] 
-**documents** | [**[IdentityVerificationDocument]**](IdentityVerificationDocument.md) | The documents associated with the identity verification. | [optional] 
+**documents** | [**[IdentityVerificationDocument], none_type**](IdentityVerificationDocument.md) | The documents associated with the identity verification. | [optional] 
 **supporting_files** | [**[IdentityVerificationDocument]**](IdentityVerificationDocument.md) | The supporting documents associated with the attested identity verification. | [optional] 
 **any string name** | **bool, date, datetime, dict, float, int, list, str, none_type** | any string name can be used but the value must be the correct type | [optional]
 
