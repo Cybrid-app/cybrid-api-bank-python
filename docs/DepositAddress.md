@@ -11,7 +11,7 @@ Name | Type | Description | Notes
 **created_at** | **datetime** | ISO8601 datetime the record was created at. | [optional] 
 **updated_at** | **datetime** | ISO8601 datetime the record was last updated at. | [optional] 
 **asset** | **str** | The asset the transfer is related to, e.g., USD. | [optional] 
-**state** | **str** | The state of the address; one of storing, created, or failed. | [optional] 
+**state** | **str** | The state of the address; one of storing or created. | [optional] 
 **address** | **str** | The blockchain address. | [optional] 
 **format** | **str** | The blockchain address format; one of standard or legacy. | [optional] 
 **tag** | **str** | The blockchain address tag. | [optional] 
