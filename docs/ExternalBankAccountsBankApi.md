@@ -375,6 +375,7 @@ with cybrid_api_bank.ApiClient(configuration) as api_client:
     guid = "guid_example" # str | Comma separated external_bank_account_guids to list external_bank_accounts for. (optional)
     bank_guid = "bank_guid_example" # str | Comma separated bank_guids to list external_bank_accounts for. (optional)
     customer_guid = "customer_guid_example" # str | Comma separated customer_guids to list external_bank_accounts for. (optional)
+    counterparty_guid = "counterparty_guid_example" # str | Comma separated counterparty_guids to list external_bank_accounts for. (optional)
     asset = "asset_example" # str | Comma separated assets to list external_bank_accounts for. (optional)
     state = "state_example" # str | Comma separated states to list external_bank_accounts for. Filtering by \"completed\" and \"unverified\" states is only supported for individual customer accounts. (optional)
 
@@ -382,7 +383,7 @@ with cybrid_api_bank.ApiClient(configuration) as api_client:
     # and optional values
     try:
         # Get external bank accounts list
-        api_response = api_instance.list_external_bank_accounts(page=page, per_page=per_page, guid=guid, bank_guid=bank_guid, customer_guid=customer_guid, asset=asset, state=state)
+        api_response = api_instance.list_external_bank_accounts(page=page, per_page=per_page, guid=guid, bank_guid=bank_guid, customer_guid=customer_guid, counterparty_guid=counterparty_guid, asset=asset, state=state)
         pprint(api_response)
     except cybrid_api_bank.ApiException as e:
         print("Exception when calling ExternalBankAccountsBankApi->list_external_bank_accounts: %s\n" % e)
@@ -398,6 +399,7 @@ Name | Type | Description  | Notes
  **guid** | **str**| Comma separated external_bank_account_guids to list external_bank_accounts for. | [optional]
  **bank_guid** | **str**| Comma separated bank_guids to list external_bank_accounts for. | [optional]
  **customer_guid** | **str**| Comma separated customer_guids to list external_bank_accounts for. | [optional]
+ **counterparty_guid** | **str**| Comma separated counterparty_guids to list external_bank_accounts for. | [optional]
  **asset** | **str**| Comma separated assets to list external_bank_accounts for. | [optional]
  **state** | **str**| Comma separated states to list external_bank_accounts for. Filtering by \&quot;completed\&quot; and \&quot;unverified\&quot; states is only supported for individual customer accounts. | [optional]
 
