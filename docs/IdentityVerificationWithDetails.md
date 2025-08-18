@@ -19,10 +19,10 @@ Name | Type | Description | Notes
 **compliance_decisions** | [**[ComplianceDecision]**](ComplianceDecision.md) | The compliance decisions associated with the identity verification. | [optional] 
 **persona_inquiry_id** | **str, none_type** | The Persona identifier of the backing inquiry. | [optional] 
 **persona_state** | **str, none_type** | The Persona state of the backing inquiry; one of waiting, pending, reviewing, processing, expired, completed, or unknown. | [optional] 
-**business_associates** | [**[IdentityVerificationBusinessAssociate]**](IdentityVerificationBusinessAssociate.md) | List of associates declared for the business customer. | [optional] 
+**business_associates** | [**[IdentityVerificationBusinessAssociate], none_type**](IdentityVerificationBusinessAssociate.md) | List of associates declared for the business customer. | [optional] 
 **pii** | [**IdentityVerificationWithDetailsPii**](IdentityVerificationWithDetailsPii.md) |  | [optional] 
 **documents** | [**[IdentityVerificationDocument], none_type**](IdentityVerificationDocument.md) | The documents associated with the identity verification. | [optional] 
-**supporting_files** | [**[IdentityVerificationDocument]**](IdentityVerificationDocument.md) | The supporting documents associated with the attested identity verification. | [optional] 
+**supporting_files** | [**[IdentityVerificationDocument], none_type**](IdentityVerificationDocument.md) | The supporting documents associated with the attested identity verification. | [optional] 
 **any string name** | **bool, date, datetime, dict, float, int, list, str, none_type** | any string name can be used but the value must be the correct type | [optional]
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
