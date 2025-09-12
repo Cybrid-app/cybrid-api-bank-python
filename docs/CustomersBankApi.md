@@ -139,7 +139,7 @@ Name | Type | Description  | Notes
 
 Get Customer
 
-Retrieves a customer.  Required scope: **customers:read**
+Retrieves a customer.  Required scope: **customers:read** Optional scope: **customers:pii:read**.
 
 ### Example
 
@@ -180,7 +180,7 @@ with cybrid_api_bank.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = customers_bank_api.CustomersBankApi(api_client)
     customer_guid = "customer_guid_example" # str | Identifier for the customer.
-    include_pii = True # bool | Include PII in the response. (optional)
+    include_pii = True # bool | Include PII in the response (requires **customers:pii:read** scope). (optional)
 
     # example passing only required values which don't have defaults set
     try:
@@ -206,7 +206,7 @@ with cybrid_api_bank.ApiClient(configuration) as api_client:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **customer_guid** | **str**| Identifier for the customer. |
- **include_pii** | **bool**| Include PII in the response. | [optional]
+ **include_pii** | **bool**| Include PII in the response (requires **customers:pii:read** scope). | [optional]
 
 ### Return type
 

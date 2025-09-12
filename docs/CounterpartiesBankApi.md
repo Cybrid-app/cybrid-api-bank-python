@@ -129,7 +129,7 @@ Name | Type | Description  | Notes
 
 Get Counterparty
 
-Retrieves a counterparty.  Required scope: **counterparties:read**
+Retrieves a counterparty.  Required scope: **counterparties:read** Optional scope: **counterparties:pii:read**.
 
 ### Example
 
@@ -170,7 +170,7 @@ with cybrid_api_bank.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = counterparties_bank_api.CounterpartiesBankApi(api_client)
     counterparty_guid = "counterparty_guid_example" # str | Identifier for the counterparty.
-    include_pii = True # bool | Include PII in the response. (optional)
+    include_pii = True # bool | Include PII in the response (requires **counterparties:pii:read** scope). (optional)
 
     # example passing only required values which don't have defaults set
     try:
@@ -196,7 +196,7 @@ with cybrid_api_bank.ApiClient(configuration) as api_client:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **counterparty_guid** | **str**| Identifier for the counterparty. |
- **include_pii** | **bool**| Include PII in the response. | [optional]
+ **include_pii** | **bool**| Include PII in the response (requires **counterparties:pii:read** scope). | [optional]
 
 ### Return type
 

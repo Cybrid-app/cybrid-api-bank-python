@@ -226,7 +226,7 @@ Name | Type | Description  | Notes
 
 Get External Bank Account
 
-Retrieves an external bank account.  ## ExternalBankAccount retrieval  When retrieving an external bank account and include_balances is set to true, the Platform will attempt to retrieve the balance from the account's financial institution.  If force_balance_refresh is set to true, the Platform will always attempt to retrieve the most up to date balance from the account's financial institution. If force_balance_refresh is set to false, the Platform will return the cached balance.  If while getting the balance the Platform determines that the account needs to be refreshed, the Platform will return a 422 status code with the message \"Bank account refresh required\" and the ExternalBankAccount will be put into the refresh_required state.  If while getting the balance the Platform determines that the account is no longer valid, the Platform will return a 422 status code with the message \"Bank account can no longer be used and is being deleted. It must be re-added\" and the ExternalBankAccount will be deleted.  When retrieving an external bank account and include_pii is set to true, the Platform will include the account holder's information in the response.    Required scope: **external_bank_accounts:read**
+Retrieves an external bank account.  ## ExternalBankAccount retrieval  When retrieving an external bank account and include_balances is set to true, the Platform will attempt to retrieve the balance from the account's financial institution.  If force_balance_refresh is set to true, the Platform will always attempt to retrieve the most up to date balance from the account's financial institution. If force_balance_refresh is set to false, the Platform will return the cached balance.  If while getting the balance the Platform determines that the account needs to be refreshed, the Platform will return a 422 status code with the message \"Bank account refresh required\" and the ExternalBankAccount will be put into the refresh_required state.  If while getting the balance the Platform determines that the account is no longer valid, the Platform will return a 422 status code with the message \"Bank account can no longer be used and is being deleted. It must be re-added\" and the ExternalBankAccount will be deleted.  When retrieving an external bank account and include_pii is set to true, the Platform will include the account holder's information in the response.    Required scope: **external_bank_accounts:read** Optional scope: **external_bank_accounts:pii:read**.
 
 ### Example
 
@@ -269,7 +269,7 @@ with cybrid_api_bank.ApiClient(configuration) as api_client:
     external_bank_account_guid = "external_bank_account_guid_example" # str | Identifier for the external bank account.
     force_balance_refresh = True # bool | Force the balance on the account to be retrieved. (optional)
     include_balances = True # bool | Include balance information in the response. If `force_balance_refresh` is `true`, the most up to date balance will be returned. If `force_balance_refresh` is `false`, the cached balance will be returned. `balance_updated_at` in the response will provide the timestamp the balance was last updated. (optional)
-    include_pii = True # bool | Include the account holder's PII in the response. (optional)
+    include_pii = True # bool | Include the account holder's PII in the response (requires **external_bank_accounts:pii:read** scope). (optional)
 
     # example passing only required values which don't have defaults set
     try:
@@ -297,7 +297,7 @@ Name | Type | Description  | Notes
  **external_bank_account_guid** | **str**| Identifier for the external bank account. |
  **force_balance_refresh** | **bool**| Force the balance on the account to be retrieved. | [optional]
  **include_balances** | **bool**| Include balance information in the response. If &#x60;force_balance_refresh&#x60; is &#x60;true&#x60;, the most up to date balance will be returned. If &#x60;force_balance_refresh&#x60; is &#x60;false&#x60;, the cached balance will be returned. &#x60;balance_updated_at&#x60; in the response will provide the timestamp the balance was last updated. | [optional]
- **include_pii** | **bool**| Include the account holder&#39;s PII in the response. | [optional]
+ **include_pii** | **bool**| Include the account holder&#39;s PII in the response (requires **external_bank_accounts:pii:read** scope). | [optional]
 
 ### Return type
 

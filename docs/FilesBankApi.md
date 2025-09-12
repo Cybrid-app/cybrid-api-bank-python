@@ -109,7 +109,7 @@ Name | Type | Description  | Notes
 
 Get File
 
-Retrieves a file.  Required scope: **files:read**
+Retrieves a file.  Required scopes: **files:read,  files:pii:read**
 
 ### Example
 

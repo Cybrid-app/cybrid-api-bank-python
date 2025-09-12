@@ -156,7 +156,7 @@ Name | Type | Description  | Notes
 
 Get Identity Verification
 
-Retrieves an identity verification.  Required scope: **identity_verifications:read**
+Retrieves an identity verification.  Required scope: **identity_verifications:read** Optional scope: **identity_verifications:pii:read**.
 
 ### Example
 
@@ -197,7 +197,7 @@ with cybrid_api_bank.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = identity_verifications_bank_api.IdentityVerificationsBankApi(api_client)
     identity_verification_guid = "identity_verification_guid_example" # str | Identifier for the identity verification.
-    include_pii = True # bool | Include PII in the response. (optional)
+    include_pii = True # bool | Include PII in the response (requires **identity_verifications:pii:read** scope). (optional)
 
     # example passing only required values which don't have defaults set
     try:
@@ -223,7 +223,7 @@ with cybrid_api_bank.ApiClient(configuration) as api_client:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **identity_verification_guid** | **str**| Identifier for the identity verification. |
- **include_pii** | **bool**| Include PII in the response. | [optional]
+ **include_pii** | **bool**| Include PII in the response (requires **identity_verifications:pii:read** scope). | [optional]
 
 ### Return type
 
