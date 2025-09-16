@@ -11,6 +11,7 @@ Name | Type | Description | Notes
 **account_guid** | **str** | The address&#39; account identifier. | [optional] 
 **created_at** | **datetime** | ISO8601 datetime the record was created at. | [optional] 
 **updated_at** | **datetime** | ISO8601 datetime the record was last updated at. | [optional] 
+**deleted_at** | **datetime, none_type** | ISO8601 datetime the record was last deleted at. | [optional] 
 **asset** | **str** | The asset the transfer is related to, e.g., USD. | [optional] 
 **state** | **str** | The state of the address; one of storing or created. | [optional] 
 **unique_memo_id** | **str** | The unique memo identifier for the address. This is used to identify the recipient when sending funds to the account. This value MUST be included in all wire transfers to this account. | [optional] 
