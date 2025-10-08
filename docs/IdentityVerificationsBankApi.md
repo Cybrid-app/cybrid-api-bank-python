@@ -64,6 +64,7 @@ with cybrid_api_bank.ApiClient(configuration) as api_client:
         method="watchlists",
         counterparty_guid="counterparty_guid_example",
         country_code="country_code_example",
+        require_tax_id=False,
         name=PostIdentityVerificationName(
             first="first_example",
             middle="middle_example",

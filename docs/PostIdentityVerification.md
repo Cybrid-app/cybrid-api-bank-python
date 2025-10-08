@@ -11,6 +11,7 @@ Name | Type | Description | Notes
 **method** | **str, none_type** | The identity verification method. Required when type is counterparty, type is kyc, or type is bank_account. | [optional] 
 **counterparty_guid** | **str, none_type** | The counterparty&#39;s identifier. Required when type is counterparty. | [optional] 
 **country_code** | **str, none_type** | The ISO 3166 country 2-Alpha country the customer is being verified in. If not present, will default to the Bank&#39;s configured country code. Optional when type is kyc and method is id_and_selfie, type is kyc and method is tax_id_and_selfie, or type is kyc and method is business_registration. | [optional] 
+**require_tax_id** | **bool, none_type** | Whether the collection of the tax id is required during identity verification. This will default to SSN in USA and SIN in Canada. It&#39;s not used elsewhere. Optional when type is kyc and method is id_and_selfie. | [optional]  if omitted the server will use the default value of False
 **name** | [**PostIdentityVerificationName**](PostIdentityVerificationName.md) |  | [optional] 
 **address** | [**PostIdentityVerificationAddress**](PostIdentityVerificationAddress.md) |  | [optional] 
 **date_of_birth** | **date, none_type** | The customer&#39;s date of birth. Required when type is kyc and method is attested or type is kyc and method is attested_id_and_selfie. | [optional] 

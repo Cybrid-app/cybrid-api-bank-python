@@ -16,6 +16,7 @@ Name | Type | Description | Notes
 **outcome** | **str, none_type** | The identity verification outcome; one of passed or failed. | [optional] 
 **failure_codes** | **[str], none_type** | The reason codes explaining the outcome. | [optional] 
 **compliance_decisions** | [**[ComplianceDecision]**](ComplianceDecision.md) | The compliance decisions associated with the identity verification. | [optional] 
+**options** | [**IdentityVerificationOptions**](IdentityVerificationOptions.md) |  | [optional] 
 **any string name** | **bool, date, datetime, dict, float, int, list, str, none_type** | any string name can be used but the value must be the correct type | [optional]
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
