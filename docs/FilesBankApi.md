@@ -1,6 +1,6 @@
 # cybrid_api_bank.FilesBankApi
 
-All URIs are relative to *https://bank.sandbox.cybrid.app*
+All URIs are relative to *http://api-platform-bank.local.cybrid.com:3002*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
@@ -29,10 +29,10 @@ from cybrid_api_bank.model.error_response import ErrorResponse
 from cybrid_api_bank.model.platform_file import PlatformFile
 from cybrid_api_bank.model.post_file import PostFile
 from pprint import pprint
-# Defining the host is optional and defaults to https://bank.sandbox.cybrid.app
+# Defining the host is optional and defaults to http://api-platform-bank.local.cybrid.com:3002
 # See configuration.py for a list of all supported configuration parameters.
 configuration = cybrid_api_bank.Configuration(
-    host = "https://bank.sandbox.cybrid.app"
+    host = "http://api-platform-bank.local.cybrid.com:3002"
 )
 
 # The client must configure the authentication and authorization parameters
@@ -47,7 +47,7 @@ configuration = cybrid_api_bank.Configuration(
 
 # Configure OAuth2 access token for authorization: oauth2
 configuration = cybrid_api_bank.Configuration(
-    host = "https://bank.sandbox.cybrid.app"
+    host = "http://api-platform-bank.local.cybrid.com:3002"
 )
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
@@ -123,10 +123,10 @@ from cybrid_api_bank.api import files_bank_api
 from cybrid_api_bank.model.error_response import ErrorResponse
 from cybrid_api_bank.model.platform_file import PlatformFile
 from pprint import pprint
-# Defining the host is optional and defaults to https://bank.sandbox.cybrid.app
+# Defining the host is optional and defaults to http://api-platform-bank.local.cybrid.com:3002
 # See configuration.py for a list of all supported configuration parameters.
 configuration = cybrid_api_bank.Configuration(
-    host = "https://bank.sandbox.cybrid.app"
+    host = "http://api-platform-bank.local.cybrid.com:3002"
 )
 
 # The client must configure the authentication and authorization parameters
@@ -141,7 +141,7 @@ configuration = cybrid_api_bank.Configuration(
 
 # Configure OAuth2 access token for authorization: oauth2
 configuration = cybrid_api_bank.Configuration(
-    host = "https://bank.sandbox.cybrid.app"
+    host = "http://api-platform-bank.local.cybrid.com:3002"
 )
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
@@ -222,10 +222,10 @@ from cybrid_api_bank.api import files_bank_api
 from cybrid_api_bank.model.platform_file_list import PlatformFileList
 from cybrid_api_bank.model.error_response import ErrorResponse
 from pprint import pprint
-# Defining the host is optional and defaults to https://bank.sandbox.cybrid.app
+# Defining the host is optional and defaults to http://api-platform-bank.local.cybrid.com:3002
 # See configuration.py for a list of all supported configuration parameters.
 configuration = cybrid_api_bank.Configuration(
-    host = "https://bank.sandbox.cybrid.app"
+    host = "http://api-platform-bank.local.cybrid.com:3002"
 )
 
 # The client must configure the authentication and authorization parameters
@@ -240,7 +240,7 @@ configuration = cybrid_api_bank.Configuration(
 
 # Configure OAuth2 access token for authorization: oauth2
 configuration = cybrid_api_bank.Configuration(
-    host = "https://bank.sandbox.cybrid.app"
+    host = "http://api-platform-bank.local.cybrid.com:3002"
 )
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 

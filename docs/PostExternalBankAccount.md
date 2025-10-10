@@ -16,7 +16,7 @@ Name | Type | Description | Notes
 **plaid_account_mask** | **str, none_type** | The account mask for the account. Required when account_kind is plaid_processor_token. | [optional] 
 **plaid_account_name** | **str, none_type** | The name of the account. Required when account_kind is plaid_processor_token. | [optional] 
 **counterparty_guid** | **str, none_type** | The counterparty identifier. Optional when account_kind is raw_routing_details. | [optional] 
-**counterparty_bank_account** | [**PostExternalBankAccountCounterpartyBankAccount**](PostExternalBankAccountCounterpartyBankAccount.md) |  | [optional] 
+**counterparty_bank_account_details** | [**[PostBankAccountDetails], none_type**](PostBankAccountDetails.md) | The counterparty&#39;s checking bank account information. Required when account_kind is raw_routing_details. | [optional] 
 **counterparty_name** | [**PostExternalBankAccountCounterpartyName**](PostExternalBankAccountCounterpartyName.md) |  | [optional] 
 **counterparty_address** | [**PostExternalBankAccountCounterpartyAddress**](PostExternalBankAccountCounterpartyAddress.md) |  | [optional] 
 **counterparty_email_address** | **str, none_type** | The counterparty&#39;s email address on their checking account. Optional when account_kind is raw_routing_details and counterparty_guid is not present. | [optional] 
