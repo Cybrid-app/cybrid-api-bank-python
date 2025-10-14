@@ -7464,6 +7464,7 @@ with cybrid_api_bank.ApiClient(configuration) as api_client:
     page = ListRequestPage(0) # int |  (optional)
     per_page = ListRequestPerPage(1) # int |  (optional)
     guid = "guid_example" # str | Comma separated assets to list customers for. (optional)
+    type = "type_example" # str | Comma separated types to list customers for. (optional)
     bank_guid = "bank_guid_example" # str | Comma separated bank_guids to list customers for. (optional)
     organization_guid = "organization_guid_example" # str | Comma separated organization_guids to list customers for. (optional)
 
@@ -7471,7 +7472,7 @@ with cybrid_api_bank.ApiClient(configuration) as api_client:
     # and optional values
     try:
         # List Customers
-        api_response = api_instance.internal_list_customers(page=page, per_page=per_page, guid=guid, bank_guid=bank_guid, organization_guid=organization_guid)
+        api_response = api_instance.internal_list_customers(page=page, per_page=per_page, guid=guid, type=type, bank_guid=bank_guid, organization_guid=organization_guid)
         pprint(api_response)
     except cybrid_api_bank.ApiException as e:
         print("Exception when calling InternalBankApi->internal_list_customers: %s\n" % e)
@@ -7485,6 +7486,7 @@ Name | Type | Description  | Notes
  **page** | **int**|  | [optional]
  **per_page** | **int**|  | [optional]
  **guid** | **str**| Comma separated assets to list customers for. | [optional]
+ **type** | **str**| Comma separated types to list customers for. | [optional]
  **bank_guid** | **str**| Comma separated bank_guids to list customers for. | [optional]
  **organization_guid** | **str**| Comma separated organization_guids to list customers for. | [optional]
 

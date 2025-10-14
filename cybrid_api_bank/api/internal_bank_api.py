@@ -4570,6 +4570,7 @@ class InternalBankApi(object):
                     'page',
                     'per_page',
                     'guid',
+                    'type',
                     'bank_guid',
                     'organization_guid',
                 ],
@@ -4604,6 +4605,8 @@ class InternalBankApi(object):
                         (int,),
                     'guid':
                         (str,),
+                    'type':
+                        (str,),
                     'bank_guid':
                         (str,),
                     'organization_guid':
@@ -4613,6 +4616,7 @@ class InternalBankApi(object):
                     'page': 'page',
                     'per_page': 'per_page',
                     'guid': 'guid',
+                    'type': 'type',
                     'bank_guid': 'bank_guid',
                     'organization_guid': 'organization_guid',
                 },
@@ -4620,6 +4624,7 @@ class InternalBankApi(object):
                     'page': 'query',
                     'per_page': 'query',
                     'guid': 'query',
+                    'type': 'query',
                     'bank_guid': 'query',
                     'organization_guid': 'query',
                 },
@@ -15219,6 +15224,7 @@ class InternalBankApi(object):
             page (int): [optional]
             per_page (int): [optional]
             guid (str): Comma separated assets to list customers for.. [optional]
+            type (str): Comma separated types to list customers for.. [optional]
             bank_guid (str): Comma separated bank_guids to list customers for.. [optional]
             organization_guid (str): Comma separated organization_guids to list customers for.. [optional]
             _return_http_data_only (bool): response data without head status
