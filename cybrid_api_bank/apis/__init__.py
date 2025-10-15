@@ -26,7 +26,6 @@ from cybrid_api_bank.api.external_bank_accounts_bank_api import ExternalBankAcco
 from cybrid_api_bank.api.external_wallets_bank_api import ExternalWalletsBankApi
 from cybrid_api_bank.api.files_bank_api import FilesBankApi
 from cybrid_api_bank.api.identity_verifications_bank_api import IdentityVerificationsBankApi
-from cybrid_api_bank.api.internal_bank_api import InternalBankApi
 from cybrid_api_bank.api.invoices_bank_api import InvoicesBankApi
 from cybrid_api_bank.api.payment_instructions_bank_api import PaymentInstructionsBankApi
 from cybrid_api_bank.api.persona_sessions_bank_api import PersonaSessionsBankApi
