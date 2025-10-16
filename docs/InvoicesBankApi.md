@@ -288,7 +288,7 @@ Name | Type | Description  | Notes
 
 List Invoices
 
-Retrieves a list of invoices.  Required scope: **invoices:read**
+Retrieves a list of invoices. Records are sorted by creation date in descending order.  Required scope: **invoices:read**
 
 ### Example
 
