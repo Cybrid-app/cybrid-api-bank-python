@@ -334,7 +334,7 @@ Name | Type | Description  | Notes
 
 Get external bank accounts list
 
-Retrieves a listing of external bank accounts.  Required scope: **external_bank_accounts:read**
+Retrieves a listing of external bank accounts. Records are sorted by creation date in descending order.  Required scope: **external_bank_accounts:read**
 
 ### Example
 

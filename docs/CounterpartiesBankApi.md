@@ -227,7 +227,7 @@ Name | Type | Description  | Notes
 
 Get counterparties list
 
-Retrieves a listing of counterparties.  Required scope: **counterparties:read**
+Retrieves a listing of counterparties. Records are sorted by creation date in descending order.  Required scope: **counterparties:read**
 
 ### Example
 

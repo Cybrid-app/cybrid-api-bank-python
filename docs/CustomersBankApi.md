@@ -238,7 +238,7 @@ Name | Type | Description  | Notes
 
 Get customers list
 
-Retrieves a listing of customers.  Required scope: **customers:read**
+Retrieves a listing of customers. Records are sorted by creation date in descending order.  Required scope: **customers:read**
 
 ### Example
 
