@@ -63,6 +63,9 @@ with cybrid_api_bank.ApiClient(configuration) as api_client:
         asset="asset_example",
         address="address_example",
         tag="tag_example",
+        expected_behaviours=[
+            "force_review",
+        ],
     ) # PostExternalWallet | 
 
     # example passing only required values which don't have defaults set
