@@ -8,6 +8,7 @@ Name | Type | Description | Notes
 **guid** | **str** | Auto-generated unique identifier for the transfer account. | 
 **type** | **str** | The type of transfer account; one of trading or external_bank_account. | 
 **asset** | **str** | The account asset, e.g., USD. | 
+**organization_guid** | **str, none_type** | The account&#39;s organization identifier. | [optional] 
 **bank_guid** | **str, none_type** | The account&#39;s bank identifier. | [optional] 
 **customer_guid** | **str, none_type** | The account&#39;s customer identifier. | [optional] 
 **counterparty_guid** | **str, none_type** | The account&#39;s counterparty identifier. | [optional] 
