@@ -227,7 +227,7 @@ Name | Type | Description  | Notes
 
 Get counterparties list
 
-Retrieves a listing of counterparties. Records are sorted by creation date in descending order.  Required scope: **counterparties:read**
+Retrieves a listing of counterparties. Records are sorted by creation date in descending order.  Required scope: **counterparties:read** Optional scope: **counterparties:pii:read**.
 
 ### Example
 
@@ -274,12 +274,13 @@ with cybrid_api_bank.ApiClient(configuration) as api_client:
     customer_guid = "customer_guid_example" # str | Comma separated customer_guids to list counterparties for. (optional)
     guid = "guid_example" # str | Comma separated counterparty_guids to list counterparties for. (optional)
     label = "label_example" # str | Comma separated labels to list counterparties for. (optional)
+    include_pii = True # bool | Include PII in the response (requires **counterparties:pii:read** scope). (optional)
 
     # example passing only required values which don't have defaults set
     # and optional values
     try:
         # Get counterparties list
-        api_response = api_instance.list_counterparties(page=page, per_page=per_page, type=type, bank_guid=bank_guid, customer_guid=customer_guid, guid=guid, label=label)
+        api_response = api_instance.list_counterparties(page=page, per_page=per_page, type=type, bank_guid=bank_guid, customer_guid=customer_guid, guid=guid, label=label, include_pii=include_pii)
         pprint(api_response)
     except cybrid_api_bank.ApiException as e:
         print("Exception when calling CounterpartiesBankApi->list_counterparties: %s\n" % e)
@@ -297,6 +298,7 @@ Name | Type | Description  | Notes
  **customer_guid** | **str**| Comma separated customer_guids to list counterparties for. | [optional]
  **guid** | **str**| Comma separated counterparty_guids to list counterparties for. | [optional]
  **label** | **str**| Comma separated labels to list counterparties for. | [optional]
+ **include_pii** | **bool**| Include PII in the response (requires **counterparties:pii:read** scope). | [optional]
 
 ### Return type
 

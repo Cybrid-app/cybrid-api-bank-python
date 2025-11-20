@@ -238,7 +238,7 @@ Name | Type | Description  | Notes
 
 Get customers list
 
-Retrieves a listing of customers. Records are sorted by creation date in descending order.  Required scope: **customers:read**
+Retrieves a listing of customers. Records are sorted by creation date in descending order.  Required scope: **customers:read** Optional scope: **customers:pii:read**.
 
 ### Example
 
@@ -284,12 +284,13 @@ with cybrid_api_bank.ApiClient(configuration) as api_client:
     bank_guid = "bank_guid_example" # str | Comma separated bank_guids to list customers for. (optional)
     guid = "guid_example" # str | Comma separated customer_guids to list customers for. (optional)
     label = "label_example" # str | Comma separated labels to list customers for. (optional)
+    include_pii = True # bool | Include PII in the response (requires **customers:pii:read** scope). (optional)
 
     # example passing only required values which don't have defaults set
     # and optional values
     try:
         # Get customers list
-        api_response = api_instance.list_customers(page=page, per_page=per_page, type=type, bank_guid=bank_guid, guid=guid, label=label)
+        api_response = api_instance.list_customers(page=page, per_page=per_page, type=type, bank_guid=bank_guid, guid=guid, label=label, include_pii=include_pii)
         pprint(api_response)
     except cybrid_api_bank.ApiException as e:
         print("Exception when calling CustomersBankApi->list_customers: %s\n" % e)
@@ -306,6 +307,7 @@ Name | Type | Description  | Notes
  **bank_guid** | **str**| Comma separated bank_guids to list customers for. | [optional]
  **guid** | **str**| Comma separated customer_guids to list customers for. | [optional]
  **label** | **str**| Comma separated labels to list customers for. | [optional]
+ **include_pii** | **bool**| Include PII in the response (requires **customers:pii:read** scope). | [optional]
 
 ### Return type
 
