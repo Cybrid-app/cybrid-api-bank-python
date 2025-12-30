@@ -58,6 +58,7 @@ from cybrid_api_bank.model.deposit_bank_account_routing_number_type import Depos
 from cybrid_api_bank.model.deposit_bank_account_state import DepositBankAccountState
 from cybrid_api_bank.model.error_response import ErrorResponse
 from cybrid_api_bank.model.execution import Execution
+from cybrid_api_bank.model.execution_list import ExecutionList
 from cybrid_api_bank.model.execution_travel_rule_info import ExecutionTravelRuleInfo
 from cybrid_api_bank.model.external_bank_account import ExternalBankAccount
 from cybrid_api_bank.model.external_bank_account_balances import ExternalBankAccountBalances
@@ -102,6 +103,7 @@ from cybrid_api_bank.model.payment_instruction import PaymentInstruction
 from cybrid_api_bank.model.payment_instruction_list import PaymentInstructionList
 from cybrid_api_bank.model.persona_session import PersonaSession
 from cybrid_api_bank.model.plan import Plan
+from cybrid_api_bank.model.plan_list import PlanList
 from cybrid_api_bank.model.plan_travel_rule_info import PlanTravelRuleInfo
 from cybrid_api_bank.model.platform_file import PlatformFile
 from cybrid_api_bank.model.platform_file_list import PlatformFileList
