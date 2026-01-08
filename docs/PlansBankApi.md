@@ -71,6 +71,7 @@ with cybrid_api_bank.ApiClient(configuration) as api_client:
             ultimate_originating_party_guid="ultimate_originating_party_guid_example",
             ultimate_receiving_party_guid="ultimate_receiving_party_guid_example",
         ),
+        purpose_of_transaction="computer_services",
     ) # PostPlan | 
 
     # example passing only required values which don't have defaults set
