@@ -8,7 +8,7 @@ Name | Type | Description | Notes
 **organization_guid** | **str** | The organization identifier. | [optional] 
 **bank_guid** | **str, none_type** | The bank identifier. | [optional] 
 **customer_guid** | **str, none_type** | The customer identifier. | [optional] 
-**type** | **str** | The file type; one of drivers_license_front, drivers_license_back, passport, passport_card, visa, identification_card, residence_card, work_permit, selfie, selfie_video, selfie_left, selfie_right, utility_bill, proof_of_address, bank_statement, property_tax, tax_document, ein_letter, incorporation_certificate, persona_inquiry_report, or persona_inquiry_export. | [optional] 
+**type** | **str** | The file type; one of drivers_license_front, drivers_license_back, passport, passport_card, visa, identification_card, residence_card, work_permit, indigenous_id_document, selfie, selfie_video, selfie_left, selfie_right, utility_bill, proof_of_address, bank_statement, property_tax, tax_document, ein_letter, incorporation_certificate, persona_inquiry_report, or persona_inquiry_export. | [optional] 
 **content_type** | **str** | The media type; one of image/jpeg, image/png, application/pdf, application/json, or video/mp4. | [optional] 
 **filename** | **str** | The name of the file. | [optional] 
 **completed_at** | **datetime** | The ISO8601 datetime the file was completed at. | [optional] 
