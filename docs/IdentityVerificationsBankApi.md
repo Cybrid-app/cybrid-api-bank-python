@@ -109,6 +109,7 @@ with cybrid_api_bank.ApiClient(configuration) as api_client:
             "supporting_file_guids_example",
         ],
         occupation="occupation_example",
+        biometrics_verified=True,
         external_bank_account_guid="external_bank_account_guid_example",
     ) # PostIdentityVerification | 
 

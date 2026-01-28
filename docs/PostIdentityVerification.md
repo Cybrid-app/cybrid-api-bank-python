@@ -6,7 +6,7 @@ Request body for identity verification creation.
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **type** | **str** | The type of identity verification. | 
-**customer_guid** | **str, none_type** | The customer&#39;s identifier. Required when type is kyc and method is attested_business_registration or type is kyc and method is attested_id_and_selfie. | [optional] 
+**customer_guid** | **str, none_type** | The customer&#39;s identifier. Required when type is kyc and method is attested_business_registration, type is kyc and method is attested_id_and_selfie, or type is kyc and method is attested_business_associate. | [optional] 
 **expected_behaviours** | **[str], none_type** | The optional expected behaviour to simulate. | [optional] 
 **method** | **str, none_type** | The identity verification method. Required when type is counterparty, type is kyc, or type is bank_account. | [optional] 
 **counterparty_guid** | **str, none_type** | The counterparty&#39;s identifier. Required when type is counterparty. | [optional] 
@@ -14,17 +14,18 @@ Name | Type | Description | Notes
 **require_tax_id** | **bool, none_type** | Whether the collection of the tax id is required during identity verification. This will default to SSN in USA and SIN in Canada. It&#39;s not used elsewhere. Optional when type is kyc and method is id_and_selfie. | [optional]  if omitted the server will use the default value of False
 **name** | [**PostIdentityVerificationName**](PostIdentityVerificationName.md) |  | [optional] 
 **address** | [**PostIdentityVerificationAddress**](PostIdentityVerificationAddress.md) |  | [optional] 
-**date_of_birth** | **date, none_type** | The customer&#39;s date of birth. Required when type is kyc and method is attested or type is kyc and method is attested_id_and_selfie. | [optional] 
-**identification_numbers** | [**[PostIdentificationNumber], none_type**](PostIdentificationNumber.md) | The customer&#39;s identification numbers. Required when type is kyc and method is attested, type is kyc and method is attested_business_registration, or type is kyc and method is attested_id_and_selfie. | [optional] 
+**date_of_birth** | **date, none_type** | The customer&#39;s date of birth. Required when type is kyc and method is attested, type is kyc and method is attested_id_and_selfie, or type is kyc and method is attested_business_associate. | [optional] 
+**identification_numbers** | [**[PostIdentificationNumber], none_type**](PostIdentificationNumber.md) | The customer&#39;s identification numbers. Required when type is kyc and method is attested, type is kyc and method is attested_business_registration, type is kyc and method is attested_id_and_selfie, or type is kyc and method is attested_business_associate. | [optional] 
 **aliases** | [**[PostIdentityVerificationAliasesInner], none_type**](PostIdentityVerificationAliasesInner.md) | The aliases of the customer. Optional when type is kyc and method is attested_business_registration. | [optional] 
-**phone_number** | **str, none_type** | The customer&#39;s phone number. Required when type is kyc and method is attested_business_registration or type is kyc and method is attested_id_and_selfie. Optional when type is bank_account and method is attested_ownership. | [optional] 
-**email_address** | **str, none_type** | The customer&#39;s email address. Required when type is kyc and method is attested_business_registration or type is kyc and method is attested_id_and_selfie. Optional when type is bank_account and method is attested_ownership. | [optional] 
+**phone_number** | **str, none_type** | The customer&#39;s phone number. Required when type is kyc and method is attested_business_registration, type is kyc and method is attested_id_and_selfie, or type is kyc and method is attested_business_associate. Optional when type is bank_account and method is attested_ownership. | [optional] 
+**email_address** | **str, none_type** | The customer&#39;s email address. Required when type is kyc and method is attested_business_registration, type is kyc and method is attested_id_and_selfie, or type is kyc and method is attested_business_associate. Optional when type is bank_account and method is attested_ownership. | [optional] 
 **website** | **str, none_type** | The customer&#39;s website. Required when type is kyc and method is attested_business_registration. | [optional] 
 **nature_of_business** | **str, none_type** | The customer&#39;s nature of business. Required when type is kyc and method is attested_business_registration. | [optional] 
 **director_customer_guids** | **[str], none_type** | The customer guids of the directors of the business Required when type is kyc and method is attested_business_registration. | [optional] 
 **ultimate_beneficial_owners** | [**[PostUltimateBeneficialOwner], none_type**](PostUltimateBeneficialOwner.md) | The ultimate beneficial owners of the business with 10% or more ownership Required when type is kyc and method is attested_business_registration. | [optional] 
-**supporting_file_guids** | **[str], none_type** | File guids supporting the verification Required when type is kyc and method is attested_business_registration or type is kyc and method is attested_id_and_selfie. | [optional] 
-**occupation** | **str, none_type** | The customer&#39;s occupation. Optional when type is kyc and method is attested_id_and_selfie. | [optional] 
+**supporting_file_guids** | **[str], none_type** | File guids supporting the verification Required when type is kyc and method is attested_business_registration, type is kyc and method is attested_id_and_selfie, or type is kyc and method is attested_business_associate. | [optional] 
+**occupation** | **str, none_type** | The customer&#39;s occupation. Required when type is kyc and method is attested_business_associate. Optional when type is kyc and method is attested_id_and_selfie. | [optional] 
+**biometrics_verified** | **bool, none_type** | Whether biometrics have been verified Required when type is kyc and method is attested_business_associate. | [optional] 
 **external_bank_account_guid** | **str, none_type** | The external bank account&#39;s identifier. Required when type is bank_account. | [optional] 
 **any string name** | **bool, date, datetime, dict, float, int, list, str, none_type** | any string name can be used but the value must be the correct type | [optional]
 
