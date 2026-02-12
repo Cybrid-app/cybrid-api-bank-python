@@ -127,6 +127,7 @@ from cybrid_api_bank.model.post_external_bank_account_counterparty_name import P
 from cybrid_api_bank.model.post_external_wallet import PostExternalWallet
 from cybrid_api_bank.model.post_fee import PostFee
 from cybrid_api_bank.model.post_file import PostFile
+from cybrid_api_bank.model.post_file_metadata import PostFileMetadata
 from cybrid_api_bank.model.post_identification_number import PostIdentificationNumber
 from cybrid_api_bank.model.post_identity_verification import PostIdentityVerification
 from cybrid_api_bank.model.post_identity_verification_address import PostIdentityVerificationAddress
