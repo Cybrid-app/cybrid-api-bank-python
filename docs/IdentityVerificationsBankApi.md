@@ -108,6 +108,17 @@ with cybrid_api_bank.ApiClient(configuration) as api_client:
         supporting_file_guids=[
             "supporting_file_guids_example",
         ],
+        registered_address=PostIdentityVerificationRegisteredAddress(
+            street="street_example",
+            street2="street2_example",
+            city="city_example",
+            subdivision="subdivision_example",
+            postal_code="postal_code_example",
+            country_code="country_code_example",
+        ),
+        business_industry="business_industry_example",
+        business_funds_source="business_funds_source_example",
+        business_funds_destination="business_funds_destination_example",
         occupation="occupation_example",
         biometrics_verified=True,
         external_bank_account_guid="external_bank_account_guid_example",
