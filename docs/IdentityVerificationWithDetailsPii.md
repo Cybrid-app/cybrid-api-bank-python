@@ -14,6 +14,10 @@ Name | Type | Description | Notes
 **occupation** | **str, none_type** | The attested occupation. | [optional] 
 **website** | **str, none_type** | The attested website. | [optional] 
 **nature_of_business** | **str, none_type** | The attested nature of business. | [optional] 
+**registered_address** | [**IdentityVerificationWithDetailsPiiRegisteredAddress**](IdentityVerificationWithDetailsPiiRegisteredAddress.md) |  | [optional] 
+**business_industry** | **str, none_type** | The attested business industry. | [optional] 
+**business_funds_source** | **str, none_type** | The attested business funds source. | [optional] 
+**business_funds_destination** | **str, none_type** | The attested business funds destination. | [optional] 
 **identification_numbers** | [**[IdentificationNumber], none_type**](IdentificationNumber.md) | The attested identification numbers. | [optional] 
 **any string name** | **bool, date, datetime, dict, float, int, list, str, none_type** | any string name can be used but the value must be the correct type | [optional]
 
