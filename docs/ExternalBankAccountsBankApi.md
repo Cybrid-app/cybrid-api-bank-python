@@ -71,11 +71,11 @@ with cybrid_api_bank.ApiClient(configuration) as api_client:
         counterparty_guid="counterparty_guid_example",
         counterparty_bank_account_details=[
             PostBankAccountDetails(
-                bank_code_type="CPA",
                 bank_code="bank_code_example",
                 account_identifier="account_identifier_example",
                 account_identifier_type="CLABE",
                 payment_rail="EFT",
+                bank_code_type="CPA",
                 account_type="checking",
             ),
         ],
