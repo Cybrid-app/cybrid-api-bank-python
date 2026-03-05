@@ -131,10 +131,10 @@ Name | Type | Description  | Notes
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
 **201** | ExternalBankAccount created |  -  |
-**400** | Invalid requests |  -  |
+**400** | Bad Request |  -  |
 **401** | Unauthorized - Authentication failed,  |  -  |
 **403** | Invalid scope |  -  |
-**422** | Unable to process request |  -  |
+**422** | Unprocessable Content |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 

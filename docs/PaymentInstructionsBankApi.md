@@ -97,6 +97,9 @@ Name | Type | Description  | Notes
 **201** | Payment Instruction created |  -  |
 **401** | Unauthorized - Authentication failed,  |  -  |
 **403** | Invalid scope |  -  |
+**400** | Bad Request |  -  |
+**409** | Conflict |  -  |
+**422** | Unprocessable Content |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
