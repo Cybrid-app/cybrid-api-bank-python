@@ -73,6 +73,7 @@ from cybrid_api_bank.model.external_wallet_environment import ExternalWalletEnvi
 from cybrid_api_bank.model.external_wallet_list import ExternalWalletList
 from cybrid_api_bank.model.external_wallet_state import ExternalWalletState
 from cybrid_api_bank.model.fee_association import FeeAssociation
+from cybrid_api_bank.model.fee_detail import FeeDetail
 from cybrid_api_bank.model.identification_number import IdentificationNumber
 from cybrid_api_bank.model.identity_verification import IdentityVerification
 from cybrid_api_bank.model.identity_verification_business_associate import IdentityVerificationBusinessAssociate
