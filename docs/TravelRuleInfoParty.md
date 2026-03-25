@@ -1,7 +1,6 @@
 # TravelRuleInfoParty
 
 
-
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
