@@ -1,7 +1,6 @@
 # AccountAssociation
 
 
-
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------

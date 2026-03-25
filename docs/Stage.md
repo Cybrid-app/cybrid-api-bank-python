@@ -1,7 +1,6 @@
 # Stage
 
 
-
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
