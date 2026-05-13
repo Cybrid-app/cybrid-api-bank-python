@@ -94,7 +94,7 @@ Name | Type | Description  | Notes
 |-------------|-------------|------------------|
 **201** | session created |  -  |
 **409** | Inquiry already completed |  -  |
-**401** | Unauthorized - Authentication failed,  |  -  |
+**401** | Unauthorized - Authentication failed |  -  |
 **403** | Invalid scope |  -  |
 **404** | Identity verification not found |  -  |
 

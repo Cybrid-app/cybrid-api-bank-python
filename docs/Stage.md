@@ -7,6 +7,8 @@ Name | Type | Description | Notes
 **guid** | **str** | The unique identifier for the stage. | 
 **type** | **str** | The type of stage; one of payout. | 
 **state** | **str** | The state of the stage; one of storing, planning, planned, executing, completed, or failed. | 
+**identifiers** | [**[StageIdentifier]**](StageIdentifier.md) | Provider-issued identifiers associated with this stage. Always present, possibly empty. | 
+**links** | [**[StageLink]**](StageLink.md) | Provider-issued links associated with this stage. Always present, possibly empty. | 
 **created_at** | **datetime** | The ISO8601 datetime the stage was created at. | 
 **updated_at** | **datetime** | The ISO8601 datetime the stage was last updated at. | 
 **source_account** | [**AccountAssociation**](AccountAssociation.md) |  | 

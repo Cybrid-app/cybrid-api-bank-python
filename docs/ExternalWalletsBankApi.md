@@ -104,7 +104,7 @@ Name | Type | Description  | Notes
 |-------------|-------------|------------------|
 **201** | ExternalWallet created |  -  |
 **400** | Bad Request |  -  |
-**401** | Unauthorized - Authentication failed,  |  -  |
+**401** | Unauthorized - Authentication failed |  -  |
 **403** | Invalid scope |  -  |
 **409** | Data already exists |  -  |
 **422** | Unprocessable Content |  -  |
@@ -193,7 +193,7 @@ Name | Type | Description  | Notes
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
 **200** | External wallet deleted |  -  |
-**401** | Unauthorized - Authentication failed,  |  -  |
+**401** | Unauthorized - Authentication failed |  -  |
 **403** | Invalid scope |  -  |
 **404** | ExternalWallet not found |  -  |
 
@@ -281,7 +281,7 @@ Name | Type | Description  | Notes
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
 **200** | External wallet found |  -  |
-**401** | Unauthorized - Authentication failed,  |  -  |
+**401** | Unauthorized - Authentication failed |  -  |
 **403** | Invalid scope |  -  |
 **404** | ExternalWallet not found |  -  |
 
@@ -387,7 +387,7 @@ Name | Type | Description  | Notes
 |-------------|-------------|------------------|
 **200** | Get list of external_wallets |  -  |
 **400** | Invalid requests |  -  |
-**401** | Unauthorized - Authentication failed,  |  -  |
+**401** | Unauthorized - Authentication failed |  -  |
 **403** | Invalid scope |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
