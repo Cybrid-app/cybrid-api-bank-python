@@ -110,7 +110,7 @@ Name | Type | Description  | Notes
 |-------------|-------------|------------------|
 **201** | plan created |  -  |
 **400** | Invalid requests |  -  |
-**401** | Unauthorized - Authentication failed,  |  -  |
+**401** | Unauthorized - Authentication failed |  -  |
 **403** | Invalid scope |  -  |
 **422** | Unable to process request |  -  |
 
@@ -198,7 +198,7 @@ Name | Type | Description  | Notes
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
 **200** | plan found |  -  |
-**401** | Unauthorized - Authentication failed,  |  -  |
+**401** | Unauthorized - Authentication failed |  -  |
 **403** | Invalid scope |  -  |
 **404** | plan not found |  -  |
 
@@ -312,7 +312,7 @@ Name | Type | Description  | Notes
 |-------------|-------------|------------------|
 **200** | get list of plans |  -  |
 **400** | Invalid requests |  -  |
-**401** | Unauthorized - Authentication failed,  |  -  |
+**401** | Unauthorized - Authentication failed |  -  |
 **403** | Invalid scope |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)

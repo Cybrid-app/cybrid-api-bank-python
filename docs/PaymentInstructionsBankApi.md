@@ -95,7 +95,7 @@ Name | Type | Description  | Notes
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
 **201** | Payment Instruction created |  -  |
-**401** | Unauthorized - Authentication failed,  |  -  |
+**401** | Unauthorized - Authentication failed |  -  |
 **403** | Invalid scope |  -  |
 **400** | Bad Request |  -  |
 **409** | Conflict |  -  |
@@ -185,7 +185,7 @@ Name | Type | Description  | Notes
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
 **200** | payment_instruction found |  -  |
-**401** | Unauthorized - Authentication failed,  |  -  |
+**401** | Unauthorized - Authentication failed |  -  |
 **403** | Invalid scope |  -  |
 **404** | payment_instruction not found |  -  |
 
@@ -285,7 +285,7 @@ Name | Type | Description  | Notes
 |-------------|-------------|------------------|
 **200** | get list of payment instructions |  -  |
 **400** | Invalid requests |  -  |
-**401** | Unauthorized - Authentication failed,  |  -  |
+**401** | Unauthorized - Authentication failed |  -  |
 **403** | Invalid scope |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)

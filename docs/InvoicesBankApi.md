@@ -92,7 +92,7 @@ Name | Type | Description  | Notes
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
 **200** | Invoice cancelled |  -  |
-**401** | Unauthorized - Authentication failed,  |  -  |
+**401** | Unauthorized - Authentication failed |  -  |
 **403** | Invalid scope |  -  |
 **404** | Invoice not found |  -  |
 **422** | Unprocessable Content |  -  |
@@ -191,7 +191,7 @@ Name | Type | Description  | Notes
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
 **201** | Invoice created |  -  |
-**401** | Unauthorized - Authentication failed,  |  -  |
+**401** | Unauthorized - Authentication failed |  -  |
 **403** | Invalid scope |  -  |
 **422** | Unprocessable Content |  -  |
 
@@ -279,7 +279,7 @@ Name | Type | Description  | Notes
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
 **200** | invoice found |  -  |
-**401** | Unauthorized - Authentication failed,  |  -  |
+**401** | Unauthorized - Authentication failed |  -  |
 **403** | Invalid scope |  -  |
 **404** | invoice not found |  -  |
 
@@ -387,7 +387,7 @@ Name | Type | Description  | Notes
 |-------------|-------------|------------------|
 **200** | get list of invoices |  -  |
 **400** | Invalid requests |  -  |
-**401** | Unauthorized - Authentication failed,  |  -  |
+**401** | Unauthorized - Authentication failed |  -  |
 **403** | Invalid scope |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)

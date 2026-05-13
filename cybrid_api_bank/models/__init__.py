@@ -160,6 +160,8 @@ from cybrid_api_bank.model.quote_list import QuoteList
 from cybrid_api_bank.model.quote_side import QuoteSide
 from cybrid_api_bank.model.quote_type import QuoteType
 from cybrid_api_bank.model.stage import Stage
+from cybrid_api_bank.model.stage_identifier import StageIdentifier
+from cybrid_api_bank.model.stage_link import StageLink
 from cybrid_api_bank.model.symbol_price import SymbolPrice
 from cybrid_api_bank.model.symbol_price_response import SymbolPriceResponse
 from cybrid_api_bank.model.symbols import Symbols
