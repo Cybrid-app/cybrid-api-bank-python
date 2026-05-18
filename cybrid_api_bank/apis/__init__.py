@@ -32,6 +32,7 @@ from cybrid_api_bank.api.persona_sessions_bank_api import PersonaSessionsBankApi
 from cybrid_api_bank.api.plans_bank_api import PlansBankApi
 from cybrid_api_bank.api.prices_bank_api import PricesBankApi
 from cybrid_api_bank.api.quotes_bank_api import QuotesBankApi
+from cybrid_api_bank.api.sardine_sessions_bank_api import SardineSessionsBankApi
 from cybrid_api_bank.api.symbols_bank_api import SymbolsBankApi
 from cybrid_api_bank.api.trades_bank_api import TradesBankApi
 from cybrid_api_bank.api.transfers_bank_api import TransfersBankApi

@@ -146,6 +146,7 @@ from cybrid_api_bank.model.post_plan_source_account import PostPlanSourceAccount
 from cybrid_api_bank.model.post_plan_travel_rule_info import PostPlanTravelRuleInfo
 from cybrid_api_bank.model.post_quote import PostQuote
 from cybrid_api_bank.model.post_quote_entry import PostQuoteEntry
+from cybrid_api_bank.model.post_sardine_session import PostSardineSession
 from cybrid_api_bank.model.post_supported_payout_symbols import PostSupportedPayoutSymbols
 from cybrid_api_bank.model.post_trade import PostTrade
 from cybrid_api_bank.model.post_transfer import PostTransfer
@@ -159,6 +160,7 @@ from cybrid_api_bank.model.quote_entry_source_account import QuoteEntrySourceAcc
 from cybrid_api_bank.model.quote_list import QuoteList
 from cybrid_api_bank.model.quote_side import QuoteSide
 from cybrid_api_bank.model.quote_type import QuoteType
+from cybrid_api_bank.model.sardine_session import SardineSession
 from cybrid_api_bank.model.stage import Stage
 from cybrid_api_bank.model.stage_identifier import StageIdentifier
 from cybrid_api_bank.model.stage_link import StageLink
