@@ -72,6 +72,14 @@ with cybrid_api_bank.ApiClient(configuration) as api_client:
             ultimate_receiving_party_guid="ultimate_receiving_party_guid_example",
         ),
         purpose_of_transaction="computer_services",
+        supporting_documents=[
+            PostSupportingDocument(
+                type="invoice",
+                file_guids=[
+                    "file_guids_example",
+                ],
+            ),
+        ],
     ) # PostPlan | 
 
     # example passing only required values which don't have defaults set
