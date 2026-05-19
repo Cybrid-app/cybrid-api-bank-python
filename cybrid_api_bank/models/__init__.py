@@ -148,6 +148,7 @@ from cybrid_api_bank.model.post_quote import PostQuote
 from cybrid_api_bank.model.post_quote_entry import PostQuoteEntry
 from cybrid_api_bank.model.post_sardine_session import PostSardineSession
 from cybrid_api_bank.model.post_supported_payout_symbols import PostSupportedPayoutSymbols
+from cybrid_api_bank.model.post_supporting_document import PostSupportingDocument
 from cybrid_api_bank.model.post_trade import PostTrade
 from cybrid_api_bank.model.post_transfer import PostTransfer
 from cybrid_api_bank.model.post_transfer_participant import PostTransferParticipant
@@ -164,6 +165,8 @@ from cybrid_api_bank.model.sardine_session import SardineSession
 from cybrid_api_bank.model.stage import Stage
 from cybrid_api_bank.model.stage_identifier import StageIdentifier
 from cybrid_api_bank.model.stage_link import StageLink
+from cybrid_api_bank.model.supporting_document import SupportingDocument
+from cybrid_api_bank.model.supporting_document_file import SupportingDocumentFile
 from cybrid_api_bank.model.symbol_price import SymbolPrice
 from cybrid_api_bank.model.symbol_price_response import SymbolPriceResponse
 from cybrid_api_bank.model.symbols import Symbols
