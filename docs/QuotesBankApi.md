@@ -72,6 +72,7 @@ with cybrid_api_bank.ApiClient(configuration) as api_client:
         ],
         side="deposit",
         destination_account_guid="destination_account_guid_example",
+        payment_rail="ach",
         symbol="symbol_example",
         destination_accounts=[
             PostQuoteEntry(

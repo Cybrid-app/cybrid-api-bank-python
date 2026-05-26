@@ -64,6 +64,8 @@ with cybrid_api_bank.ApiClient(configuration) as api_client:
         send_as_deposit_bank_account_guid="send_as_deposit_bank_account_guid_example",
         payment_rail="ach",
         beneficiary_memo="beneficiary_memo_example",
+        security_question="security_question_example",
+        security_answer="security_answer_example",
         source_participants=[
             PostTransferParticipant(
                 type="bank",
