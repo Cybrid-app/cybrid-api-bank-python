@@ -72,6 +72,9 @@ with cybrid_api_bank.ApiClient(configuration) as api_client:
             ultimate_receiving_party_guid="ultimate_receiving_party_guid_example",
         ),
         purpose_of_transaction="computer_services",
+        labels=[
+            "labels_example",
+        ],
         supporting_documents=[
             PostSupportingDocument(
                 type="invoice",
@@ -270,12 +273,13 @@ with cybrid_api_bank.ApiClient(configuration) as api_client:
     created_at_lt = "created_at_lt_example" # str | Created at end date-time exclusive upper bound, ISO8601. (optional)
     updated_at_gte = "updated_at_gte_example" # str | Updated at start date-time inclusive lower bound, ISO8601. (optional)
     updated_at_lt = "updated_at_lt_example" # str | Updated at end date-time exclusive upper bound, ISO8601. (optional)
+    label = "label_example" # str | Comma separated labels to list plans for. (optional)
 
     # example passing only required values which don't have defaults set
     # and optional values
     try:
         # Get plans list
-        api_response = api_instance.list_plans(page=page, per_page=per_page, guid=guid, bank_guid=bank_guid, customer_guid=customer_guid, type=type, state=state, source_account_guid=source_account_guid, destination_account_guid=destination_account_guid, created_at_gte=created_at_gte, created_at_lt=created_at_lt, updated_at_gte=updated_at_gte, updated_at_lt=updated_at_lt)
+        api_response = api_instance.list_plans(page=page, per_page=per_page, guid=guid, bank_guid=bank_guid, customer_guid=customer_guid, type=type, state=state, source_account_guid=source_account_guid, destination_account_guid=destination_account_guid, created_at_gte=created_at_gte, created_at_lt=created_at_lt, updated_at_gte=updated_at_gte, updated_at_lt=updated_at_lt, label=label)
         pprint(api_response)
     except cybrid_api_bank.ApiException as e:
         print("Exception when calling PlansBankApi->list_plans: %s\n" % e)
@@ -299,6 +303,7 @@ Name | Type | Description  | Notes
  **created_at_lt** | **str**| Created at end date-time exclusive upper bound, ISO8601. | [optional]
  **updated_at_gte** | **str**| Updated at start date-time inclusive lower bound, ISO8601. | [optional]
  **updated_at_lt** | **str**| Updated at end date-time exclusive upper bound, ISO8601. | [optional]
+ **label** | **str**| Comma separated labels to list plans for. | [optional]
 
 ### Return type
 
