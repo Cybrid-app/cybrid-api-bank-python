@@ -9,7 +9,7 @@ Name | Type | Description | Notes
 **plan_guid** | **str** | The unique identifier for the plan. | 
 **created_at** | **datetime** | ISO8601 datetime the record was created at. | 
 **updated_at** | **datetime** | ISO8601 datetime the record was last updated at. | 
-**state** | **str** | The state of the execution; one of storing, executing, completed, or failed. | 
+**state** | **str** | The state of the execution; one of storing, executing, completed, failed, or reviewing. | 
 **source_account** | [**AccountAssociation**](AccountAssociation.md) |  | 
 **destination_account** | [**AccountAssociation**](AccountAssociation.md) |  | 
 **stages** | [**[Stage]**](Stage.md) | The stages of the execution. | 
