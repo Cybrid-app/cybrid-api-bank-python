@@ -62,10 +62,12 @@ with cybrid_api_bank.ApiClient(configuration) as api_client:
         source_account=PostPlanSourceAccount(
             guid="guid_example",
             amount=1,
+            payment_rail="ach",
         ),
         destination_account=PostPlanDestinationAccount(
             guid="guid_example",
             amount=1,
+            payment_rail="ach",
         ),
         travel_rule_info=PostPlanTravelRuleInfo(
             ultimate_originating_party_guid="ultimate_originating_party_guid_example",
