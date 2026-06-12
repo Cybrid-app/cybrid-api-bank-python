@@ -83,6 +83,7 @@ with cybrid_api_bank.ApiClient(configuration) as api_client:
                 file_guids=[
                     "file_guids_example",
                 ],
+                document_reference_number="document_reference_number_example",
             ),
         ],
     ) # PostPlan | 
