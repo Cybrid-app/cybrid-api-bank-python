@@ -13,7 +13,7 @@ Name | Type | Description | Notes
 **travel_rule_info** | [**PostPlanTravelRuleInfo**](PostPlanTravelRuleInfo.md) |  | [optional] 
 **purpose_of_transaction** | **str, none_type** | The purpose of transaction for the plan. | [optional] 
 **labels** | **[str], none_type** | The labels associated with the plan. | [optional] 
-**supporting_documents** | [**[PostSupportingDocument], none_type**](PostSupportingDocument.md) | Supporting documents to attach to the plan. Only valid for remittance plans; requests that include this field on other plan types are rejected. Optional when type is remittance. | [optional] 
+**supporting_documents** | [**[PostSupportingDocument], none_type**](PostSupportingDocument.md) | Supporting documents to attach to the plan. Optional when type is remittance. | [optional] 
 **any string name** | **bool, date, datetime, dict, float, int, list, str, none_type** | any string name can be used but the value must be the correct type | [optional]
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
