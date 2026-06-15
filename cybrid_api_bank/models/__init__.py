@@ -96,6 +96,7 @@ from cybrid_api_bank.model.identity_verification_with_details_pii_name import Id
 from cybrid_api_bank.model.identity_verification_with_details_pii_registered_address import IdentityVerificationWithDetailsPiiRegisteredAddress
 from cybrid_api_bank.model.invoice import Invoice
 from cybrid_api_bank.model.invoice_list import InvoiceList
+from cybrid_api_bank.model.legal_entity_name import LegalEntityName
 from cybrid_api_bank.model.list_request_page import ListRequestPage
 from cybrid_api_bank.model.list_request_per_page import ListRequestPerPage
 from cybrid_api_bank.model.patch_bank import PatchBank
@@ -106,6 +107,7 @@ from cybrid_api_bank.model.patch_transfer_participant import PatchTransferPartic
 from cybrid_api_bank.model.payment_instruction import PaymentInstruction
 from cybrid_api_bank.model.payment_instruction_list import PaymentInstructionList
 from cybrid_api_bank.model.persona_session import PersonaSession
+from cybrid_api_bank.model.physical_address import PhysicalAddress
 from cybrid_api_bank.model.plan import Plan
 from cybrid_api_bank.model.plan_list import PlanList
 from cybrid_api_bank.model.plan_travel_rule_info import PlanTravelRuleInfo
