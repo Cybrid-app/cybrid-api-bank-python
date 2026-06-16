@@ -57,6 +57,7 @@ with cybrid_api_bank.ApiClient(configuration) as api_client:
     api_instance = executions_bank_api.ExecutionsBankApi(api_client)
     post_execution = PostExecution(
         plan_guid="plan_guid_example",
+        sardine_session_guid="sardine_session_guid_example",
     ) # PostExecution | 
 
     # example passing only required values which don't have defaults set
