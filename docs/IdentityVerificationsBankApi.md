@@ -85,6 +85,7 @@ with cybrid_api_bank.ApiClient(configuration) as api_client:
                 type="drivers_license",
                 issuing_country_code="issuing_country_code_example",
                 identification_number="identification_number_example",
+                issuing_subdivision="issuing_subdivision_example",
             ),
         ],
         aliases=[
