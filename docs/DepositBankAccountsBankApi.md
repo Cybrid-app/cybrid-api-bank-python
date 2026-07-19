@@ -5,6 +5,7 @@ All URIs are relative to *https://bank.sandbox.cybrid.app*
 Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**create_deposit_bank_account**](DepositBankAccountsBankApi.md#create_deposit_bank_account) | **POST** /api/deposit_bank_accounts | Create Deposit Bank Account
+[**delete_deposit_bank_account**](DepositBankAccountsBankApi.md#delete_deposit_bank_account) | **DELETE** /api/deposit_bank_accounts/{deposit_bank_account_guid} | Delete Deposit Bank Account
 [**get_deposit_bank_account**](DepositBankAccountsBankApi.md#get_deposit_bank_account) | **GET** /api/deposit_bank_accounts/{deposit_bank_account_guid} | Get Deposit Bank Account
 [**list_deposit_bank_accounts**](DepositBankAccountsBankApi.md#list_deposit_bank_accounts) | **GET** /api/deposit_bank_accounts | List Deposit Bank Accounts
 
@@ -104,6 +105,95 @@ Name | Type | Description  | Notes
 **403** | Invalid scope |  -  |
 **422** | Unprocessable Content |  -  |
 **409** | Conflict |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **delete_deposit_bank_account**
+> DepositBankAccount delete_deposit_bank_account(deposit_bank_account_guid)
+
+Delete Deposit Bank Account
+
+Deletes a deposit bank account.  ## State  | State | Description | |-------|-------------| | deleting | The Platform is deleting the deposit bank account and closing the associated provider account | | deleted | The Platform has deleted the deposit bank account |    Required scope: **deposit_bank_accounts:execute**
+
+### Example
+
+* Bearer (JWT) Authentication (BearerAuth):
+* OAuth Authentication (oauth2):
+
+```python
+import time
+import cybrid_api_bank
+from cybrid_api_bank.api import deposit_bank_accounts_bank_api
+from cybrid_api_bank.model.error_response import ErrorResponse
+from cybrid_api_bank.model.deposit_bank_account import DepositBankAccount
+from pprint import pprint
+# Defining the host is optional and defaults to https://bank.sandbox.cybrid.app
+# See configuration.py for a list of all supported configuration parameters.
+configuration = cybrid_api_bank.Configuration(
+    host = "https://bank.sandbox.cybrid.app"
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
+# Configure Bearer authorization (JWT): BearerAuth
+configuration = cybrid_api_bank.Configuration(
+    access_token = 'YOUR_BEARER_TOKEN'
+)
+
+# Configure OAuth2 access token for authorization: oauth2
+configuration = cybrid_api_bank.Configuration(
+    host = "https://bank.sandbox.cybrid.app"
+)
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
+
+# Enter a context with an instance of the API client
+with cybrid_api_bank.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = deposit_bank_accounts_bank_api.DepositBankAccountsBankApi(api_client)
+    deposit_bank_account_guid = "deposit_bank_account_guid_example" # str | Identifier for the deposit bank account.
+
+    # example passing only required values which don't have defaults set
+    try:
+        # Delete Deposit Bank Account
+        api_response = api_instance.delete_deposit_bank_account(deposit_bank_account_guid)
+        pprint(api_response)
+    except cybrid_api_bank.ApiException as e:
+        print("Exception when calling DepositBankAccountsBankApi->delete_deposit_bank_account: %s\n" % e)
+```
+
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **deposit_bank_account_guid** | **str**| Identifier for the deposit bank account. |
+
+### Return type
+
+[**DepositBankAccount**](DepositBankAccount.md)
+
+### Authorization
+
+[BearerAuth](../README.md#BearerAuth), [oauth2](../README.md#oauth2)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+
+### HTTP response details
+
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** | Deposit bank account deletion initiated |  -  |
+**401** | Unauthorized - Authentication failed |  -  |
+**403** | Invalid scope |  -  |
+**404** | deposit_bank_account not found |  -  |
+**422** | Unprocessable Content |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
