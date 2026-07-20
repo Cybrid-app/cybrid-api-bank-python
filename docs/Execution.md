@@ -5,7 +5,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **guid** | **str** | Auto-generated unique identifier for the quote. | 
-**type** | **str** | The type of product the plan is for; one of remittance. | 
+**type** | **str** | The type of product the plan is for; one of remittance, deposit_return, or withdrawal_return. | 
 **plan_guid** | **str** | The unique identifier for the plan. | 
 **created_at** | **datetime** | ISO8601 datetime the record was created at. | 
 **updated_at** | **datetime** | ISO8601 datetime the record was last updated at. | 
@@ -20,6 +20,7 @@ Name | Type | Description | Notes
 **failure_code** | **str, none_type** | The failure code for failed executions. | [optional] 
 **holds** | [**[HoldDetail], none_type**](HoldDetail.md) | The holds placed on the execution. | [optional] 
 **purpose_of_transaction** | **str, none_type** | The purpose of transaction for the execution. | [optional] 
+**references** | [**[PlanReference], none_type**](PlanReference.md) | Objects this return execution references (the returned execution and stage). Optional when type is deposit_return or type is withdrawal_return. | [optional] 
 **any string name** | **bool, date, datetime, dict, float, int, list, str, none_type** | any string name can be used but the value must be the correct type | [optional]
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
