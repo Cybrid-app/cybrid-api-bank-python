@@ -5,10 +5,10 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **guid** | **str** | Auto-generated unique identifier for the entity. | 
-**type** | **str** | The type of product the plan is for; one of remittance. | 
+**type** | **str** | The type of product the plan is for; one of remittance, deposit_return, or withdrawal_return. | 
 **created_at** | **datetime** | ISO8601 datetime the record was created at. | 
 **updated_at** | **datetime** | ISO8601 datetime the record was last updated at. | 
-**expires_at** | **datetime** | ISO8601 datetime the plan will expire at. | 
+**expires_at** | **datetime, none_type** | ISO8601 datetime the plan will expire at. Null for return plans, which do not expire. | 
 **state** | **str** | The state of the plan; one of storing, planning, completed, or failed. | 
 **source_account** | [**AccountAssociation**](AccountAssociation.md) |  | 
 **destination_account** | [**AccountAssociation**](AccountAssociation.md) |  | 

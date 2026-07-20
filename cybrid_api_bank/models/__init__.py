@@ -110,6 +110,7 @@ from cybrid_api_bank.model.persona_session import PersonaSession
 from cybrid_api_bank.model.physical_address import PhysicalAddress
 from cybrid_api_bank.model.plan import Plan
 from cybrid_api_bank.model.plan_list import PlanList
+from cybrid_api_bank.model.plan_reference import PlanReference
 from cybrid_api_bank.model.plan_travel_rule_info import PlanTravelRuleInfo
 from cybrid_api_bank.model.platform_file import PlatformFile
 from cybrid_api_bank.model.platform_file_list import PlatformFileList
@@ -164,6 +165,7 @@ from cybrid_api_bank.model.quote_entry_source_account import QuoteEntrySourceAcc
 from cybrid_api_bank.model.quote_list import QuoteList
 from cybrid_api_bank.model.quote_side import QuoteSide
 from cybrid_api_bank.model.quote_type import QuoteType
+from cybrid_api_bank.model.return_details import ReturnDetails
 from cybrid_api_bank.model.sardine_session import SardineSession
 from cybrid_api_bank.model.stage import Stage
 from cybrid_api_bank.model.stage_identifier import StageIdentifier
