@@ -482,6 +482,7 @@ with cybrid_api_bank.ApiClient(configuration) as api_client:
     external_bank_account_guid = "external_bank_account_guid_example" # str | Identifier for the external bank account.
     patch_external_bank_account = PatchExternalBankAccount(
         state="completed",
+        name="name_example",
     ) # PatchExternalBankAccount | 
 
     # example passing only required values which don't have defaults set

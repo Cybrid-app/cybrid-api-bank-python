@@ -8,6 +8,7 @@ Method | HTTP request | Description
 [**delete_external_wallet**](ExternalWalletsBankApi.md#delete_external_wallet) | **DELETE** /api/external_wallets/{external_wallet_guid} | Delete External Wallet
 [**get_external_wallet**](ExternalWalletsBankApi.md#get_external_wallet) | **GET** /api/external_wallets/{external_wallet_guid} | Get External Wallet
 [**list_external_wallets**](ExternalWalletsBankApi.md#list_external_wallets) | **GET** /api/external_wallets | Get external wallets list
+[**update_external_wallet**](ExternalWalletsBankApi.md#update_external_wallet) | **PATCH** /api/external_wallets/{external_wallet_guid} | Patch External Wallet
 
 
 # **create_external_wallet**
@@ -389,6 +390,99 @@ Name | Type | Description  | Notes
 **400** | Invalid requests |  -  |
 **401** | Unauthorized - Authentication failed |  -  |
 **403** | Invalid scope |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **update_external_wallet**
+> ExternalWallet update_external_wallet(external_wallet_guid, patch_external_wallet)
+
+Patch External Wallet
+
+Updates an external_wallet.  Required scope: **external_wallets:write**
+
+### Example
+
+* Bearer (JWT) Authentication (BearerAuth):
+* OAuth Authentication (oauth2):
+
+```python
+import time
+import cybrid_api_bank
+from cybrid_api_bank.api import external_wallets_bank_api
+from cybrid_api_bank.model.error_response import ErrorResponse
+from cybrid_api_bank.model.patch_external_wallet import PatchExternalWallet
+from cybrid_api_bank.model.external_wallet import ExternalWallet
+from pprint import pprint
+# Defining the host is optional and defaults to https://bank.sandbox.cybrid.app
+# See configuration.py for a list of all supported configuration parameters.
+configuration = cybrid_api_bank.Configuration(
+    host = "https://bank.sandbox.cybrid.app"
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
+# Configure Bearer authorization (JWT): BearerAuth
+configuration = cybrid_api_bank.Configuration(
+    access_token = 'YOUR_BEARER_TOKEN'
+)
+
+# Configure OAuth2 access token for authorization: oauth2
+configuration = cybrid_api_bank.Configuration(
+    host = "https://bank.sandbox.cybrid.app"
+)
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
+
+# Enter a context with an instance of the API client
+with cybrid_api_bank.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = external_wallets_bank_api.ExternalWalletsBankApi(api_client)
+    external_wallet_guid = "external_wallet_guid_example" # str | Identifier for the external_wallet.
+    patch_external_wallet = PatchExternalWallet(
+        name="name_example",
+    ) # PatchExternalWallet | 
+
+    # example passing only required values which don't have defaults set
+    try:
+        # Patch External Wallet
+        api_response = api_instance.update_external_wallet(external_wallet_guid, patch_external_wallet)
+        pprint(api_response)
+    except cybrid_api_bank.ApiException as e:
+        print("Exception when calling ExternalWalletsBankApi->update_external_wallet: %s\n" % e)
+```
+
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **external_wallet_guid** | **str**| Identifier for the external_wallet. |
+ **patch_external_wallet** | [**PatchExternalWallet**](PatchExternalWallet.md)|  |
+
+### Return type
+
+[**ExternalWallet**](ExternalWallet.md)
+
+### Authorization
+
+[BearerAuth](../README.md#BearerAuth), [oauth2](../README.md#oauth2)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+
+### HTTP response details
+
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** | External wallet updated |  -  |
+**401** | Unauthorized - Authentication failed |  -  |
+**403** | Invalid scope |  -  |
+**404** | ExternalWallet not found |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
