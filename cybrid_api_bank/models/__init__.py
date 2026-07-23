@@ -99,6 +99,7 @@ from cybrid_api_bank.model.invoice_list import InvoiceList
 from cybrid_api_bank.model.legal_entity_name import LegalEntityName
 from cybrid_api_bank.model.list_request_page import ListRequestPage
 from cybrid_api_bank.model.list_request_per_page import ListRequestPerPage
+from cybrid_api_bank.model.patch_account import PatchAccount
 from cybrid_api_bank.model.patch_bank import PatchBank
 from cybrid_api_bank.model.patch_customer import PatchCustomer
 from cybrid_api_bank.model.patch_external_bank_account import PatchExternalBankAccount
