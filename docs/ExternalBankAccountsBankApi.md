@@ -77,6 +77,7 @@ with cybrid_api_bank.ApiClient(configuration) as api_client:
                 payment_rail="EFT",
                 bank_code_type="CPA",
                 account_type="checking",
+                account_designation="NRE",
             ),
         ],
         counterparty_name=PostExternalBankAccountCounterpartyName(
