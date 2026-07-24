@@ -5,6 +5,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **guid** | **str** | Auto-generated unique identifier for the identity verification. | [optional] 
+**name** | **str, none_type** | The name of the deposit address. | [optional] 
 **bank_guid** | **str** | The address&#39; bank identifier. | [optional] 
 **customer_guid** | **str, none_type** | The address&#39; customer identifier. | [optional] 
 **account_guid** | **str** | The address&#39; account identifier. | [optional] 
