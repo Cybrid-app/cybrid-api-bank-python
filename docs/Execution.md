@@ -18,6 +18,7 @@ Name | Type | Description | Notes
 **bank_guid** | **str, none_type** | The unique identifier for the bank. | [optional] 
 **customer_guid** | **str, none_type** | The unique identifier for the customer. | [optional] 
 **failure_code** | **str, none_type** | The failure code for failed executions. | [optional] 
+**effective_rate** | [**EffectiveRate**](EffectiveRate.md) |  | [optional] 
 **holds** | [**[HoldDetail], none_type**](HoldDetail.md) | The holds placed on the execution. | [optional] 
 **purpose_of_transaction** | **str, none_type** | The purpose of transaction for the execution. | [optional] 
 **references** | [**[PlanReference], none_type**](PlanReference.md) | Objects this return execution references (the returned execution and stage). Optional when type is deposit_return or type is withdrawal_return. | [optional] 

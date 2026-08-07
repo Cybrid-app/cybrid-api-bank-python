@@ -18,6 +18,7 @@ Name | Type | Description | Notes
 **bank_guid** | **str, none_type** | The unique identifier for the bank. | [optional] 
 **customer_guid** | **str, none_type** | The unique identifier for the customer. | [optional] 
 **failure_code** | **str, none_type** | The failure code for failed plans. | [optional] 
+**effective_rate** | [**EffectiveRate**](EffectiveRate.md) |  | [optional] 
 **purpose_of_transaction** | **str, none_type** | The purpose of transaction for the plan. | [optional] 
 **supporting_documents** | [**[SupportingDocument], none_type**](SupportingDocument.md) | Supporting documents attached to the plan. Optional when type is remittance. | [optional] 
 **labels** | **[str], none_type** | The labels associated with the plan. | [optional] 

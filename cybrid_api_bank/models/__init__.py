@@ -56,6 +56,7 @@ from cybrid_api_bank.model.deposit_bank_account_list import DepositBankAccountLi
 from cybrid_api_bank.model.deposit_bank_account_routing_details_inner import DepositBankAccountRoutingDetailsInner
 from cybrid_api_bank.model.deposit_bank_account_routing_number_type import DepositBankAccountRoutingNumberType
 from cybrid_api_bank.model.deposit_bank_account_state import DepositBankAccountState
+from cybrid_api_bank.model.effective_rate import EffectiveRate
 from cybrid_api_bank.model.error_response import ErrorResponse
 from cybrid_api_bank.model.execution import Execution
 from cybrid_api_bank.model.execution_list import ExecutionList
