@@ -15,6 +15,7 @@ Name | Type | Description | Notes
 **destination_account** | [**AccountAssociation**](AccountAssociation.md) |  | 
 **fees** | [**[FeeAssociation]**](FeeAssociation.md) | The fees associated with the stage. | 
 **failure_code** | **str, none_type** | The failure code for failed stages. | [optional] 
+**effective_rate** | [**EffectiveRate**](EffectiveRate.md) |  | [optional] 
 **deposit_return_details** | [**ReturnDetails**](ReturnDetails.md) |  | [optional] 
 **withdrawal_return_details** | [**ReturnDetails**](ReturnDetails.md) |  | [optional] 
 **any string name** | **bool, date, datetime, dict, float, int, list, str, none_type** | any string name can be used but the value must be the correct type | [optional]
