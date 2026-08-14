@@ -121,6 +121,7 @@ with cybrid_api_bank.ApiClient(configuration) as api_client:
         business_funds_source="business_funds_source_example",
         business_funds_destination="business_funds_destination_example",
         occupation="occupation_example",
+        citizenship="citizenship_example",
         biometrics_verified=True,
         external_bank_account_guid="external_bank_account_guid_example",
     ) # PostIdentityVerification | 
