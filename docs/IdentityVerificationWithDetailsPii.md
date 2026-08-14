@@ -12,6 +12,7 @@ Name | Type | Description | Notes
 **phone_number** | **str, none_type** | The attested phone number. | [optional] 
 **email_address** | **str, none_type** | The attested email address. | [optional] 
 **occupation** | **str, none_type** | The attested occupation. | [optional] 
+**citizenship** | **str, none_type** | The ISO 3166 country 2-Alpha country code of the customer&#39;s citizenship. | [optional] 
 **website** | **str, none_type** | The attested website. | [optional] 
 **nature_of_business** | **str, none_type** | The attested nature of business. | [optional] 
 **registered_address** | [**IdentityVerificationWithDetailsPiiRegisteredAddress**](IdentityVerificationWithDetailsPiiRegisteredAddress.md) |  | [optional] 
