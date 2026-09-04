@@ -19,6 +19,8 @@ Name | Type | Description | Notes
 **business_industry** | **str, none_type** | The attested business industry. | [optional] 
 **business_funds_source** | **str, none_type** | The attested business funds source. | [optional] 
 **business_funds_destination** | **str, none_type** | The attested business funds destination. | [optional] 
+**business_type** | **str, none_type** | The attested business type. | [optional] 
+**business_incorporation_date** | **date, none_type** | The attested business incorporation date. | [optional] 
 **identification_numbers** | [**[IdentificationNumber], none_type**](IdentificationNumber.md) | The attested identification numbers. | [optional] 
 **any string name** | **bool, date, datetime, dict, float, int, list, str, none_type** | any string name can be used but the value must be the correct type | [optional]
 
