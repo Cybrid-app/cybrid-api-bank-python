@@ -31,7 +31,7 @@ Name | Type | Description | Notes
 **business_type** | **str, none_type** | The type of business. Defaults to &#39;entity&#39; for V3. Optional when type is kyc and method is attested_business_registration. | [optional] 
 **business_incorporation_date** | **date, none_type** | The date the business was incorporated. Required for attested business registration V3. Optional when type is kyc and method is attested_business_registration. | [optional] 
 **occupation** | **str, none_type** | The customer&#39;s occupation. Required when type is kyc and method is attested_business_associate. Optional when type is kyc and method is attested_id_and_selfie. | [optional] 
-**citizenship** | **str, none_type** | The customer&#39;s citizenship country code. Required when type is kyc and method is attested_business_associate. | [optional] 
+**citizenship** | **str, none_type** | The customer&#39;s citizenship country code. Required when type is kyc and method is attested_business_associate. Optional when type is kyc and method is attested_id_and_selfie, type is kyc and method is attested_id_and_database, or type is kyc and method is attested_database. | [optional] 
 **biometrics_verified** | **bool, none_type** | Whether biometrics have been verified Required when type is kyc and method is attested_business_associate or type is kyc and method is attested_id_and_database. | [optional] 
 **external_bank_account_guid** | **str, none_type** | The external bank account&#39;s identifier. Required when type is bank_account. | [optional] 
 **any string name** | **bool, date, datetime, dict, float, int, list, str, none_type** | any string name can be used but the value must be the correct type | [optional]
