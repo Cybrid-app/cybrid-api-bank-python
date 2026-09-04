@@ -17,6 +17,7 @@ Name | Type | Description | Notes
 **date_of_birth** | **date, none_type** | The customer&#39;s DOB. Only available for GET operations when &#39;include_pii&#39; is set. | [optional] 
 **phone_number** | **str, none_type** | The customer&#39;s phone number. Only available for GET operations when &#39;include_pii&#39; is set. | [optional] 
 **email_address** | **str, none_type** | The customer&#39;s email address. Only available for GET operations when &#39;include_pii&#39; is set. | [optional] 
+**citizenship** | **str, none_type** | The ISO 3166 country 2-Alpha country code of the customer&#39;s citizenship. Only available for GET operations when &#39;include_pii&#39; is set. | [optional] 
 **labels** | **[str], none_type** | The labels associated with the customer. | [optional] 
 **compliance_decisions** | [**[ComplianceDecision]**](ComplianceDecision.md) | The compliance decisions associated with the customer. | [optional] 
 **identification_numbers** | [**[IdentificationNumber], none_type**](IdentificationNumber.md) | The customer&#39;s identification numbers. Only available for GET operations when &#39;include_pii&#39; is set and bank has access. | [optional] 
