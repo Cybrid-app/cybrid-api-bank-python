@@ -5,7 +5,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **guid** | **str** | Auto-generated unique identifier for the transfer. | [optional] 
-**transfer_type** | **str** | The type of transfer; one of funding, book, crypto, instant_funding, funding_return, crypto_return, loss_recovery, inter_account, lightning, or instant_funding_return. | [optional] 
+**transfer_type** | **str** | The type of transfer; one of funding, book, crypto, instant_funding, funding_return, crypto_return, loss_recovery, inter_account, lightning, instant_funding_return, loss_coverage, or loss_reclaim. | [optional] 
 **bank_guid** | **str, none_type** | The associated bank&#39;s identifier. | [optional] 
 **customer_guid** | **str, none_type** | The associated customer&#39;s identifier. | [optional] 
 **quote_guid** | **str** | The associated quote&#39;s identifier. | [optional] 
@@ -13,7 +13,7 @@ Name | Type | Description | Notes
 **asset** | **str** | The asset the transfer is related to, e.g., USD. | [optional] 
 **side** | **str** | The direction of the quote; one of deposit or withdrawal. | [optional] 
 **state** | **str** | The state of the transfer; one of storing, pending, holding, reviewing, completed, failed, or cancelling. | [optional] 
-**failure_code** | **str, none_type** | The failure code for failed transfers; one of non_sufficient_funds, refresh_required, party_name_invalid, payment_rail_invalid, compliance_rejection, cancelled, reversed, limit_exceeded, network_fee_too_low, amount_too_low, internal_error, invalid_address, invalid_destination, customer_action_required, external_vendor_error, payment_request_expired, return_risk_exceeded, daily_limit_exceeded, weekly_limit_exceeded, monthly_limit_exceeded, customer_contact_info_missing, or recipient_cancelled. | [optional] 
+**failure_code** | **str, none_type** | The failure code for failed transfers; one of non_sufficient_funds, refresh_required, party_name_invalid, payment_rail_invalid, compliance_rejection, cancelled, reversed, limit_exceeded, network_fee_too_low, amount_too_low, internal_error, invalid_address, invalid_destination, customer_action_required, external_vendor_error, payment_request_expired, return_risk_exceeded, daily_limit_exceeded, weekly_limit_exceeded, monthly_limit_exceeded, lifetime_limit_exceeded, customer_contact_info_missing, or recipient_cancelled. | [optional] 
 **return_code** | **str, none_type** | The return code for reversed transfers | [optional] 
 **amount** | **int, none_type** | The actual amount in base units of the asset. | [optional] 
 **estimated_amount** | **int** | The estimated amount in base units of the asset. | [optional] 

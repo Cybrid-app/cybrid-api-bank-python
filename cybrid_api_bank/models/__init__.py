@@ -111,6 +111,7 @@ from cybrid_api_bank.model.patch_transfer import PatchTransfer
 from cybrid_api_bank.model.patch_transfer_participant import PatchTransferParticipant
 from cybrid_api_bank.model.payment_instruction import PaymentInstruction
 from cybrid_api_bank.model.payment_instruction_list import PaymentInstructionList
+from cybrid_api_bank.model.payout_return_details import PayoutReturnDetails
 from cybrid_api_bank.model.persona_session import PersonaSession
 from cybrid_api_bank.model.physical_address import PhysicalAddress
 from cybrid_api_bank.model.plan import Plan

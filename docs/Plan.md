@@ -5,7 +5,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **guid** | **str** | Auto-generated unique identifier for the entity. | 
-**type** | **str** | The type of product the plan is for; one of remittance, deposit_return, or withdrawal_return. | 
+**type** | **str** | The type of product the plan is for; one of remittance, bill_pay, disbursement, invoice_pay, deposit_return, withdrawal_return, or payout_return. | 
 **created_at** | **datetime** | ISO8601 datetime the record was created at. | 
 **updated_at** | **datetime** | ISO8601 datetime the record was last updated at. | 
 **expires_at** | **datetime, none_type** | ISO8601 datetime the plan will expire at. Null for return plans, which do not expire. | 
@@ -20,7 +20,7 @@ Name | Type | Description | Notes
 **failure_code** | **str, none_type** | The failure code for failed plans. | [optional] 
 **effective_rate** | [**EffectiveRate**](EffectiveRate.md) |  | [optional] 
 **purpose_of_transaction** | **str, none_type** | The purpose of transaction for the plan. | [optional] 
-**supporting_documents** | [**[SupportingDocument], none_type**](SupportingDocument.md) | Supporting documents attached to the plan. Optional when type is remittance. | [optional] 
+**supporting_documents** | [**[SupportingDocument], none_type**](SupportingDocument.md) | Supporting documents attached to the plan. Optional when type is remittance or type is invoice_pay. | [optional] 
 **labels** | **[str], none_type** | The labels associated with the plan. | [optional] 
 **any string name** | **bool, date, datetime, dict, float, int, list, str, none_type** | any string name can be used but the value must be the correct type | [optional]
 

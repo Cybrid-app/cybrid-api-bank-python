@@ -5,15 +5,15 @@ Request body for plan creation.
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
+**type** | **str** | The type of product the plan is for. | 
 **source_account** | [**PostPlanSourceAccount**](PostPlanSourceAccount.md) |  | 
 **destination_account** | [**PostPlanDestinationAccount**](PostPlanDestinationAccount.md) |  | 
-**type** | **str** | The type of product the plan is for. | defaults to "remittance"
 **bank_guid** | **str, none_type** | The unique identifier for the bank. | [optional] 
 **customer_guid** | **str, none_type** | The unique identifier for the customer. | [optional] 
 **travel_rule_info** | [**PostPlanTravelRuleInfo**](PostPlanTravelRuleInfo.md) |  | [optional] 
 **purpose_of_transaction** | **str, none_type** | The purpose of transaction for the plan. | [optional] 
 **labels** | **[str], none_type** | The labels associated with the plan. | [optional] 
-**supporting_documents** | [**[PostSupportingDocument], none_type**](PostSupportingDocument.md) | Supporting documents to attach to the plan. Optional when type is remittance. | [optional] 
+**supporting_documents** | [**[PostSupportingDocument], none_type**](PostSupportingDocument.md) | Supporting documents to attach to the plan. Optional when type is remittance or type is invoice_pay. | [optional] 
 **any string name** | **bool, date, datetime, dict, float, int, list, str, none_type** | any string name can be used but the value must be the correct type | [optional]
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
