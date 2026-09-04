@@ -20,6 +20,7 @@ from cybrid_api_bank.model.activity_type import ActivityType
 from cybrid_api_bank.model.asset import Asset
 from cybrid_api_bank.model.asset_list import AssetList
 from cybrid_api_bank.model.asset_types import AssetTypes
+from cybrid_api_bank.model.balance import Balance
 from cybrid_api_bank.model.bank import Bank
 from cybrid_api_bank.model.bank_feature import BankFeature
 from cybrid_api_bank.model.bank_list import BankList
@@ -187,6 +188,10 @@ from cybrid_api_bank.model.trade_list import TradeList
 from cybrid_api_bank.model.trade_side import TradeSide
 from cybrid_api_bank.model.trade_state import TradeState
 from cybrid_api_bank.model.trade_type import TradeType
+from cybrid_api_bank.model.transaction import Transaction
+from cybrid_api_bank.model.transaction_list import TransactionList
+from cybrid_api_bank.model.transaction_list_page_info import TransactionListPageInfo
+from cybrid_api_bank.model.transaction_resource import TransactionResource
 from cybrid_api_bank.model.transfer import Transfer
 from cybrid_api_bank.model.transfer_account_type import TransferAccountType
 from cybrid_api_bank.model.transfer_destination_account import TransferDestinationAccount
