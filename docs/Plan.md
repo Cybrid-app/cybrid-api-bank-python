@@ -5,7 +5,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **guid** | **str** | Auto-generated unique identifier for the entity. | 
-**type** | **str** | The type of product the plan is for; one of remittance, bill_pay, disbursement, invoice_pay, deposit_return, withdrawal_return, or payout_return. | 
+**type** | **str** | The type of product the plan is for; one of remittance, bill_pay, disbursement, invoice_pay, deposit, withdrawal, conversion, deposit_return, withdrawal_return, or payout_return. | 
 **created_at** | **datetime** | ISO8601 datetime the record was created at. | 
 **updated_at** | **datetime** | ISO8601 datetime the record was last updated at. | 
 **expires_at** | **datetime, none_type** | ISO8601 datetime the plan will expire at. Null for return plans, which do not expire. | 
