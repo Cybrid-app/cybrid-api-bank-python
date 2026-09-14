@@ -18,6 +18,7 @@ Name | Type | Description | Notes
 **bank_guid** | **str, none_type** | The unique identifier for the bank. | [optional] 
 **customer_guid** | **str, none_type** | The unique identifier for the customer. | [optional] 
 **failure_code** | **str, none_type** | The failure code for failed executions. | [optional] 
+**intermediate_accounts** | [**[IntermediateAccount], none_type**](IntermediateAccount.md) | Intermediate accounts explicitly requested by the caller that were actually used to disambiguate the plan. | [optional] 
 **effective_rate** | [**EffectiveRate**](EffectiveRate.md) |  | [optional] 
 **holds** | [**[HoldDetail], none_type**](HoldDetail.md) | The holds placed on the execution. | [optional] 
 **purpose_of_transaction** | **str, none_type** | The purpose of transaction for the execution. | [optional] 
