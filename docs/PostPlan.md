@@ -10,6 +10,7 @@ Name | Type | Description | Notes
 **destination_account** | [**PostPlanDestinationAccount**](PostPlanDestinationAccount.md) |  | 
 **bank_guid** | **str, none_type** | The unique identifier for the bank. | [optional] 
 **customer_guid** | **str, none_type** | The unique identifier for the customer. | [optional] 
+**intermediate_accounts** | [**[PostPlanIntermediateAccountsInner], none_type**](PostPlanIntermediateAccountsInner.md) | Accounts to disambiguate a multi-stage plan when more than one account of the same asset is eligible for a stage. | [optional] 
 **travel_rule_info** | [**PostPlanTravelRuleInfo**](PostPlanTravelRuleInfo.md) |  | [optional] 
 **purpose_of_transaction** | **str, none_type** | The purpose of transaction for the plan. | [optional] 
 **labels** | **[str], none_type** | The labels associated with the plan. | [optional] 
