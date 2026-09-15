@@ -53,6 +53,8 @@ with cybrid_api_bank.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = transactions_bank_api.TransactionsBankApi(api_client)
     account_guid = "account_guid_example" # str | 
+    bank_guid = "bank_guid_example" # str | Comma separated bank_guids the account must belong to. (optional)
+    customer_guid = "customer_guid_example" # str | Comma separated customer_guids the account must belong to. (optional)
     cursor = "cursor_example" # str, none_type |  (optional)
     per_page = ListRequestPerPage(1) # int |  (optional)
     direction = "credit" # str |  (optional)
@@ -72,7 +74,7 @@ with cybrid_api_bank.ApiClient(configuration) as api_client:
     # and optional values
     try:
         # List Transactions
-        api_response = api_instance.list_transactions(account_guid, cursor=cursor, per_page=per_page, direction=direction, created_at_gte=created_at_gte, created_at_lt=created_at_lt, include_balances=include_balances)
+        api_response = api_instance.list_transactions(account_guid, bank_guid=bank_guid, customer_guid=customer_guid, cursor=cursor, per_page=per_page, direction=direction, created_at_gte=created_at_gte, created_at_lt=created_at_lt, include_balances=include_balances)
         pprint(api_response)
     except cybrid_api_bank.ApiException as e:
         print("Exception when calling TransactionsBankApi->list_transactions: %s\n" % e)
@@ -84,6 +86,8 @@ with cybrid_api_bank.ApiClient(configuration) as api_client:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **account_guid** | **str**|  |
+ **bank_guid** | **str**| Comma separated bank_guids the account must belong to. | [optional]
+ **customer_guid** | **str**| Comma separated customer_guids the account must belong to. | [optional]
  **cursor** | **str, none_type**|  | [optional]
  **per_page** | **int**|  | [optional]
  **direction** | **str**|  | [optional]
