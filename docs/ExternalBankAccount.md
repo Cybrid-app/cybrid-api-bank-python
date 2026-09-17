@@ -17,7 +17,7 @@ Name | Type | Description | Notes
 **plaid_institution_id** | **str, none_type** | The Plaid institution ID for the account. | [optional] 
 **plaid_account_mask** | **str, none_type** | The account number mask for the account. | [optional] 
 **plaid_account_name** | **str, none_type** | The name for the account. | [optional] 
-**state** | **str** | The state of the external bank account; one of storing, completed, failed, refresh_required, unverified, deleting, or deleted. | [optional] 
+**state** | **str** | The state of the external bank account; one of storing, completed, failed, refresh_required, unverified, deleting, deleted, pending, or reviewing. | [optional] 
 **failure_code** | **str, none_type** | The failure code for failed transfers. | [optional] 
 **balance_updated_at** | **datetime, none_type** | The timestamp that the balance information was last updated at. | [optional] 
 **balances** | [**ExternalBankAccountBalances**](ExternalBankAccountBalances.md) |  | [optional] 
