@@ -120,6 +120,7 @@ from cybrid_api_bank.model.plan import Plan
 from cybrid_api_bank.model.plan_list import PlanList
 from cybrid_api_bank.model.plan_reference import PlanReference
 from cybrid_api_bank.model.plan_travel_rule_info import PlanTravelRuleInfo
+from cybrid_api_bank.model.plan_type import PlanType
 from cybrid_api_bank.model.platform_file import PlatformFile
 from cybrid_api_bank.model.platform_file_list import PlatformFileList
 from cybrid_api_bank.model.post_account import PostAccount
