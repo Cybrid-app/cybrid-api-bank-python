@@ -14,6 +14,7 @@ Name | Type | Description | Notes
 **counterparty_guid** | **str, none_type** | The counterparty identifier. | [optional] 
 **created_at** | **datetime** | ISO8601 datetime the record was created at. | [optional] 
 **updated_at** | **datetime** | ISO8601 datetime the record was last updated at. | [optional] 
+**usable_at** | **datetime, none_type** | ISO8601 datetime from which the destination can be used for a withdrawal. Null when no minimum age applies. | [optional] 
 **plaid_institution_id** | **str, none_type** | The Plaid institution ID for the account. | [optional] 
 **plaid_account_mask** | **str, none_type** | The account number mask for the account. | [optional] 
 **plaid_account_name** | **str, none_type** | The name for the account. | [optional] 
