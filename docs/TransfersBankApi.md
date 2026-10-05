@@ -235,7 +235,7 @@ Name | Type | Description  | Notes
 
 Get Transfer
 
-Retrieves a transfer.  Required scope: **transfers:read**
+Retrieves a transfer.  Required scope: **transfers:read** Optional scope: **transfers:pii:read**.
 
 ### Example
 
@@ -276,11 +276,21 @@ with cybrid_api_bank.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = transfers_bank_api.TransfersBankApi(api_client)
     transfer_guid = "transfer_guid_example" # str | Identifier for the transfer.
+    include_pii = True # bool | Include PII in the response (requires **transfers:pii:read** scope). (optional)
 
     # example passing only required values which don't have defaults set
     try:
         # Get Transfer
         api_response = api_instance.get_transfer(transfer_guid)
+        pprint(api_response)
+    except cybrid_api_bank.ApiException as e:
+        print("Exception when calling TransfersBankApi->get_transfer: %s\n" % e)
+
+    # example passing only required values which don't have defaults set
+    # and optional values
+    try:
+        # Get Transfer
+        api_response = api_instance.get_transfer(transfer_guid, include_pii=include_pii)
         pprint(api_response)
     except cybrid_api_bank.ApiException as e:
         print("Exception when calling TransfersBankApi->get_transfer: %s\n" % e)
@@ -292,6 +302,7 @@ with cybrid_api_bank.ApiClient(configuration) as api_client:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **transfer_guid** | **str**| Identifier for the transfer. |
+ **include_pii** | **bool**| Include PII in the response (requires **transfers:pii:read** scope). | [optional]
 
 ### Return type
 
