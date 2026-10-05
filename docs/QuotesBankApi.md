@@ -62,7 +62,7 @@ with cybrid_api_bank.ApiClient(configuration) as api_client:
         receive_amount=1,
         deliver_amount=1,
         asset="asset_example",
-        network_address="network_address_example",
+        side="deposit",
         fees=[
             PostFee(
                 type="spread",
@@ -70,7 +70,6 @@ with cybrid_api_bank.ApiClient(configuration) as api_client:
                 fixed_fee=1,
             ),
         ],
-        side="deposit",
         destination_account_guid="destination_account_guid_example",
         payment_rail="ach",
         symbol="symbol_example",
