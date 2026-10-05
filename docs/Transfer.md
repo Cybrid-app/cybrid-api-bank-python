@@ -35,7 +35,7 @@ Name | Type | Description | Notes
 **created_at** | **datetime** | ISO8601 datetime the record was created at. | [optional] 
 **updated_at** | **datetime** | ISO8601 datetime the record was last updated at. | [optional] 
 **hold_details** | [**TransferHoldDetails**](TransferHoldDetails.md) |  | [optional] 
-**transfer_details** | **{str: (bool, date, datetime, dict, float, int, list, str, none_type)}, none_type** | The raw details on the transfer from the bank. | [optional] 
+**transfer_details** | **{str: (bool, date, datetime, dict, float, int, list, str, none_type)}, none_type** | The raw details on the transfer from the bank. Returned only by the get transfer endpoint when include_pii is true, which requires the **transfers:pii:read** scope. | [optional] 
 **payment_rail** | **str, none_type** | The rail the payment was done on. One of: ach, eft, wire, rtp, etransfer | [optional] 
 **labels** | **[str], none_type** | The labels associated with the transfer. | [optional] 
 **entries** | [**[TransferEntry], none_type**](TransferEntry.md) | Transfer entries associated with the batch transfer | [optional] 
