@@ -14,7 +14,7 @@ Name | Type | Description | Notes
 **source_account** | [**AccountAssociation**](AccountAssociation.md) |  | 
 **destination_account** | [**AccountAssociation**](AccountAssociation.md) |  | 
 **fees** | [**[FeeAssociation]**](FeeAssociation.md) | The fees associated with the stage. | 
-**failure_code** | **str, none_type** | The failure code for failed stages. | [optional] 
+**failure_code** | **str, none_type** | The failure code for failed stages. Failures without a documented code are reported as internal_error. | [optional] 
 **effective_rate** | [**EffectiveRate**](EffectiveRate.md) |  | [optional] 
 **deposit_return_details** | [**ReturnDetails**](ReturnDetails.md) |  | [optional] 
 **withdrawal_return_details** | [**ReturnDetails**](ReturnDetails.md) |  | [optional] 
