@@ -68,6 +68,8 @@ with cybrid_api_bank.ApiClient(configuration) as api_client:
             guid="guid_example",
             amount=1,
             payment_rail="ach",
+            security_question="security_question_example",
+            security_answer="security_answer_example",
         ),
         intermediate_accounts=[
             PostPlanIntermediateAccountsInner(

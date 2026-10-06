@@ -17,7 +17,7 @@ Name | Type | Description | Notes
 **travel_rule_info** | [**PlanTravelRuleInfo**](PlanTravelRuleInfo.md) |  | 
 **bank_guid** | **str, none_type** | The unique identifier for the bank. | [optional] 
 **customer_guid** | **str, none_type** | The unique identifier for the customer. | [optional] 
-**failure_code** | **str, none_type** | The failure code for failed plans. | [optional] 
+**failure_code** | **str, none_type** | The failure code for failed plans. Failures without a documented code are reported as internal_error. | [optional] 
 **intermediate_accounts** | [**[IntermediateAccount], none_type**](IntermediateAccount.md) | Intermediate accounts explicitly requested by the caller that were actually used to disambiguate the plan. | [optional] 
 **effective_rate** | [**EffectiveRate**](EffectiveRate.md) |  | [optional] 
 **purpose_of_transaction** | **str, none_type** | The purpose of transaction for the plan. | [optional] 
