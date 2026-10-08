@@ -8,6 +8,7 @@ Name | Type | Description | Notes
 **type** | **str** | The counterparty&#39;s type. | 
 **address** | [**PostCounterpartyAddress**](PostCounterpartyAddress.md) |  | 
 **customer_guid** | **str, none_type** | The owning customer&#39;s identifier. | [optional] 
+**customer_relationship** | **str, none_type** | The counterparty&#39;s relationship to the owning customer. | [optional] 
 **name** | [**PostCounterpartyName**](PostCounterpartyName.md) |  | [optional] 
 **aliases** | [**[PostCounterpartyAliasesInner], none_type**](PostCounterpartyAliasesInner.md) | The aliases of the counterparty. Optional when type is business. | [optional] 
 **date_of_birth** | **date, none_type** | The counterparty&#39;s date of birth. Optional when type is individual. | [optional] 
