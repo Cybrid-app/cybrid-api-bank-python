@@ -8,6 +8,7 @@ Name | Type | Description | Notes
 **type** | **str** | The counterparty type; one of business or individual. | [optional] 
 **bank_guid** | **str** | Auto-generated unique identifier for the counterparty&#39;s bank. | [optional] 
 **customer_guid** | **str, none_type** | Auto-generated unique identifier for the counterparty&#39;s customer. | [optional] 
+**customer_relationship** | **str, none_type** | The counterparty&#39;s relationship to the owning customer. | [optional] 
 **created_at** | **datetime** | ISO8601 datetime the record was created at. | [optional] 
 **updated_at** | **datetime** | ISO8601 datetime the record was last updated at. | [optional] 
 **state** | **str** | The counterparty state; one of storing, unverified, verified, or rejected. | [optional] 
