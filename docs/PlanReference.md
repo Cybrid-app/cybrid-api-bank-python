@@ -4,7 +4,7 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**type** | **str** | The type of object being referenced; one of returned_execution or returned_stage. | 
+**type** | **str** | The type of object being referenced; one of returned_execution, returned_stage, or returned_by_execution. | 
 **guid** | **str** | The guid of the referenced object. | 
 **any string name** | **bool, date, datetime, dict, float, int, list, str, none_type** | any string name can be used but the value must be the correct type | [optional]
 

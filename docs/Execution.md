@@ -22,7 +22,7 @@ Name | Type | Description | Notes
 **effective_rate** | [**EffectiveRate**](EffectiveRate.md) |  | [optional] 
 **holds** | [**[HoldDetail], none_type**](HoldDetail.md) | The holds placed on the execution. | [optional] 
 **purpose_of_transaction** | **str, none_type** | The purpose of transaction for the execution. | [optional] 
-**references** | [**[PlanReference], none_type**](PlanReference.md) | Objects this return execution references (the returned execution and stage). Optional when type is deposit_return, type is withdrawal_return, or type is payout_return. | [optional] 
+**references** | [**[PlanReference], none_type**](PlanReference.md) | Objects this execution references. A return execution references the returned execution and stage; a returned execution references the return execution(s) that returned it. | [optional] 
 **labels** | **[str], none_type** | The labels associated with the execution. | [optional] 
 **any string name** | **bool, date, datetime, dict, float, int, list, str, none_type** | any string name can be used but the value must be the correct type | [optional]
 
