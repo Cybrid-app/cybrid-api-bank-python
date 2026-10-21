@@ -93,6 +93,13 @@ with cybrid_api_bank.ApiClient(configuration) as api_client:
                 document_reference_number="document_reference_number_example",
             ),
         ],
+        fees=[
+            PostFee(
+                type="spread",
+                spread_fee=1,
+                fixed_fee=1,
+            ),
+        ],
     ) # PostPlan | 
 
     # example passing only required values which don't have defaults set
