@@ -80,6 +80,7 @@ with cybrid_api_bank.ApiClient(configuration) as api_client:
         ],
         date_of_birth=dateutil_parser('1970-01-01').date(),
         email_address="email_address_example",
+        phone_number="phone_number_example",
         identification_numbers=[
             PostIdentificationNumber(
                 type="drivers_license",

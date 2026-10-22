@@ -13,6 +13,7 @@ Name | Type | Description | Notes
 **aliases** | [**[PostCounterpartyAliasesInner], none_type**](PostCounterpartyAliasesInner.md) | The aliases of the counterparty. Optional when type is business. | [optional] 
 **date_of_birth** | **date, none_type** | The counterparty&#39;s date of birth. Optional when type is individual. | [optional] 
 **email_address** | **str, none_type** | The counterparty&#39;s email address. | [optional] 
+**phone_number** | **str, none_type** | The counterparty&#39;s phone number. | [optional] 
 **identification_numbers** | [**[PostIdentificationNumber], none_type**](PostIdentificationNumber.md) | The counterparty&#39;s identification numbers. | [optional] 
 **labels** | **[str], none_type** | The labels associated with the counterparty. | [optional] 
 **any string name** | **bool, date, datetime, dict, float, int, list, str, none_type** | any string name can be used but the value must be the correct type | [optional]
