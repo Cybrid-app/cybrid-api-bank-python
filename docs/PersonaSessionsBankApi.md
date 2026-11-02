@@ -93,9 +93,9 @@ Name | Type | Description  | Notes
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
 **201** | session created |  -  |
-**401** | Unauthorized - Authentication failed |  -  |
-**403** | Invalid scope |  -  |
 **400** | Bad Request |  -  |
+**401** | Unauthorized |  -  |
+**403** | Forbidden |  -  |
 **404** | Not Found |  -  |
 **409** | Conflict |  -  |
 
