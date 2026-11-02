@@ -194,7 +194,7 @@ Name | Type | Description  | Notes
 **200** | Deposit bank account deletion initiated |  -  |
 **401** | Unauthorized - Authentication failed |  -  |
 **403** | Invalid scope |  -  |
-**404** | deposit_bank_account not found |  -  |
+**404** | Not Found |  -  |
 **422** | Unprocessable Content |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
@@ -283,7 +283,7 @@ Name | Type | Description  | Notes
 **200** | deposit bank account found |  -  |
 **401** | Unauthorized - Authentication failed |  -  |
 **403** | Invalid scope |  -  |
-**404** | deposit_bank_account not found |  -  |
+**404** | Not Found |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
@@ -483,7 +483,7 @@ Name | Type | Description  | Notes
 **200** | Deposit bank account updated |  -  |
 **401** | Unauthorized - Authentication failed |  -  |
 **403** | Invalid scope |  -  |
-**404** | deposit_bank_account not found |  -  |
+**404** | Not Found |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 

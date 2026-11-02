@@ -202,7 +202,7 @@ Name | Type | Description  | Notes
 **200** | account found |  -  |
 **401** | Unauthorized - Authentication failed |  -  |
 **403** | Invalid scope |  -  |
-**404** | account not found |  -  |
+**404** | Not Found |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
@@ -401,7 +401,7 @@ Name | Type | Description  | Notes
 **400** | Invalid requests |  -  |
 **401** | Unauthorized - Authentication failed |  -  |
 **403** | Invalid scope |  -  |
-**404** | account not found |  -  |
+**404** | Not Found |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 

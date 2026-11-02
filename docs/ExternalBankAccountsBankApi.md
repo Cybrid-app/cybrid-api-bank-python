@@ -226,7 +226,7 @@ Name | Type | Description  | Notes
 **200** | External bank account deleted |  -  |
 **401** | Unauthorized - Authentication failed |  -  |
 **403** | Invalid scope |  -  |
-**404** | ExternalBankAccount not found |  -  |
+**404** | Not Found |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
@@ -329,7 +329,7 @@ Name | Type | Description  | Notes
 **200** | External bank account found |  -  |
 **401** | Unauthorized - Authentication failed |  -  |
 **403** | Invalid scope |  -  |
-**404** | ExternalBankAccount not found |  -  |
+**404** | Not Found |  -  |
 **422** | Unable to process request |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
@@ -527,7 +527,7 @@ Name | Type | Description  | Notes
 **200** | external bank account found |  -  |
 **401** | Unauthorized - Authentication failed |  -  |
 **403** | Invalid scope |  -  |
-**404** | ExternalBankAccount not found |  -  |
+**404** | Not Found |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 

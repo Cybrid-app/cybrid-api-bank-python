@@ -192,7 +192,7 @@ Name | Type | Description  | Notes
 **200** | trade found |  -  |
 **401** | Unauthorized - Authentication failed |  -  |
 **403** | Invalid scope |  -  |
-**404** | trade not found |  -  |
+**404** | Not Found |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
