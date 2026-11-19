@@ -124,6 +124,7 @@ with cybrid_api_bank.ApiClient(configuration) as api_client:
         business_incorporation_date=dateutil_parser('1970-01-01').date(),
         occupation="occupation_example",
         citizenship="citizenship_example",
+        source_of_funds="salary_wages",
         biometrics_verified=True,
         external_bank_account_guid="external_bank_account_guid_example",
     ) # PostIdentityVerification | 
