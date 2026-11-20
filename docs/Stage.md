@@ -5,7 +5,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **guid** | **str** | The unique identifier for the stage. | 
-**type** | **str** | The type of stage; one of payout, deposit, withdrawal, trade, deposit_return, loss_recovery, withdrawal_return, or payout_return. | 
+**type** | **str** | The type of stage; one of payout, deposit, withdrawal, trade, deposit_return, loss_recovery, withdrawal_return, payout_return, book_transfer, or account_transfer. | 
 **state** | **str** | The state of the stage; one of storing, planning, planned, executing, completed, or failed. | 
 **identifiers** | [**[StageIdentifier]**](StageIdentifier.md) | Provider-issued identifiers associated with this stage. Always present, possibly empty. | 
 **links** | [**[StageLink]**](StageLink.md) | Provider-issued links associated with this stage. Always present, possibly empty. | 
